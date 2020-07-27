@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :users do
-      resources :listings, only: [:index]
+      resources :events, only: [:index]
     end
 
     resources :benches
