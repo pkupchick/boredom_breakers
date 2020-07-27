@@ -34,9 +34,11 @@ class EmailInput extends React.Component {
           <input
             type="text"
             value={this.state.email}
+            placeholder="Email"
             onChange={this.handleInput('email')}
           />
-          <button onClick={this.handleSubmit}>Get Started</button>
+          <br/>
+          <button onClick={this.handleSubmit} className="login-button">Get Started</button>
         </form>
       </div>
     );

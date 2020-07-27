@@ -9,6 +9,7 @@ const App = () => (
       <GreetingContainer />
     </header>
     <AuthRoute exact path="/login" component={EmailInputContainer} />
+    <AuthRoute exact path="/signup" component={EmailInputContainer} />
   </div>
 );
 
