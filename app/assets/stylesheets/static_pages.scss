@@ -30,21 +30,12 @@ body {
     border-style: none;
     width: 300px;
     height: 50px;
+    opacity: 1,
+    
 }
 
-.placeholder
-{
-    position: relative;
-}
-
-.placeholder::after
-{
-    position: absolute;
-    left: 5px;
-    top: 3px;
-    content: attr(data-placeholder);
-    pointer-events: none;
-    opacity: 0.6;
+.login-button:hover {
+    opacity: 0.6
 }
 
 input {

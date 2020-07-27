@@ -8,8 +8,7 @@ const App = () => (
       <h1>Boredom Breakers</h1>
       <GreetingContainer />
     </header>
-    <AuthRoute exact path="/login" component={EmailInputContainer} />
-    <AuthRoute exact path="/signup" component={EmailInputContainer} />
+    <AuthRoute path="/" component={EmailInputContainer} />
   </div>
 );
 
