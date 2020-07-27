@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     end
 
     resources :benches
-    
+    match 'verify_user', to: 'users#verify', via: [:post]
     resource :session, only: [:create, :destroy]
   end
 end

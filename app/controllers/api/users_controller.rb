@@ -23,6 +23,15 @@ class Api::UsersController < ApplicationController
   def show
     @user = selected_user
   end
+
+  def verify
+    @user = User.find_by(email: params[:user][:email])
+    if @user
+      render :show
+    else
+      render :json => { id: nil, email: nil }
+    end
+  end
   
   def index
     @users = User.all

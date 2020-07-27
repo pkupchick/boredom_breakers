@@ -17,3 +17,11 @@ export const logout = () =>
     url: "/api/session",
     method: "DELETE",
   });
+
+export const verify = (email) => {
+  return $.ajax({
+    method: "POST",
+    url: "api/verify_user",
+    data: { user: { email: email } },
+  });
+};
