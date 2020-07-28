@@ -1,12 +1,12 @@
 import React from "react";
-import Header from './header/header_container';
+import GreetContainer from './greeting/greeting_container'
 import SessionContainer from './session/session_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
       <h1>Boredom Breakers</h1>
-      <Header />
+      <GreetContainer />
     </header>
     <AuthRoute path="/" component={SessionContainer} />
   </div>

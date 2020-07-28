@@ -36,7 +36,7 @@ const msp = (state) => {
     }
 }
 
-const mdp = (dispatc) => {
+const mdp = (dispatch) => {
     return {
         logout: (currentUser) => dispatch(logout())
     };
