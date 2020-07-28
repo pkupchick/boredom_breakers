@@ -13,7 +13,7 @@ class Header extends React.Component {
         let headerComponent = null;
         if (!currentUser.name) {
             headerComponent = <div className="login-signup">
-                
+                <img src="app/assets/images/e-logo.png" />
                 <p className="login-signup-greeting">Sign up or log in</p>
             </div>;
         } else {
