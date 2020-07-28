@@ -1,14 +1,13 @@
 import React from "react";
-import GreetContainer from './greeting/greeting_container'
+import Header from './header/header_container';
 import SessionContainer from './session/session_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
     <header>
-      <h1>Boredom Breakers</h1>
-      <GreetContainer />
+      <Header />
     </header>
-    <AuthRoute path="/" component={SessionContainer} />
+    <AuthRoute path="/signup" component={SessionContainer} />
   </div>
 );
 

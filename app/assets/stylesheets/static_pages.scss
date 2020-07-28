@@ -13,6 +13,10 @@ body {
     color: var(--eds-ui-800,#39364f);
 }
 
+a {
+    text-decoration: none;
+}
+
 .login-signup {
     margin: auto;
     text-align: center;
@@ -26,18 +30,18 @@ body {
 
 .login-button {
     border-radius: 5px;
-    background-color: orange;
+    background-color: var(--eds-primary-brand,#d1410c);
     border-style: none;
-    width: 300px;
-    height: 50px;
+    width: 425px;
+    height: 47px;
     opacity: 1;
     color: whitesmoke;
 }
 
 .login-signup-greeting {
-    font-size: 20px;
+    font-size: 24px;
     line-height: 22px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .login-button:hover {
@@ -45,8 +49,14 @@ body {
 }
 
 input {
-    width: 290px;
+    width: 415px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 20px;
+}
+
+.logo-small {
+    margin-top: 50px;
+    height: 50px;
+    width: 50px;
 }

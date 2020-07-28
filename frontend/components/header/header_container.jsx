@@ -1,6 +1,7 @@
 import React from 'react';
 import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 
 class Header extends React.Component {
@@ -13,11 +14,12 @@ class Header extends React.Component {
         let headerComponent = null;
         if (!currentUser.name) {
             headerComponent = <div className="login-signup">
-                <img src="app/assets/images/e-logo.png" />
-                <p className="login-signup-greeting">Sign up or log in</p>
+                <img src="http://yogapattern.com/e-logo.png" className="logo-small"/>
+                <p className="login-signup-greeting"><Link to="/signup/">Sign up or log in</Link></p>
             </div>;
         } else {
                 headerComponent = (<div>
+                <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
                 <h2>Hi, {currentUser.email}!</h2>
                 <button className="logout-button" onClick={logout()}>Log Out</button>
                  </div>)
