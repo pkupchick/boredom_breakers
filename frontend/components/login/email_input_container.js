@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { login } from '../../actions/session_actions'
-import { verify } from '../../util/session_api_util'
+import { verify } from '../../actions/session_actions'
 import EmailInput from "./email_input";
 
 const msp = (state, ownProps) => {

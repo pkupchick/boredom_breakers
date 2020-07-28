@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
-import { login, logout } from './actions/session_actions';
+import { login, logout, signup, verify } from './actions/session_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -24,6 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
     window.dispatch = store.dispatch;
     window.login = login;
     window.logout = logout;
+    window.signup = signup;
+    window.verify = verify;
     //   TESTING END
 
   const root = document.getElementById("root");

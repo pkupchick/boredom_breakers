@@ -24,6 +24,7 @@ class EmailInput extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.verify(this.state.email);
+    debugger;
   }
 
   render() {
