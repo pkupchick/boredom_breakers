@@ -1,6 +1,6 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
-import EmailInputContainer from './login/email_input_container';
+import EmailInputContainer from './session/email_input_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>

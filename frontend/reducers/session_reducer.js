@@ -5,17 +5,16 @@ import {
 } from "../actions/session_actions";
 
 const _nullUser = Object.freeze({
-  id: null,
+  currentUser: null,
 });
 
 const sessionReducer = (state = _nullUser, action) => {
   Object.freeze(state);
   switch (action.type) {
     case VERIFY_EMAIL:
-      debugger;
-      return { email: action.currentUser.email }
+      return action.user;
     case RECEIVE_CURRENT_USER:
-      return { id: action.currentUser.id };
+      return action.currentUser;
     case LOGOUT_CURRENT_USER:
       return _nullUser;
     default:

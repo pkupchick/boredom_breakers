@@ -24,7 +24,6 @@ class EmailInput extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.verify(this.state.email);
-    debugger;
   }
 
   render() {
@@ -32,7 +31,7 @@ class EmailInput extends React.Component {
       <div className="email-verify">
         <form onSubmit={this.handleSubmit}>
           <input
-            type="text"
+            type="email"
             value={this.state.email}
             placeholder="Email"
             autoComplete="on"

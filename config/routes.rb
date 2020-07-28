@@ -7,7 +7,7 @@ Rails.application.routes.draw do
       resources :events, only: [:index]
     end
     
-    match 'verify_user', to: 'users#verify', via: [:post]
+    match 'verify_user', to: 'users#verify', via: [:get]
     resource :session, only: [:create, :destroy]
   end
 end

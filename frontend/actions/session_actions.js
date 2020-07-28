@@ -19,9 +19,9 @@ export const receiveErrors = (errors) => ({
   errors,
 });
 
-export const verifyEmail = (email) => ({
+export const verifyEmail = (user) => ({
   type: VERIFY_EMAIL,
-  email
+  user
 })
 
 export const signup = (user) => (dispatch) =>
@@ -40,4 +40,4 @@ export const logout = () => (dispatch) =>
   APIUtil.logout().then((user) => dispatch(logoutCurrentUser()));
 
 export const verify = (email) => (dispatch) =>
-  APIUtil.verify(email).then((email) => dispatch(verifyEmail()));
+  APIUtil.verify(email).then((user) => dispatch(verifyEmail(user)));
