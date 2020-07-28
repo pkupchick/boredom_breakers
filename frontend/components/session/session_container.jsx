@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { login, verify } from '../../actions/session_actions';
+import { login, verify, signup } from '../../actions/session_actions';
 import EmailInput from './email_input';
+import Login from './login_container';
+import SignUp from './signup_container';
 
 class Session extends React.Component {
     constructor(props) {
@@ -9,14 +11,14 @@ class Session extends React.Component {
     }
 
     render() {
-        const { currentUser, login, verify, errors } = this.props;
+        const { currentUser, login, verify, errors, signup } = this.props;
         let formComponent = null;
         if (!currentUser.email) {
             formComponent = <EmailInput verify={verify} errors={errors} />;
         } else if (!currentUser.id) {
-            formComponent = <p>Sign up form</p>;
+            formComponent = <SignUp signup={signup} props={currentUser} errors={errors} />
         } else {
-            formComponent = <p>Log in form</p>;
+            formComponent = <Login login={login} props={currentUser} errors={errors} />
         }
         return (
             <div>
@@ -36,7 +38,8 @@ const msp = (state) => {
 const mdp = (dispatch) => {
     return {
         login: (currentUser) => dispatch(login(currentUser)),
-        verify: (email) => dispatch(verify(email)),    
+        verify: (email) => dispatch(verify(email)),  
+        signup: (currentUser) => dispatch(signup(currentUser))  
     };
 };
 

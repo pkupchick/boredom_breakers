@@ -6,8 +6,6 @@ class EmailInput extends React.Component {
 
     this.state = {
       email: "",
-      password: "",
-      verified: false,
       errors: [],
     };
 
