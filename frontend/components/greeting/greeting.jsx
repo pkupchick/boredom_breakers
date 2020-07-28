@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
@@ -16,7 +15,7 @@ const Greeting = ({ currentUser, logout }) => {
       </button>
     </hgroup>
   );
-
+  
   return currentUser.name ? personalGreeting() : sessionLinks();
 };
 

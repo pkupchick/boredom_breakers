@@ -28,6 +28,7 @@ class SignUp extends React.Component {
 
     render() {
         const { email } = this.props.props;
+        debugger;
         return (
             <div className="email-verify">
                 <form onSubmit={this.handleSubmit}>
