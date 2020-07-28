@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Greeting = ({ currentUser, logout }) => {
   const sessionLinks = () => (
     <div className="login-signup">
-      <p>Sign up or log in</p>
+      <p className="login-signup-greeting">Sign up or log in</p>
     </div>
   );
 

@@ -35,6 +35,7 @@ class EmailInput extends React.Component {
             type="text"
             value={this.state.email}
             placeholder="Email"
+            autoComplete="on"
             onChange={this.handleInput('email')}
           />
           <br/>
