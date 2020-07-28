@@ -13,6 +13,7 @@ class Header extends React.Component {
         let headerComponent = null;
         if (!currentUser.name) {
             headerComponent = <div className="login-signup">
+                
                 <p className="login-signup-greeting">Sign up or log in</p>
             </div>;
         } else {
