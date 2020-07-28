@@ -1,5 +1,4 @@
 import React from 'react';
-import Redirect from 'react-router'
 
 class EmailInput extends React.Component {
   constructor(props) {
@@ -24,7 +23,7 @@ class EmailInput extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
-    this.props.verify(this.state.email)
+    this.props.verify(this.state.email);
   }
 
   render() {
@@ -36,10 +35,12 @@ class EmailInput extends React.Component {
             value={this.state.email}
             placeholder="Email"
             autoComplete="on"
-            onChange={this.handleInput('email')}
+            onChange={this.handleInput("email")}
           />
-          <br/>
-          <button onClick={this.handleSubmit} className="login-button">Get Started</button>
+          <br />
+          <button onClick={this.handleSubmit} className="login-button">
+            Get Started
+          </button>
         </form>
       </div>
     );

@@ -27,7 +27,7 @@ class Api::UsersController < ApplicationController
   def verify
     @user = User.find_by(email: params[:user][:email])
     if @user
-      render :show
+      render :json => { email: @user.email }
     else
       render :json => { id: nil, email: nil }
     end
