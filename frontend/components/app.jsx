@@ -1,6 +1,6 @@
 import React from "react";
 import GreetingContainer from "./greeting/greeting_container";
-import EmailInputContainer from './session/email_input_container';
+import SessionContainer from './session/session_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
   <div>
@@ -8,7 +8,7 @@ const App = () => (
       <h1>Boredom Breakers</h1>
       <GreetingContainer />
     </header>
-    <AuthRoute path="/" component={EmailInputContainer} />
+    <AuthRoute path="/" component={SessionContainer} />
   </div>
 );
 

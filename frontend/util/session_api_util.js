@@ -20,7 +20,7 @@ export const logout = () =>
 
 export const verify = (email) => {
   return $.ajax({
-    method: "POST",
+    method: "GET",
     url: "api/verify_user",
     data: { user: { email: email } },
   });
