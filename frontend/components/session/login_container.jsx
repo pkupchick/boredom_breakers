@@ -28,24 +28,31 @@ class Login extends React.Component {
     render() {
         const { email } = this.props.props;
         return (
-            <div className="email-verify">
-                <form onSubmit={this.handleSubmit}>
-                    <input
-                        type="email"
-                        value={email}
-                        disabled
-                    />
-                    <br/>
-                    <input 
-                        type="password"
-                        value={this.state.password}
-                        placeholder="Password"
-                        onChange={this.handleInput("password")}
-                    />
-                    <br/>
-                    <button onClick={this.handleSubmit} className="login-button">Log in</button>
-                </form>
-            </div>
+            <>
+                <div className="login-welcome">
+                    <img src="http://yogapattern.com/welcome-guy.png" className="logo-small" />
+                    <p className="login-signup-greeting">Welcome back</p>
+                </div>
+                <div className="email-verify">
+                    <p className="login-instructions">Please enter your password to log in.</p>
+                    <form onSubmit={this.handleSubmit}>
+                        <input
+                            type="email"
+                            value={email}
+                            disabled
+                        />
+                        <br/>
+                        <input 
+                            type="password"
+                            value={this.state.password}
+                            placeholder="Password"
+                            onChange={this.handleInput("password")}
+                        />
+                        <br/>
+                        <button onClick={this.handleSubmit} className="login-button">Log in</button>
+                    </form>
+                </div>
+            </>
         )
     }
 }

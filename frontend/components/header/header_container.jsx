@@ -3,7 +3,6 @@ import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-
 class Header extends React.Component {
     constructor(props) {
         super(props);
@@ -13,10 +12,7 @@ class Header extends React.Component {
         const { currentUser } = this.props;
         let headerComponent = null;
         if (!currentUser.name) {
-            headerComponent = <div className="login-signup">
-                <img src="http://yogapattern.com/e-logo.png" className="logo-small"/>
-                <p className="login-signup-greeting"><Link to="/signup/">Sign up or log in</Link></p>
-            </div>;
+            headerComponent = <div className="signin-header"><Link to="/signup">Sign in</Link></div>
         } else {
                 headerComponent = (<div>
                 <img src="http://yogapattern.com/e-logo.png" className="logo-small" />

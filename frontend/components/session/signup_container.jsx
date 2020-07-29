@@ -1,4 +1,6 @@
 import React from 'react';
+import { Redirect } from 'react-router';
+import { Link } from 'react-router-dom';
 
 class SignUp extends React.Component {
     constructor(props) {
@@ -12,6 +14,7 @@ class SignUp extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.checkMatch = this.checkMatch.bind(this);
     }
 
     handleInput(type) {
@@ -26,10 +29,33 @@ class SignUp extends React.Component {
         this.props.signup(this.state);
     }
 
+    checkMatch(input) {
+        if (input !== this.state.email) {
+            alert("Emails must match")
+        } else {
+            return;
+        }
+    }
+
     render() {
+
+        if (this.props.currentUser) {
+            <Redirect to="/" />
+        }
+
+        if (this.state.errors) {
+
+        }
+
         const { email } = this.props.props;
         return (
+        <>
+                <div className="login-welcome">
+                    <img src="http://yogapattern.com/welcome-guy.png" className="logo-small" />
+                    <p className="login-signup-greeting">Welcome</p>
+                </div>
             <div className="email-verify">
+                    <p className="login-instructions">Create an account.</p>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         type="email"
@@ -37,27 +63,25 @@ class SignUp extends React.Component {
                         disabled
                     />
                     <br />
-                <label>Full Name:
-                    <br/>
-                    <br/>
                     <input
                         type="text"
                         value={this.state.name}
+                        placeholder="Full Name"
                         onChange={this.handleInput("name")}
                     />
-                    <br />
-                </label>Password:
-                    <br/>
                     <br/>
                     <input
                         type="password"
+                        placeholder="Password"
                         value={this.state.password}
                         onChange={this.handleInput("password")}
                     />
                     <br />
                     <button onClick={this.handleSubmit} className="login-button">Log in</button>
                 </form>
+                    <p><Link to="/signup">Log In Instead</Link></p>
             </div>
+        </>
         )
     }
 }

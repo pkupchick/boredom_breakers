@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class EmailInput extends React.Component {
   constructor(props) {
@@ -26,21 +27,27 @@ class EmailInput extends React.Component {
 
   render() {
     return (
-      <div className="email-verify">
-        <form onSubmit={this.handleSubmit}>
-          <input
-            type="email"
-            value={this.state.email}
-            placeholder="Email"
-            autoComplete="on"
-            onChange={this.handleInput("email")}
-          />
-          <br />
-          <button onClick={this.handleSubmit} className="login-button">
-            Get Started
-          </button>
-        </form>
-      </div>
+      <>
+        <div className="login-signup">
+          <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
+          <p className="login-signup-greeting">Sign up or log in</p>
+        </div>
+        <div className="email-verify">
+          <form onSubmit={this.handleSubmit}>
+            <input
+              type="email"
+              value={this.state.email}
+              placeholder="Email"
+              autoComplete="on"
+              onChange={this.handleInput("email")}
+            />
+            <br />
+            <button onClick={this.handleSubmit} className="login-button">
+              Get Started
+            </button>
+          </form>
+        </div>
+      </>
     );
   }
 }
