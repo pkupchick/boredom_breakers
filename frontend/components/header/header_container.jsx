@@ -1,7 +1,7 @@
 import React from 'react';
-import { logout } from '../../actions/session_actions';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logout } from '../../actions/session_actions'
 
 class Header extends React.Component {
     constructor(props) {
@@ -14,12 +14,15 @@ class Header extends React.Component {
         if (!currentUser.name) {
             headerComponent = <div className="signin-header"><Link to="/signup">Sign in</Link></div>
         } else {
-                headerComponent = (<div>
-                <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
-                <h2>Hi, {currentUser.email}!</h2>
-                <button className="logout-button" onClick={logout()}>Log Out</button>
-                 </div>)
+            headerComponent = (
+                <div>
+                    <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
+                    <h2>Hi, {currentUser.name}!</h2>
+                    <button className="logout-button" onClick={this.props.logout}>Log Out</button>
+                </div>
+            );
         }
+
         return (
             <div>
                 {headerComponent}
@@ -37,7 +40,7 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
     return {
-        logout: (currentUser) => dispatch(logout())
+        logout: () => dispatch(logout())
     };
 };
 

@@ -5,6 +5,12 @@
 header {
     margin: auto;
     text-align: center;
+    height: 60px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.signin-header {
+    text-align: end;
 }
 
 body {
@@ -17,9 +23,6 @@ a {
     text-decoration: none;
 }
 
-.signin-header {
-    text-align: end;
-}
 
 .login-signup {
     margin: auto;
@@ -74,11 +77,12 @@ a {
 }
 
 input {
-    width: 315px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: 322px;
+    height: 47px;
+    padding: 10px;
     margin-bottom: 20px;
     transition: padding .16s cubic-bezier(.4,0,.3,1),color .4s cubic-bezier(.4,0,.3,1);
+    box-sizing: border-box;
 }
 
 .logo-small {
@@ -86,3 +90,8 @@ input {
     height: 50px;
     width: 50px;
 }
+
+ .errors-list {
+   list-style: none;
+   text-align: center;
+ }
