@@ -19,6 +19,13 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+  window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      $(dropdowns[0]).addClass('hidden');
+    }
+  }
+
     //   TESTING START
     window.getState = store.getState;
     window.dispatch = store.dispatch;
