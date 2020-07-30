@@ -51,46 +51,61 @@ class SignUp extends React.Component {
       <Redirect to="/" />;
     }
 
-    if (this.state.errors) {
-    }
+    let nameErrors = null;
+    let pwErrors = null;
+
+    this.props.errors.forEach((error) => {
+      if (error === "Name can't be blank") {
+        nameErrors = <div className="errors-list">{error}</div>;
+      } else if (error === "Password is too short (minimum is 6 characters)") {
+        pwErrors = <div className="errors-list">{error}</div>;
+      };
+    })
 
     const { email } = this.props.props;
+    const nameInputClass = nameErrors ? "input-error" : "input-email";
+    const pwInputClass = pwErrors ? "input-error" : "input-email";
     return (
       <>
-        <div className="login-welcome">
-          <img
-            src="http://yogapattern.com/welcome-guy.png"
-            className="logo-small"
-          />
-          <p className="login-signup-greeting">Welcome</p>
-        </div>
-        <div className="email-verify">
-          <p className="login-instructions">Create an account.</p>
-          <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
-            <input type="email" value={email} disabled />
-            <br />
-            <input
-              type="text"
-              value={this.state.name}
-              placeholder="Full Name"
-              onChange={this.handleInput("name")}
+        <div className="form-container">
+          <div className="login-welcome">
+            <img
+              src="http://yogapattern.com/welcome-guy.png"
+              className="logo-small"
             />
-            <br />
-            <input
-              type="password"
-              placeholder="Password"
-              value={this.state.password}
-              onChange={this.handleInput("password")}
-            />
-            <br />
-            <button onClick={this.handleSubmit} className="login-button">
-              Log in
-            </button>
-          </form>
-          <p>
-            <a onClick={this.props.resetCurrentUser}>Log In Instead</a>
-          </p>
+            <p className="login-signup-greeting">Welcome</p>
+          </div>
+          <div className="email-verify">
+            <p className="login-instructions">Create an account.</p>
+            <form onSubmit={this.handleSubmit}>
+              <input type="email" className="input-email" value={email} disabled />
+              <br />
+              <input
+                type="text"
+                value={this.state.name}
+                className={nameInputClass}
+                placeholder="Full Name"
+                onChange={this.handleInput("name")}
+              />
+              {nameErrors}
+              <br />
+              <input
+                type="password"
+                className={pwInputClass}
+                placeholder="Password"
+                value={this.state.password}
+                onChange={this.handleInput("password")}
+              />
+              {pwErrors}
+              <br />
+              <button onClick={this.handleSubmit} className="login-button">
+                Sign Up
+              </button>
+            </form>
+            <p>
+              <a className="log-in-instead" onClick={this.props.resetCurrentUser}>Log In Instead</a>
+            </p>
+          </div>
         </div>
       </>
     );

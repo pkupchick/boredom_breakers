@@ -19,6 +19,11 @@ body {
     color: var(--eds-ui-800,#39364f);
 }
 
+.form-container {
+    margin: auto;
+    width: 325px;
+}
+
 a {
     text-decoration: none;
 }
@@ -58,6 +63,7 @@ a {
     color: whitesmoke;
     letter-spacing: .2px;
     transition: all .4s cubic-bezier(.4,0,.3,1);
+    margin-bottom: 10px;
 }
 
 .login-signup-greeting {
@@ -79,10 +85,12 @@ a {
 input {
     width: 322px;
     height: 47px;
-    padding: 10px;
-    margin-bottom: 20px;
     transition: padding .16s cubic-bezier(.4,0,.3,1),color .4s cubic-bezier(.4,0,.3,1);
     box-sizing: border-box;
+}
+
+.input-email {
+    margin-bottom: 20px;
 }
 
 .logo-small {
@@ -93,5 +101,25 @@ input {
 
  .errors-list {
    list-style: none;
-   text-align: center;
+   font-size: 12px;
+   color: #c42421;
+   margin: 0px;
+   padding: 0px;
+   padding-top: 5px;
+   text-align: left;
+ }
+
+ .input-error {
+     border: 1px solid red;
+ }
+
+ .log-in-instead {
+    color: blue;
+    font-weight: 300;
+    font-size: 12px;
+    letter-spacing: .2;
+ }
+
+ .log-in-instead:hover {
+     cursor: pointer;
  }

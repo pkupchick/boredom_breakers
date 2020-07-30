@@ -32,7 +32,7 @@ class EmailInput extends React.Component {
     if (ValidateUtil.validateEmail(this.state.email)) {
       this.props.verify(this.state.email);
     } else {
-      this.setState({ errors: ["Invalid Email Format"] });
+      this.setState({ errors: ["Please enter a valid email address"] });
     }
   }
 
@@ -47,35 +47,37 @@ class EmailInput extends React.Component {
   }
 
   render() {
-    const emailInputClass = this.state.errors.length > 0 ? "error" : "";
+    const emailInputClass = this.state.errors.length > 0 ? "input-error" : "";
     return (
       <>
-        <div className="login-signup">
-          <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
-          <p className="login-signup-greeting">Sign up or log in</p>
-        </div>
-        <div className="email-verify">
-          <form onSubmit={this.handleSubmit}>
-            {this.renderErrors()}
-            <input
-              className={emailInputClass}
-              type="email"
-              id="email"
-              value={this.state.email}
-              placeholder="Email"
-              autoComplete="on"
-              onChange={this.handleInput("email")}
-            />
+        <div className="form-container">
+          <div className="login-signup">
+            <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
+            <p className="login-signup-greeting">Sign up or log in</p>
+          </div>
+          <div className="email-verify">
+            <form onSubmit={this.handleSubmit}>
+              <input
+                className={emailInputClass}
+                type="email"
+                id="email"
+                value={this.state.email}
+                placeholder="Email"
+                autoComplete="on"
+                onChange={this.handleInput("email")}
+              />
+              {this.renderErrors()}
+              <br />
+              <button onClick={this.handleSubmit} className="login-button">
+                Get Started
+              </button>
+            </form>
             <br />
-            <button onClick={this.handleSubmit} className="login-button">
-              Get Started
+            <button onClick={this.handleDemoSubmit} className="login-button">
+              Demo Login
             </button>
-          </form>
-          <br />
-          <button onClick={this.handleDemoSubmit} className="login-button">
-            Demo Login
-          </button>
-        </div>
+          </div>
+      </div>
       </>
     );
   }

@@ -15,7 +15,7 @@ class Header extends React.Component {
             headerComponent = <div className="signin-header"><Link to="/signup">Sign in</Link></div>
         } else {
             headerComponent = (
-                <div>
+                <div className="signin-header">
                     <img src="http://yogapattern.com/e-logo.png" className="logo-small" />
                     <h2>Hi, {currentUser.name}!</h2>
                     <button className="logout-button" onClick={this.props.logout}>Log Out</button>

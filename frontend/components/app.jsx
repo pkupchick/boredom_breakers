@@ -1,7 +1,6 @@
 import React from "react";
 import Header from './header/header_container';
 import SessionContainer from './session/session_container';
-import Login from './session/login_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch, Route } from 'react-router-dom';
 const App = () => (
