@@ -38,22 +38,28 @@ class Header extends React.Component {
         let headerComponent = null;
 
         let dropDown = (
-            // <div className="dropdown">
-            <>
-                <a
-                    className="dropbtn"
-                    value="drop-down-now">
-                    <img src="http://yogapattern.com/lil-guy.png" 
-                    className="pos-ab"
-                    />
-                </a>
-                <div id="myDropdown" className="dropdown-content hidden" onClick={this.handleDropDown}>
-                    <a onClick={this.props.logout}>Log Out</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
-                </div>
-            </>
-        )
+          // <div className="dropdown">
+          <>
+            <a
+              className="dropbtn"
+              value="drop-down-now"
+            >
+              <img
+                src="http://yogapattern.com/lil-guy.png"
+                className="pos-ab"
+              />
+            </a>
+            <div
+              id="myDropdown"
+              className="dropdown-content hidden"
+              onClick={this.handleDropDown}
+            >
+              <a onClick={this.props.logout}>Log Out</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+          </>
+        );
         if (!currentUser.name) {
             headerComponent = (
                 <div className="header-container" onClick={this.handleDropDown} >
@@ -65,14 +71,16 @@ class Header extends React.Component {
             )
         } else {
             headerComponent = (
-                <div className="header-container" onClick={this.handleDropDown} >
-                    <div className="logo-right">
-                        <Link to="/"><img src="http://yogapattern.com/e-brite.png" /></Link>
-                    </div>
-                    <div className="dropdown">
-                        {dropDown}
-                    </div>
+              <div className="header-container" onClick={this.handleDropDown}>
+                <div className="logo-right">
+                  <Link to="/">
+                    <img src="http://yogapattern.com/e-brite.png" />
+                  </Link>
                 </div>
+                <div className="dropdown" >
+                  {dropDown}
+                </div>
+              </div>
             );
         }
 

@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import configureStore from "./store/store";
 import Root from "./components/root";
 import { login, logout, signup, verify } from './actions/session_actions';
+import { fetchEvents, fetchEvent } from './actions/event_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.logout = logout;
     window.signup = signup;
     window.verify = verify;
+    window.$ = $;
+    window.fetchEvents = fetchEvents;
+    window.fetchEvent = fetchEvent;
     //   TESTING END
 
   const root = document.getElementById("root");
