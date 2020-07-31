@@ -15,7 +15,7 @@ export const fetchEvent = id => (
 export const createEvent = eventForm => (
     $.ajax({
         method: "POST",
-        url: `/api/user/${eventForm.host_id}/events`,
-        data: eventForm,
+        url: "/api/events",
+        data: {event: eventForm},
     })
 )

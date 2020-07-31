@@ -12,9 +12,9 @@ const App = () => (
       <Header/>
     </header>
     <Switch>
-      <ProtectedRoute path="/events/new" component={EventForm} />
       <AuthRoute path="/signup" component={SessionContainer} />
-      <AuthRoute path="/events" component={HomePage} />
+      <Route path="/" component={HomePage} />
+      <ProtectedRoute path="/events/new" component={EventForm} />
     </Switch>
   </div>
 );

@@ -4,10 +4,10 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :users do
-      resources :events, only: [:edit, :create, :destroy]
+      resources :events, only: [:edit, :destroy]
     end
 
-    resources :events, only: [:index, :show]
+    resources :events, only: [:index, :show, :create]
     
     match 'verify_user', to: 'users#verify', via: [:get]
     resource :session, only: [:create, :destroy]

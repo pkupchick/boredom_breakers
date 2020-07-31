@@ -14,7 +14,14 @@
 #  updated_at    :datetime         not null
 #
 class Event < ApplicationRecord
+    
+    validates :title, presence: true, uniqueness: true
+    validates :host_id, :description, :price, :location, :category, :max_attendees, presence: true
+
     belongs_to :host,
     foreign_key: :host_id,
     class_name: :User
+
+    has_one_attached :photo
+
 end
