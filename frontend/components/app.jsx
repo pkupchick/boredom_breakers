@@ -13,7 +13,7 @@ const App = () => (
     </header>
     <Switch>
       <AuthRoute path="/signup" component={SessionContainer} />
-      <Route path="/" component={HomePage} />
+      <Route exact path="/" component={HomePage} />
       <ProtectedRoute path="/events/new" component={EventForm} />
     </Switch>
   </div>

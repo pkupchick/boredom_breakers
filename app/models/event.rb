@@ -16,7 +16,7 @@
 class Event < ApplicationRecord
     
     validates :title, presence: true, uniqueness: true
-    validates :host_id, :description, :price, :location, :category, :max_attendees, presence: true
+    validates :host_id, :description, :price, :location, :category, :event_start, :event_end, :event_start_time, :event_end_time, :max_attendees, presence: true
 
     belongs_to :host,
     foreign_key: :host_id,

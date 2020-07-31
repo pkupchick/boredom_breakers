@@ -17,8 +17,8 @@ class HomePage extends React.Component {
         eventsArray = eventsArray.map((event, idx) => {
             return(
                 <>
-                    <h3 className="event-title">{event.title}</h3>
-                    <p key={idx} className="event-description">{event.description}</p>
+                    <h3 className="event-date-time">{event.event_start} - {event.event_start_time}</h3>
+                    <h3 key={idx} className="event-description">{event.title}</h3>
                 </>
             )
         })
