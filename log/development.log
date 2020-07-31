@@ -14776,3 +14776,1662 @@ Processing by Api::EventsController#index as JSON
 Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-07-31 10:39:12 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 46ms (Views: 43.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:39:12 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/index.json.jbuilder (2.9ms)
+Completed 200 OK in 11ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:40:22 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 308ms (Views: 306.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:40:23 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (2.1ms)
+Completed 200 OK in 11ms (Views: 8.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:40:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 430ms (Views: 425.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:40:53 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (5.3ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:40:56 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:40:56 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/index.json.jbuilder (5.3ms)
+Completed 200 OK in 21ms (Views: 14.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:41:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 360ms (Views: 356.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:41:09 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/index.json.jbuilder (4.3ms)
+Completed 200 OK in 23ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:46:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 317ms (Views: 315.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:46:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 322ms (Views: 319.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:46:52 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (3.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (9.7ms)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:48:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 444ms (Views: 439.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:48:33 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (5.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/index.json.jbuilder (13.6ms)
+Completed 200 OK in 54ms (Views: 42.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:51:20 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:51:20 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/index.json.jbuilder (7.3ms)
+Completed 200 OK in 25ms (Views: 21.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:51:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:51:41 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 33ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:51:51 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 55ms (Views: 52.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/verify_user?user%5Bemail%5D=pkupchick%40gmail.com" for ::1 at 2020-07-31 10:52:39 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 19ms (Views: 0.3ms | ActiveRecord: 9.1ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 10:52:50 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+Completed 401 Unauthorized in 256ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 10:52:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/verify_user?user%5Bemail%5D=miguel%40gmail.com" for ::1 at 2020-07-31 10:53:00 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"miguel@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-31 10:53:14 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"miguel@gmail.com", "password"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "8Kq19mtfBINfadT7EYPY9A"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (3.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 271ms (Views: 0.2ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-31 10:53:19 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"miguel@gmail.com", "password"=>"[FILTERED]", "name"=>"Miguel"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "U0B1nGEb_3qDOr43kLTtbQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 272ms (Views: 0.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-31 10:53:41 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"miguel@gmail.com", "password"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "jUE79cL5ZJ2H1llmAe3DJQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 258ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-31 10:54:07 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"miguel@gmail.com", "password"=>"[FILTERED]", "name"=>""}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "miguel@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "Be8YF0HNTpo5pezkD0oEUw"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:4
+Completed 401 Unauthorized in 258ms (Views: 0.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 10:54:29 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/index.json.jbuilder (3.8ms)
+Completed 200 OK in 18ms (Views: 13.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:09:10 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 105ms (Views: 97.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:09:10 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (36.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/index.json.jbuilder (40.5ms)
+Completed 200 OK in 58ms (Views: 17.2ms | ActiveRecord: 36.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:10:16 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 429ms (Views: 424.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:10:17 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (3.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.8ms)
+  Rendered api/events/index.json.jbuilder (10.0ms)
+Completed 200 OK in 35ms (Views: 27.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:10:53 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 86ms (Views: 83.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:10:54 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/index.json.jbuilder (4.5ms)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:10:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:10:59 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (5.6ms)
+Completed 200 OK in 17ms (Views: 13.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:12:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 313ms (Views: 310.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:12:07 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (4.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/index.json.jbuilder (8.9ms)
+Completed 200 OK in 27ms (Views: 17.7ms | ActiveRecord: 4.9ms)
+
+
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (9.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 12]]
+  ↳ db/seeds.rb:9
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 8]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 9]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 14]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 10]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 11]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 15]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 18]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 19]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (1.3ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 2]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "Pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "wKsc2zugB8Bc_4GmPc_D1A"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (4.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "Pkupchick@gmail.com"], ["name", "Peter KupchicK"], ["session_token", "wKsc2zugB8Bc_4GmPc_D1A"], ["password_digest", "$2a$12$tNptsiJB9WjFapN4Qtc8heL62LXHo3QXfaTBIr.iH24x1XZIyPyz2"], ["created_at", "2020-07-31 15:21:49.175969"], ["updated_at", "2020-07-31 15:21:49.175969"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "agregory@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "owzl3cbCoJkLMUBBiGOcLQ"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "agregory@gmail.com"], ["name", "Aschel Gregory"], ["session_token", "owzl3cbCoJkLMUBBiGOcLQ"], ["password_digest", "$2a$12$MMBN57mCAxCCmOX9kGNwVOLD2jZTyhrWADQLWgm0nDLK.VxcfQDY2"], ["created_at", "2020-07-31 15:21:49.368838"], ["updated_at", "2020-07-31 15:21:49.368838"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "rgYX32tI57iZ19kbisFeMA"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bkupchick@gmail.com"], ["name", "Brenda Kupchick"], ["session_token", "rgYX32tI57iZ19kbisFeMA"], ["password_digest", "$2a$12$C9.C1GusSj5Wkln4hWHMA.A2Ig/M1EjIgAmZrUke675yOnfi3RpQC"], ["created_at", "2020-07-31 15:21:49.558568"], ["updated_at", "2020-07-31 15:21:49.558568"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "daniel@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "ugJNnrXiWPn39wR5sX7SZw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "daniel@gmail.com"], ["name", "Daniel Disimone"], ["session_token", "ugJNnrXiWPn39wR5sX7SZw"], ["password_digest", "$2a$12$8ZV.egq7ul.JVaFLwaHVref0UAf8sF6deDhWpkXAdbZnlbegU0AW6"], ["created_at", "2020-07-31 15:21:49.753428"], ["updated_at", "2020-07-31 15:21:49.753428"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mEvent Create (4.1ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 21], ["title", "Yoga Classes"], ["description", "Come learn the healing properties of Yoga with top instructor Aschel Gregory"], ["price", 50], ["location", "Los Angeles, CA"], ["category", "Yoga"], ["max_attendees", 30], ["created_at", "2020-07-31 15:21:49.765671"], ["updated_at", "2020-07-31 15:21:49.765671"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 22], ["title", "Black Lives Matter - CT"], ["description", "Fairfield CT's very own first selectwoman is putting on an event to show her support for the BLM movement"], ["price", 0], ["location", "Fairfield, CT"], ["category", "politics"], ["max_attendees", 999999], ["created_at", "2020-07-31 15:21:49.772661"], ["updated_at", "2020-07-31 15:21:49.772661"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 20], ["title", "Chance the Rapper - Mystery Tour - 2020"], ["description", "Come see chance the rapper at the hammerstein ballroom in NYC this thursday!"], ["price", 50], ["location", "New York, NY"], ["category", "Music"], ["max_attendees", 820], ["created_at", "2020-07-31 15:21:49.775664"], ["updated_at", "2020-07-31 15:21:49.775664"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 20], ["title", "How to BBQ"], ["description", "Bring your appetite and meats and learn how to cookd like the pros"], ["price", 0], ["location", "Portland, MA"], ["category", "Food"], ["max_attendees", 10], ["created_at", "2020-07-31 15:21:49.778108"], ["updated_at", "2020-07-31 15:21:49.778108"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/" for ::1 at 2020-07-31 11:22:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:22:15 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (6.1ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:23:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 299ms (Views: 295.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:23:49 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.5ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (11.0ms)
+Completed 200 OK in 23ms (Views: 19.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:24:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 315ms (Views: 311.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:24:05 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (8.5ms)
+Completed 200 OK in 20ms (Views: 17.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:24:50 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 286ms (Views: 283.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:24:50 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (6.1ms)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 11:25:03 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+Completed 401 Unauthorized in 2ms (Views: 0.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 11:25:05 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+Completed 401 Unauthorized in 2ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/verify_user?user%5Bemail%5D=pkupchick%40gmail.com" for ::1 at 2020-07-31 11:25:15 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:25:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:25:53 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 1255ms (Views: 1250.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/api/verify_user?user%5Bemail%5D=pkupchick%40gmail.com" for ::1 at 2020-07-31 11:26:01 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/users" for ::1 at 2020-07-31 11:26:14 -0400
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]", "name"=>"Peter Kupchick"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "H-PssOwaKVsSF5THiO_XYQ"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "pkupchick@gmail.com"], ["name", "Peter Kupchick"], ["session_token", "H-PssOwaKVsSF5THiO_XYQ"], ["password_digest", "$2a$12$QeK8wI0jm64y40uV0bok6eL8XsYbqDQM4EGJ8ci7uW82wZzZLpOu."], ["created_at", "2020-07-31 15:26:14.611137"], ["updated_at", "2020-07-31 15:26:14.611137"]]
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/users_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "SrLhKotLnKx_DopFY8ZFvw"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "SrLhKotLnKx_DopFY8ZFvw"], ["updated_at", "2020-07-31 15:26:14.617074"], ["id", 24]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.7ms)
+Completed 200 OK in 235ms (Views: 8.9ms | ActiveRecord: 7.7ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 11:26:24 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SrLhKotLnKx_DopFY8ZFvw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "SrLhKotLnKx_DopFY8ZFvw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "esv2I9e5GhGbuWwxWe5KCA"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "esv2I9e5GhGbuWwxWe5KCA"], ["updated_at", "2020-07-31 15:26:24.171766"], ["id", 24]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:26:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 27.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 11:26:28 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["updated_at", "2020-07-31 15:26:29.006979"], ["id", 24]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 212ms (Views: 6.6ms | ActiveRecord: 1.8ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "buYBqG6-ZHzHy4eOYWF3_g"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for ::1 at 2020-07-31 11:28:11 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 11:28:15 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "mJa8WhZULmf3DwNxEXu9Kw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "Bijyl5Keb3iRjUH8dulC2g"], ["id", 24], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.3ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "Bijyl5Keb3iRjUH8dulC2g"], ["updated_at", "2020-07-31 15:28:15.155813"], ["id", 24]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/verify_user?user%5Bemail%5D=pkupchick%40gmail.com" for ::1 at 2020-07-31 11:28:19 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:28:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 20]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 21]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 22]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 23]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Destroy (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 24]]
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (0.8ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 3]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (0.6ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 4]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 5]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mEvent Destroy (0.9ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 6]]
+  ↳ db/seeds.rb:10
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "h6OQyFKX2YSGOPDkXzB3Ug"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "pkupchick@gmail.com"], ["name", "Peter KupchicK"], ["session_token", "h6OQyFKX2YSGOPDkXzB3Ug"], ["password_digest", "$2a$12$FjhSDJlebFKPqvghFENlE.aF.M/Rsva2sg3aWldmJsChTMHHRNbja"], ["created_at", "2020-07-31 15:29:24.859596"], ["updated_at", "2020-07-31 15:29:24.859596"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "agregory@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "YMv8iXaAwNgOt_awBlJT1Q"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:13
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "agregory@gmail.com"], ["name", "Aschel Gregory"], ["session_token", "YMv8iXaAwNgOt_awBlJT1Q"], ["password_digest", "$2a$12$lkxoo4m8Yy3icqoBHmAOAeYzOn/AD.Z57V/ac5ENav8V0l8SSd.Xq"], ["created_at", "2020-07-31 15:29:25.058866"], ["updated_at", "2020-07-31 15:29:25.058866"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "bkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "v2M0pJmqP3FmxAqLt_MjYw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:14
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "bkupchick@gmail.com"], ["name", "Brenda Kupchick"], ["session_token", "v2M0pJmqP3FmxAqLt_MjYw"], ["password_digest", "$2a$12$xl8vDTxT5wY.bhtJBnJQDOTnOAQ4LIwWYv/q8j0MwAiGcpJGP/FVS"], ["created_at", "2020-07-31 15:29:25.279419"], ["updated_at", "2020-07-31 15:29:25.279419"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "daniel@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "XTuiMuf1bi_MgBmjeeq0qw"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:15
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "name", "session_token", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "daniel@gmail.com"], ["name", "Daniel Disimone"], ["session_token", "XTuiMuf1bi_MgBmjeeq0qw"], ["password_digest", "$2a$12$2c3ENaV0zXUecq5H1Yqdse30dVJwWTnnBDIxBK4dYpPWQZyolBpRu"], ["created_at", "2020-07-31 15:29:25.477412"], ["updated_at", "2020-07-31 15:29:25.477412"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 26], ["title", "Yoga Classes"], ["description", "Come learn the healing properties of Yoga with top instructor Aschel Gregory"], ["price", 50], ["location", "Los Angeles, CA"], ["category", "Yoga"], ["max_attendees", 30], ["created_at", "2020-07-31 15:29:25.489141"], ["updated_at", "2020-07-31 15:29:25.489141"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 27], ["LIMIT", 1]]
+  ↳ db/seeds.rb:18
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 27], ["title", "Black Lives Matter - CT"], ["description", "Fairfield CT's very own first selectwoman is putting on an event to show her support for the BLM movement"], ["price", 0], ["location", "Fairfield, CT"], ["category", "politics"], ["max_attendees", 999999], ["created_at", "2020-07-31 15:29:25.492341"], ["updated_at", "2020-07-31 15:29:25.492341"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:19
+  [1m[36mEvent Create (0.2ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 25], ["title", "Chance the Rapper - Mystery Tour - 2020"], ["description", "Come see chance the rapper at the hammerstein ballroom in NYC this thursday!"], ["price", 50], ["location", "New York, NY"], ["category", "Music"], ["max_attendees", 820], ["created_at", "2020-07-31 15:29:25.495210"], ["updated_at", "2020-07-31 15:29:25.495210"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ db/seeds.rb:20
+  [1m[36mEvent Create (0.3ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 25], ["title", "How to BBQ"], ["description", "Bring your appetite and meats and learn how to cookd like the pros"], ["price", 0], ["location", "Portland, MA"], ["category", "Food"], ["max_attendees", 10], ["created_at", "2020-07-31 15:29:25.498014"], ["updated_at", "2020-07-31 15:29:25.498014"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20
+Started GET "/api/verify_user?user%5Bemail%5D=pkupchick%40gmail.com" for ::1 at 2020-07-31 11:29:28 -0400
+Processing by Api::UsersController#verify as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:28
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:29:29 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 11:29:31 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.2ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["updated_at", "2020-07-31 15:29:31.226734"], ["id", 25]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.0ms)
+Completed 200 OK in 211ms (Views: 5.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 11:29:32 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2020-07-31 11:29:34 -0400
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "dU0vSfsIDElcp8avVnHsKg"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "mh8bCVoWEYe48aLYfVYDxw"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "mh8bCVoWEYe48aLYfVYDxw"], ["updated_at", "2020-07-31 15:29:34.678978"], ["id", 25]]
+  ↳ app/models/user.rb:52
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:29:39 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (18.2ms)
+Completed 200 OK in 31ms (Views: 19.8ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 11:33:29 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (4.8ms)
+Completed 200 OK in 15ms (Views: 11.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 11:57:39 -0400
+
+AbstractController::ActionNotFound - The action 'create' could not be found for Api::EventsController:
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 11:59:41 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"user_id"=>"25"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:02:00 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"user_id"=>"25"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::InvalidAuthenticityToken - ActionController::InvalidAuthenticityToken:
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:03:00 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"user_id"=>"25"}
+Completed 400 Bad Request in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::ParameterMissing - param is missing or the value is empty: event:
+  app/controllers/api/events_controller.rb:19:in `event_params'
+  app/controllers/api/events_controller.rb:12:in `create'
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:03:52 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"title"=>"\"Fun with bob\""}, "user_id"=>"25"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:12
+Completed 422 Unprocessable Entity in 21ms (ActiveRecord: 8.6ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Host must exist:
+  app/controllers/api/events_controller.rb:12:in `create'
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:06:47 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"host_id"=>"25", "title"=>"Hunting with Jim", "description"=>"Jim will take duck hunting, it'll be a blast", "price"=>"30", "location"=>"Greenville, AL", "category"=>"Hunting", "max_attendees"=>"5"}, "user_id"=>"25"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[36mEvent Create (1.1ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 25], ["title", "Hunting with Jim"], ["description", "Jim will take duck hunting, it'll be a blast"], ["price", 30], ["location", "Greenville, AL"], ["category", "Hunting"], ["max_attendees", 5], ["created_at", "2020-07-31 16:06:47.449861"], ["updated_at", "2020-07-31 16:06:47.449861"]]
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:12
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 8.7ms)
+
+
+
+ActionView::MissingTemplate - Missing template api/events/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/Users/pure/Desktop/boredom_breakers/app/views"
+:
+  app/controllers/api/events_controller.rb:13:in `create'
+
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:10:07 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"host_id"=>"25", "title"=>"Clubbing Seals", "description"=>"Jim will take clubbing seal pups, it'll be a blast", "price"=>"30", "location"=>"Greenville, AL", "category"=>"Hunting", "max_attendees"=>"5"}, "user_id"=>"25"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[36mEvent Create (0.4ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["host_id", 25], ["title", "Clubbing Seals"], ["description", "Jim will take clubbing seal pups, it'll be a blast"], ["price", 30], ["location", "Greenville, AL"], ["category", "Hunting"], ["max_attendees", 5], ["created_at", "2020-07-31 16:10:07.344708"], ["updated_at", "2020-07-31 16:10:07.344708"]]
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:12
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/show.json.jbuilder (1.7ms)
+Completed 200 OK in 41ms (Views: 9.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 12:18:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 324ms (Views: 321.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 12:18:16 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (7.8ms)
+Completed 200 OK in 16ms (Views: 12.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/users/25/events" for ::1 at 2020-07-31 12:42:26 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"host_id"=>"47", "title"=>"Clubbing Seals", "description"=>"Jim will take clubbing seal pups, it'll be a blast", "price"=>"30", "location"=>"Greenville, AL", "category"=>"Hunting", "max_attendees"=>"5"}, "user_id"=>"25"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/events_controller.rb:12
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.9ms)
+
+
+
+ActiveRecord::RecordInvalid - Validation failed: Host must exist:
+  app/controllers/api/events_controller.rb:12:in `create'
+
+Started DELETE "/api/users/25/events" for ::1 at 2020-07-31 12:44:57 -0400
+  
+ActionController::RoutingError (No route matches [DELETE] "/api/users/25/events"):
+  
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started DELETE "/api/users/25/events/12" for ::1 at 2020-07-31 12:46:11 -0400
+
+SyntaxError - syntax error, unexpected ':', expecting keyword_end
+        render: index
+              ^:
+  app/controllers/api/events_controller.rb:19:in `'
+
+Started DELETE "/api/users/25/events/12" for ::1 at 2020-07-31 12:46:23 -0400
+Processing by Api::EventsController#destroy as JSON
+  Parameters: {"event"=>{"host_id"=>"25", "title"=>"Clubbing Seals", "description"=>"Jim will take clubbing seal pups, it'll be a blast", "price"=>"30", "location"=>"Greenville, AL", "category"=>"Hunting", "max_attendees"=>"5"}, "user_id"=>"25", "id"=>"12"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:18
+  [1m[36mEvent Destroy (2.0ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/api/events_controller.rb:18
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:18
+  Rendering api/events/index.json.jbuilder
+  Rendered api/events/index.json.jbuilder (4.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 14.9ms)
+
+
+
+ActionView::Template::Error - undefined method `each' for nil:NilClass:
+  app/views/api/events/index.json.jbuilder:1:in `view template'
+  app/controllers/api/events_controller.rb:19:in `destroy'
+
+Started GET "/" for ::1 at 2020-07-31 13:06:21 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 46ms (Views: 38.6ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:06:21 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (9.8ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+Started GET "/" for ::1 at 2020-07-31 13:15:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 308ms (Views: 305.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:24:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:24:07 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (10.4ms)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:25:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 317ms (Views: 313.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:25:02 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.6ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (17.7ms)
+Completed 200 OK in 32ms (Views: 27.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:25:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 357ms (Views: 354.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:25:48 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (28.2ms)
+Completed 200 OK in 50ms (Views: 42.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:26:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 509ms (Views: 504.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:26:15 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.8ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.9ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.3ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (20.4ms)
+Completed 200 OK in 43ms (Views: 34.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:26:31 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 360ms (Views: 357.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:26:31 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.4ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/index.json.jbuilder (17.1ms)
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:27:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 289ms (Views: 286.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-07-31 13:27:06 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:1
+  Rendered api/events/_event.json.jbuilder (0.7ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/_event.json.jbuilder (0.2ms)
+  Rendered api/events/_event.json.jbuilder (0.1ms)
+  Rendered api/events/index.json.jbuilder (15.8ms)
+Completed 200 OK in 32ms (Views: 27.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:29:15 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 342ms (Views: 339.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:29:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered static_pages/root.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 288ms (Views: 285.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/api/session" for ::1 at 2020-07-31 13:30:00 -0400
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"pkupchick@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "pkupchick@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:32
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "pkupchick@gmail.com"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["id", 25], ["LIMIT", 1]]
+  ↳ app/models/user.rb:52
+  [1m[36mUser Update (0.4ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["updated_at", "2020-07-31 17:30:00.519296"], ["id", 25]]
+  ↳ app/models/user.rb:52
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:52
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (1.2ms)
+Completed 200 OK in 225ms (Views: 6.9ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:30:43 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 37ms (Views: 34.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:42:40 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 438ms (Views: 433.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:43:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 347ms (Views: 344.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:43:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 98ms (Views: 94.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:44:18 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 124ms (Views: 119.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:44:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.6ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:46:28 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (8.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 505ms (Views: 492.6ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:46:47 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 362ms (Views: 359.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:46:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 327ms (Views: 324.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 13:58:25 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:00:54 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 336ms (Views: 333.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:01:04 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.7ms)
+  Rendered static_pages/root.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 403ms (Views: 398.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:01:23 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 310ms (Views: 307.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:02:02 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 46ms (Views: 42.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:02:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 302ms (Views: 299.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:03:09 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 377ms (Views: 375.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:07:26 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 340ms (Views: 337.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-31 14:07:48 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "vFL5IvdCiTmvfGlaPdyxhw"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.3ms)
+  Rendered static_pages/root.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 315ms (Views: 307.3ms | ActiveRecord: 0.3ms)
+
+

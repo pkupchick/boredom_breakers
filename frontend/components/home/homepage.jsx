@@ -9,24 +9,26 @@ class HomePage extends React.Component {
 
     componentDidMount() {
         this.props.fetchEvents();
-        debugger;
     }
 
     events() {
         const events = this.props.events;
-        const eventsArray = Object.values(events);
-        eventsArray.map((event, idx) => {
+        let eventsArray = Object.values(events);
+        eventsArray = eventsArray.map((event, idx) => {
             return(
-                <ul>
-                    <li key={idx}>{event.title}</li>
-                </ul>
+                <>
+                    <h3 className="event-title">{event.title}</h3>
+                    <p key={idx} className="event-description">{event.description}</p>
+                </>
             )
         })
+        
+        return eventsArray;
     }
 
     render() {
         return (
-            <div>
+            <div className="events-container">
                 {this.events()}
             </div>
         )
