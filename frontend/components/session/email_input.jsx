@@ -72,7 +72,7 @@ class EmailInput extends React.Component {
                 Get Started
               </button>
             </form>
-            <br />
+            <br/>
             <button onClick={this.handleDemoSubmit} className="login-button">
               Demo Login
             </button>

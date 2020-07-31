@@ -2,9 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: auto;
+}
+
+.header-container {
+    display: flex;
+    // justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    height: inherit;
+    width: 100vw;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 header {
-    text-align: center;
-    height: 60px;
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    justify-content: center;
 }
 
 .dropbtn {
@@ -13,30 +37,42 @@ header {
   font-size: 16px;
   border: none;
   cursor: pointer;
-  z-index: 3;
 }
 
-.dropbtn > img {
-    z-index: -5;
+.pos-ab {
+    z-index: -4;
+    height: 50px;
+    width: 50px;
 }
 
 .dropbtn:hover {
+    opacity: .5;
     background-color:#F7F6F9;
     cursor: pointer;
 }
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+    position: relative;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    font-size: 14px;
+    color: black;
+    letter-spacing: .2;
+    // height: 100%;
+    width: 60px;
 }
 
 .dropdown-content {
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  right: 10px;
+    position: absolute;
+    background-color: white;
+    min-width: 270px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 50px;
+    text-align: left;
+    font-family: initial;
 }
 
 .dropdown-content a {
@@ -48,18 +84,6 @@ header {
 
 .dropdown-content a:hover {
     background-color: #F7F6F9;
-}
-
-.welcome-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    float: right;
-    font-size: 14px;
-    color: black;
-    letter-spacing: .2;
-    height: 50px;
-    width: 60px;
 }
 
 .show {display:block;}
@@ -182,12 +206,21 @@ input {
     width: 50px;
 }
 
-.logo-right img {
+.logo-right {
     display: flex;
-    float: left;
+    // float: left;
+    justify-content: center;
+    align-items: center;
+    // width: 110px;
+    // height: auto;
+    // padding-top: 10px;
+}
+.logo-right img {
+//     display: flex;
+//     float: left;
     width: 110px;
     height: auto;
-    padding-top: 10px;
+//     padding-top: 10px;
 }
 
  .errors-list {

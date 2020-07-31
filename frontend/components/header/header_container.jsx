@@ -25,22 +25,34 @@ class Header extends React.Component {
         this.showDropDown();
     }
 
+    headerReturn() {
+        return (
+            <div>
+                <p>Lets set it up like this</p>
+            </div>
+        )
+    }
+
     render() {
         const { currentUser } = this.props;
         let headerComponent = null;
 
         let dropDown = (
-            <div className="dropdown">
-                <img src="http://yogapattern.com/logged-in-guy.png" 
-                onClick={this.handleDropDown} 
-                className="dropbtn"
-                value="drop-down-now" />
-                <div id="myDropdown" className="dropdown-content hidden">
+            // <div className="dropdown">
+            <>
+                <a
+                    className="dropbtn"
+                    value="drop-down-now">
+                    <img src="http://yogapattern.com/lil-guy.png" 
+                    className="pos-ab"
+                    />
+                </a>
+                <div id="myDropdown" className="dropdown-content hidden" onClick={this.handleDropDown}>
                     <a onClick={this.props.logout}>Log Out</a>
                     <a href="#">Link 2</a>
                     <a href="#">Link 3</a>
                 </div>
-            </div>
+            </>
         )
         if (!currentUser.name) {
             headerComponent = (
@@ -57,7 +69,7 @@ class Header extends React.Component {
                     <div className="logo-right">
                         <Link to="/"><img src="http://yogapattern.com/e-brite.png" /></Link>
                     </div>
-                    <div className="welcome-header">
+                    <div className="dropdown">
                         {dropDown}
                     </div>
                 </div>
@@ -65,10 +77,10 @@ class Header extends React.Component {
         }
 
         return (
-            <div>
-                {headerComponent}
-            </div>
-        )
+          <div>
+            {headerComponent}
+          </div>
+        );
     };
 };
 

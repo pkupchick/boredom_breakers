@@ -18,8 +18,3 @@ export const showDropDown = () => {
 export const hideDropDown = () => {
     $('.dropdown-content').addClass('hidden')
 }
-
-// handleDropDown(e) {
-//     e.preventDefault();
-//     this.showDropDown();
-// }
