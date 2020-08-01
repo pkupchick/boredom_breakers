@@ -19,10 +19,11 @@ class HomePage extends React.Component {
                 <>
                     <h3 className="event-date-time">{event.event_start} - {event.event_start_time}</h3>
                     <h3 key={idx} className="event-description">{event.title}</h3>
+                    <img src={event.photoUrl} alt=""/>
                 </>
             )
         })
-        
+        debugger;
         return eventsArray;
     }
 

@@ -16,6 +16,8 @@ export const createEvent = eventForm => (
     $.ajax({
         method: "POST",
         url: "/api/events",
-        data: {event: eventForm},
+        data: eventForm,
+        contentType: false,
+        processData: false
     })
 )

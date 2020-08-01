@@ -17,9 +17,11 @@ class EventForm extends React.Component {
             event_start: "",
             event_end: "",
             event_start_time: "",
-            event_end_time: ""
+            event_end_time: "",
+            photoFile: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
     }
 
     handleInput(type) {
@@ -30,7 +32,24 @@ class EventForm extends React.Component {
 
     handleSubmit(e) {
         e.preventDefault();
-        this.props.createEvent(this.state);
+        const formData = new FormData();
+        formData.append('event[host_id', this.state.host_id),
+        formData.append('event[title]', this.state.title);
+        formData.append('event[description]', this.state.description);
+        formData.append('event[price]', this.state.price);
+        formData.append('event[location]', this.state.location);
+        formData.append('event[category]', this.state.category);
+        formData.append('event[max_attendees]', this.state.max_attendees);
+        formData.append('event[event_start]', this.state.event_start);
+        formData.append('event[event_end]', this.state.event_end);
+        formData.append('event[event_start_time]', this.state.event_start_time);
+        formData.append('event[event_end_time]', this.state.event_end_time);
+        formData.append('event[photo]', this.state.photoFile);
+        this.props.createEvent(formData);
+    }
+
+    handleFile(e) {
+        this.setState({photoFile: e.currentTarget.files[0]});
     }
 
 
@@ -170,6 +189,12 @@ class EventForm extends React.Component {
                             />
                             <br />
                             <br />
+                            <input 
+                                type="file"
+                                onChange={this.handleFile}
+                            />
+                            <br/>
+                            <br/>
                         <button className="login-button" onClick={this.handleSubmit}>Save &amp; Continue</button>
                     </form>
                 </div>
