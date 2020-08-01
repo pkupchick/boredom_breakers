@@ -23,7 +23,6 @@ class HomePage extends React.Component {
                 </>
             )
         })
-        debugger;
         return eventsArray;
     }
 

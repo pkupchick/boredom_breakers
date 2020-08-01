@@ -8,7 +8,7 @@ export const fetchEvents = () => (
 export const fetchEvent = id => (
     $.ajax({
         method: "GET",
-        url: `/api/events/${id}`
+        url: `/api/events/${id}`,
     })
 );
 
@@ -21,3 +21,20 @@ export const createEvent = eventForm => (
         processData: false
     })
 )
+
+export const updateEvent = (event) => {
+    return $.ajax({
+        method: "PATCH",
+        url: `api/events/${event.get("id")}`,
+        data: event,
+        contentType: false,
+        processData: false
+    });
+}
+
+export const deleteEvent = (id) => {
+    return $.ajax({
+        method: "DELETE",
+        url: `api/events/${id}`
+    });
+}

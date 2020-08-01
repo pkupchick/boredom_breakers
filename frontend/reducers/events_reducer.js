@@ -9,7 +9,7 @@ const eventsReducer = (state = {}, action) => {
         case RECEIVE_EVENTS:
             return action.events;
         case RECEIVE_EVENT:
-            const newEvent = { [action.event.id]: action.event };
+            const newEvent = action.event
             return Object.assign({}, state, newEvent);
         default:
             return state;

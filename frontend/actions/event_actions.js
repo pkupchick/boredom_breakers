@@ -20,7 +20,7 @@ export const fetchEvents = () => (dispatch) =>
 );
 
 export const fetchEvent = id => (dispatch) => (
-    APIEventUtil.fetchEvent(id).then(bench => (
+    APIEventUtil.fetchEvent(id).then(event => (
         dispatch(receiveEvent(event))
     ))
 );
@@ -30,3 +30,15 @@ export const createEvent = event => dispatch => (
         dispatch(receiveEvent(event))
     ))
 );
+
+export const updateEvent = (event) => dispatch => {
+    return APIEventUtil.updateEvent(event)
+        .then(event => dispatch(receiveEvent(event)),
+        err => dispatch(receiveErrors(err.responseJSON)))
+}
+
+export const deleteEvent = (id) => dispatch => {
+    return APIEventUtil.deleteEvent(id)
+        .then(id => dispatch(removeEvent(id)),
+        err => dispatch(receiveErrors(err.responseJSON)))
+}
