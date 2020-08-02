@@ -11,33 +11,23 @@ class EventShow extends React.Component {
     this.props.fetchEvent(this.props.match.params.eventId);
   }
 
-  eventDisplay() {
-    return <div>Jill</div>;
+  componentDidUpdate(){
+      debugger;
   }
 
-  events() {
-    const events = this.props.events;
-    let eventsArray = Object.values(events);
-    eventsArray = eventsArray.map((event, idx) => {
-      return (
-        <>
-          <h3 className="event-date-time">
-            {event.event_start} - {event.event_start_time}
-          </h3>
-          <h3 key={idx} className="event-description">
-            {event.title}
-          </h3>
-          <img src={event.photoUrl} alt="" />
-        </>
-      );
-    });
-    return eventsArray;
+  eventDisplay() {
+    return  (
+        <div>
+            {this.props.events.title}
+            <img src={this.props.events.photoUrl} />
+        </div>
+    )   
   }
 
   render() {
     return (
       <div>
-        {this.props.events.title}
+        {this.eventDisplay()}
       </div>
     );
   }
