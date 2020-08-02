@@ -85,7 +85,6 @@ class Header extends React.Component {
                   </Link>
                 <div>
                 <div className="searchContainer">
-                      <i class="fa fa-search searchIcon"></i>
                     <input type="text" className="searchBox" placeholder="Search Events" />
                 </div>
                 </div>

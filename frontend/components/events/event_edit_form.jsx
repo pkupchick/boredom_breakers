@@ -5,7 +5,6 @@ import { fetchEvent, updateEvent } from '../../actions/event_actions';
 class EventEditForm extends React.Component {
     constructor(props) {
         super(props)
-      debugger;
       this.state =  {
         host_id: this.props.currentUser.id,
         title: "",
