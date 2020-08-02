@@ -66,7 +66,14 @@ class Header extends React.Component {
                     <div className="logo-right">
                         <Link to="/"><img src="http://yogapattern.com/e-brite.png" /></Link>
                     </div>
-                    <div className="signin-header"><Link className="no-style" to="/signup">Sign in</Link></div>
+                    <div>
+                      <form className="search-header">
+                        <input type="text" className="search-bar" placeholder="Search Events" />
+                      </form>
+                    </div>
+                    <div className="signin-header">
+                      <Link className="no-style" to="/signup">Sign in</Link>
+                    </div>
                 </div>
             )
         } else {
@@ -76,6 +83,12 @@ class Header extends React.Component {
                   <Link to="/">
                     <img src="http://yogapattern.com/e-brite.png" />
                   </Link>
+                <div>
+                <div className="searchContainer">
+                      <i class="fa fa-search searchIcon"></i>
+                    <input type="text" className="searchBox" placeholder="Search Events" />
+                </div>
+                </div>
                 </div>
                 <div className="dropdown" >
                   {dropDown}

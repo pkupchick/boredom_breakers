@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -50,3 +50,4 @@ const mdp = (dispatch) => {
 }
 
 export default connect(msp, mdp)(EventShow);
+

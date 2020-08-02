@@ -5,8 +5,21 @@ import { fetchEvent, updateEvent } from '../../actions/event_actions';
 class EventEditForm extends React.Component {
     constructor(props) {
         super(props)
-
-        this.state = this.props.events;
+      debugger;
+      this.state =  {
+        host_id: this.props.currentUser.id,
+        title: "",
+        description: "",
+        price: "",
+        location: "",
+        category: "",
+        max_attendees: "",
+        event_start: "",
+        event_end: "",
+        event_start_time: "",
+        event_end_time: "",
+        photoFile: null
+      }
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
