@@ -3,11 +3,9 @@ Rails.application.routes.draw do
   root to: "static_pages#root"
 
   namespace :api, defaults: { format: :json } do
-    resources :users do
-      resources :events, only: [:edit, :destroy]
-    end
+    resources :users
 
-    resources :events, only: [:index, :show, :create]
+    resources :events
     
     match 'verify_user', to: 'users#verify', via: [:get]
     resource :session, only: [:create, :destroy]

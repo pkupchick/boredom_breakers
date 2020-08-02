@@ -8,6 +8,18 @@
     padding: 0;
 }
 
+.events-container {
+    display: flex;
+    float: left;
+    padding: 10px;
+    width: inherit;
+}
+
+.individual-event {
+    align-items: center;
+    padding: 10px;
+}
+
 .event-form {
     margin: auto;
 }

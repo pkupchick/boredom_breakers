@@ -5,9 +5,14 @@ import {
 
 const eventsReducer = (state = {}, action) => {
     Object.freeze(state)
+    let nextState = {};
     switch(action.type) {
         case RECEIVE_EVENTS:
-            return action.events;
+            let eventsArray = Object.values(action.events);
+            eventsArray.forEach(event => {
+                nextState[event.id] = event;
+            });
+            return nextState;
         case RECEIVE_EVENT:
             const newEvent = action.event
             return Object.assign({}, state, newEvent);

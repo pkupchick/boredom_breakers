@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
+import { Link, NavLink } from 'react-router-dom';
 
 class EventShow extends React.Component {
   constructor(props) {
@@ -11,25 +12,25 @@ class EventShow extends React.Component {
     this.props.fetchEvent(this.props.match.params.eventId);
   }
 
-  componentDidUpdate(){
-      debugger;
-  }
+  componentDidUpdate() {}
 
   eventDisplay() {
-    return  (
-        <div>
-            {this.props.events.title}
-            <img src={this.props.events.photoUrl} />
-        </div>
-    )   
+    return (
+      <div>
+        {this.props.events.title}
+        <NavLink to={`/events/${this.props.events.id}/edit`}>
+          <img src={this.props.events.photoUrl} alt="" />
+        </NavLink>
+      </div>
+    );
   }
 
   render() {
     return (
-      <div>
+      <div className="event-show">
         {this.eventDisplay()}
       </div>
-    );
+    )
   }
 }
 

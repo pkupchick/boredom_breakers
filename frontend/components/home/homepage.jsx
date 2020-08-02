@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
+import {Link} from 'react-router-dom';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -15,13 +16,19 @@ class HomePage extends React.Component {
         const events = this.props.events;
         let eventsArray = Object.values(events);
         eventsArray = eventsArray.map((event, idx) => {
-            return(
-                <>
-                    <h3 className="event-date-time">{event.event_start} - {event.event_start_time}</h3>
-                    <h3 key={idx} className="event-description">{event.title}</h3>
-                    <img src={event.photoUrl} alt=""/>
-                </>
-            )
+            return (
+              <div className="individual-event">
+                <h3 className="event-date-time">
+                  {event.event_start} - {event.event_start_time}
+                </h3>
+                <h3 key={idx} className="event-description">
+                  {event.title}
+                </h3>
+                <Link to={`events/${event.id}/`}>
+                  <img src={event.photoUrl} alt="" />
+                </Link>
+              </div>
+            );
         })
         return eventsArray;
     }
