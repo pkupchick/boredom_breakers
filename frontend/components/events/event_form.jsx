@@ -48,6 +48,7 @@ class EventForm extends React.Component {
         formData.append("event[event_end_time]", this.state.event_end_time);
         formData.append("event[photo]", this.state.photoFile);
         this.props.createEvent(formData);
+        this.props.history.push(`/`);
     }
 
     handleFile(e) {

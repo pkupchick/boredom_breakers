@@ -40896,3 +40896,891 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/" for ::1 at 2020-08-02 16:31:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (1.0ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 116ms (Views: 113.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-08-02 16:31:59 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 42.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/api/events" for ::1 at 2020-08-02 16:33:08 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"host_id"=>"41", "title"=>"Lebrons Basketball Camp", "description"=>"Come get dunked on six hours a day by Lebron James", "price"=>"1200", "location"=>"Los Angeles, CA", "category"=>"Sports & Fitness", "max_attendees"=>"999", "event_start"=>"2021-03-20", "event_end"=>"2021-03-22", "event_start_time"=>"16:00", "event_end_time"=>"20:00", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb408351e70 @tempfile=#<Tempfile:/var/folders/_z/my9ncnh914n212mcwh75mzbw0000gn/T/RackMultipart20200802-5553-16vhovu.jpg>, @original_filename="lebron.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[photo]\"; filename=\"lebron.jpg\"\r\nContent-Type: image/jpeg\r\n">}}
+[36m  S3 Storage (504.6ms) [0m[32mUploaded file to key: yeoHz7guYFyJDwsYVSr45WE9 (checksum: usxFla4hozljK4pqzKTKJw==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mActiveStorage::Blob Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "yeoHz7guYFyJDwsYVSr45WE9"], ["filename", "lebron.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 13496], ["checksum", "usxFla4hozljK4pqzKTKJw=="], ["created_at", "2020-08-02 20:33:08.726604"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."title" = $1 LIMIT $2[0m  [["title", "Lebrons Basketball Camp"], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Create (0.6ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at", "event_start", "event_end", "event_start_time", "event_end_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["host_id", 41], ["title", "Lebrons Basketball Camp"], ["description", "Come get dunked on six hours a day by Lebron James"], ["price", 1200], ["location", "Los Angeles, CA"], ["category", "Sports & Fitness"], ["max_attendees", 999], ["created_at", "2020-08-02 20:33:08.734816"], ["updated_at", "2020-08-02 20:33:08.734816"], ["event_start", "2021-03-20"], ["event_end", "2021-03-22"], ["event_start_time", "16:00"], ["event_end_time", "20:00"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mActiveStorage::Attachment Create (1.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Event"], ["record_id", 41], ["blob_id", 11], ["created_at", "2020-08-02 20:33:08.736700"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Update (0.5ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2020-08-02 20:33:08.738688"], ["id", 41]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 424b3dd1-05b9-4e9d-ba99-bea448018fce) to Async(default) with arguments: #<GlobalID:0x00007fb413791200 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/11>>
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/show.json.jbuilder (1.1ms)
+Completed 200 OK in 530ms (Views: 8.4ms | ActiveRecord: 5.8ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce] Performing ActiveStorage::AnalyzeJob (Job ID: 424b3dd1-05b9-4e9d-ba99-bea448018fce) from Async(default) with arguments: #<GlobalID:0x00007fb41368d188 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/11>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce] [36m  S3 Storage (120.3ms) [0m[34mDownloaded file from key: yeoHz7guYFyJDwsYVSr45WE9[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 11]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [424b3dd1-05b9-4e9d-ba99-bea448018fce] Performed ActiveStorage::AnalyzeJob (Job ID: 424b3dd1-05b9-4e9d-ba99-bea448018fce) from Async(default) in 137.05ms
+Started GET "/api/events" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 33], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (45.1ms)
+Completed 200 OK in 58ms (Views: 44.9ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c3a8e6f9265e99152206a00ee2483acb0a2027a/lil-guy.png" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c3a8e6f9265e99152206a00ee2483acb0a2027a", "filename"=>"lil-guy"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8365fbb5900d772380cfdbd77677d8fa753151af/F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F.heic" for ::1 at 2020-08-02 16:33:33 -0400
+  [1m[36mActiveStorage::Blob Load (12.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--350fab11bbb48cd848fa8785ea91c7e2bc286951/badger.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as 
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8365fbb5900d772380cfdbd77677d8fa753151af", "filename"=>"F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebf74f9fef333c7d1c97ec1b5b1408152ffb218b/welcome-guy.png" for ::1 at 2020-08-02 16:33:33 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--10c5254c52dfd82721b269d5e05a90cb650ba0a4/bbq.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+[36m  S3 Storage (1.9ms) [0m[34mGenerated URL for file at key: 1CYji8UkG7YDYH24Bkc9xLpL (https://boredom-breakers-dev.s3.amazonaws.com/1CYji8UkG7YDYH24Bkc9xLpL?response-content-disposition=inline%3B%20filename%3D%22lil-guy.png%22%3B%20filename%2A%3DUTF-8%27%27lil-guy.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1b01c979ac14b509c412125bbffb15d11eee06344acd40e66378931e0572d850)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/1CYji8UkG7YDYH24Bkc9xLpL?response-content-disposition=inline%3B%20filename%3D%22lil-guy.png%22%3B%20filename%2A%3DUTF-8%27%27lil-guy.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=1b01c979ac14b509c412125bbffb15d11eee06344acd40e66378931e0572d850
+Completed 302 Found in 22ms (ActiveRecord: 12.1ms)
+
+
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.4ms) [0m[34mGenerated URL for file at key: bLJ7VHw2tjeVVw6KowQjcHpx (https://boredom-breakers-dev.s3.amazonaws.com/bLJ7VHw2tjeVVw6KowQjcHpx?response-content-disposition=attachment%3B%20filename%3D%22F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F.heic%22%3B%20filename%2A%3DUTF-8%27%27F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F.heic&response-content-type=image%2Fheic&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ed98e22c834e1a31abf8e79956d0f5823242ef581f3de4cc6c1d097dc2dc28a7)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/bLJ7VHw2tjeVVw6KowQjcHpx?response-content-disposition=attachment%3B%20filename%3D%22F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F.heic%22%3B%20filename%2A%3DUTF-8%27%27F0ABA81B-BAB8-4E5C-B8B2-40C8C4B4FB7F.heic&response-content-type=image%2Fheic&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=ed98e22c834e1a31abf8e79956d0f5823242ef581f3de4cc6c1d097dc2dc28a7
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+Processing by ActiveStorage::BlobsController#show as PNG
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ebf74f9fef333c7d1c97ec1b5b1408152ffb218b", "filename"=>"welcome-guy"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--10c5254c52dfd82721b269d5e05a90cb650ba0a4", "filename"=>"bbq"}
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--350fab11bbb48cd848fa8785ea91c7e2bc286951", "filename"=>"badger"}
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: ZGmxFC78eBuvHy9is5geeg4R (https://boredom-breakers-dev.s3.amazonaws.com/ZGmxFC78eBuvHy9is5geeg4R?response-content-disposition=inline%3B%20filename%3D%22badger.jpg%22%3B%20filename%2A%3DUTF-8%27%27badger.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c6e5c93685eb6c8baeccf337b8c8a8f66a5ffaf3cec703dcb5f190078fca25d3)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/ZGmxFC78eBuvHy9is5geeg4R?response-content-disposition=inline%3B%20filename%3D%22badger.jpg%22%3B%20filename%2A%3DUTF-8%27%27badger.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=c6e5c93685eb6c8baeccf337b8c8a8f66a5ffaf3cec703dcb5f190078fca25d3
+Completed 302 Found in 11ms (ActiveRecord: 3.2ms)
+
+
+[36m  S3 Storage (1.5ms) [0m[34mGenerated URL for file at key: K9VVqsNxncp9ErrgA362fUik (https://boredom-breakers-dev.s3.amazonaws.com/K9VVqsNxncp9ErrgA362fUik?response-content-disposition=inline%3B%20filename%3D%22welcome-guy.png%22%3B%20filename%2A%3DUTF-8%27%27welcome-guy.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=80bfb0a42b75d72b935a31a59411a05a831530a24dea5c7176d2768dff24bbca)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/K9VVqsNxncp9ErrgA362fUik?response-content-disposition=inline%3B%20filename%3D%22welcome-guy.png%22%3B%20filename%2A%3DUTF-8%27%27welcome-guy.png&response-content-type=image%2Fpng&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=80bfb0a42b75d72b935a31a59411a05a831530a24dea5c7176d2768dff24bbca
+Completed 302 Found in 13ms (ActiveRecord: 1.3ms)
+
+
+[36m  S3 Storage (1.2ms) [0m[34mGenerated URL for file at key: BgLeuCFwWyStnLmReG1m9SMX (https://boredom-breakers-dev.s3.amazonaws.com/BgLeuCFwWyStnLmReG1m9SMX?response-content-disposition=inline%3B%20filename%3D%22bbq.jpg%22%3B%20filename%2A%3DUTF-8%27%27bbq.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a5c303fda52f869be1be2f49a227e8213ef53948d44dfb9984011883b7e60e5f)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/BgLeuCFwWyStnLmReG1m9SMX?response-content-disposition=inline%3B%20filename%3D%22bbq.jpg%22%3B%20filename%2A%3DUTF-8%27%27bbq.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=a5c303fda52f869be1be2f49a227e8213ef53948d44dfb9984011883b7e60e5f
+Completed 302 Found in 14ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b249cfe8b0cb2aab685789519b40e348dbbfb95/dan-guitar.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b249cfe8b0cb2aab685789519b40e348dbbfb95", "filename"=>"dan-guitar"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: JZeVPnrRgiKWmqKpA5sfjfPo (https://boredom-breakers-dev.s3.amazonaws.com/JZeVPnrRgiKWmqKpA5sfjfPo?response-content-disposition=inline%3B%20filename%3D%22dan-guitar.jpg%22%3B%20filename%2A%3DUTF-8%27%27dan-guitar.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9959d18f7a766206fc57a5af9e3bbc088be56ab62fc5196673c506d4227df48e)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/JZeVPnrRgiKWmqKpA5sfjfPo?response-content-disposition=inline%3B%20filename%3D%22dan-guitar.jpg%22%3B%20filename%2A%3DUTF-8%27%27dan-guitar.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=9959d18f7a766206fc57a5af9e3bbc088be56ab62fc5196673c506d4227df48e
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff32e1177323b6a86608b21d1fa52604486ff59b/aschel.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff32e1177323b6a86608b21d1fa52604486ff59b", "filename"=>"aschel"}
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: HvSksGEx6bKJiorReK7zmtD4 (https://boredom-breakers-dev.s3.amazonaws.com/HvSksGEx6bKJiorReK7zmtD4?response-content-disposition=inline%3B%20filename%3D%22aschel.jpg%22%3B%20filename%2A%3DUTF-8%27%27aschel.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2eb6382bcf9e8c684f7a0a3eb473ec64eb3fb0147c88649d29fb6c54675f217f)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/HvSksGEx6bKJiorReK7zmtD4?response-content-disposition=inline%3B%20filename%3D%22aschel.jpg%22%3B%20filename%2A%3DUTF-8%27%27aschel.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2eb6382bcf9e8c684f7a0a3eb473ec64eb3fb0147c88649d29fb6c54675f217f
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f3cb6677f246fb4624c262775682008a1f4dcbfe/disco.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f3cb6677f246fb4624c262775682008a1f4dcbfe", "filename"=>"disco"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.6ms) [0m[34mGenerated URL for file at key: j6uRG6cZ8EaUdXUvJs2BqtaD (https://boredom-breakers-dev.s3.amazonaws.com/j6uRG6cZ8EaUdXUvJs2BqtaD?response-content-disposition=inline%3B%20filename%3D%22disco.jpg%22%3B%20filename%2A%3DUTF-8%27%27disco.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b6da7cc1fac6c46676134ed6029fb9c5b0fb0837baaf1caaef9ba225a4de1346)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/j6uRG6cZ8EaUdXUvJs2BqtaD?response-content-disposition=inline%3B%20filename%3D%22disco.jpg%22%3B%20filename%2A%3DUTF-8%27%27disco.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=b6da7cc1fac6c46676134ed6029fb9c5b0fb0837baaf1caaef9ba225a4de1346
+Completed 302 Found in 7ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18d22edcc89bfb5b8639fb9b8466b7141ddd6b33/lebron.jpg" for ::1 at 2020-08-02 16:33:33 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18d22edcc89bfb5b8639fb9b8466b7141ddd6b33", "filename"=>"lebron"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.3ms) [0m[34mGenerated URL for file at key: yeoHz7guYFyJDwsYVSr45WE9 (https://boredom-breakers-dev.s3.amazonaws.com/yeoHz7guYFyJDwsYVSr45WE9?response-content-disposition=inline%3B%20filename%3D%22lebron.jpg%22%3B%20filename%2A%3DUTF-8%27%27lebron.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=e2ee45879b36d2e1e44ba21e893d857a70538727509bf555817e3e7b99ea7a34)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/yeoHz7guYFyJDwsYVSr45WE9?response-content-disposition=inline%3B%20filename%3D%22lebron.jpg%22%3B%20filename%2A%3DUTF-8%27%27lebron.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T203333Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=e2ee45879b36d2e1e44ba21e893d857a70538727509bf555817e3e7b99ea7a34
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (1.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 32], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 6ff97a91-1cfc-49b6-bf2e-23191bb65bf2) to Async(default) with arguments: #<GlobalID:0x00007fca58df02f8 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/2>>
+Started GET "/" for ::1 at 2020-08-02 16:35:01 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.8ms)
+  Rendered static_pages/root.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 62ms (Views: 55.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:35:01 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (1.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 33], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (4.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (2.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (3.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (6.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (70.3ms)
+Completed 200 OK in 87ms (Views: 56.7ms | ActiveRecord: 25.2ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2] Performing ActiveStorage::PurgeJob (Job ID: 6ff97a91-1cfc-49b6-bf2e-23191bb65bf2) from Async(default) with arguments: #<GlobalID:0x00007fca58fb61f0 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/2>>
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2]   [1m[36mActiveStorage::Attachment Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2]   [1m[36mActiveStorage::Blob Destroy (0.8ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 2]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 2], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2] [36m  S3 Storage (360.6ms) [0m[31mDeleted file from key: 1CYji8UkG7YDYH24Bkc9xLpL[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2] [36m  S3 Storage (66.4ms) [0m[31mDeleted files by key prefix: variants/1CYji8UkG7YDYH24Bkc9xLpL/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [6ff97a91-1cfc-49b6-bf2e-23191bb65bf2] Performed ActiveStorage::PurgeJob (Job ID: 6ff97a91-1cfc-49b6-bf2e-23191bb65bf2) from Async(default) in 454.33ms
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 33], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.4ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: 99de9cef-1b79-4c9b-afad-aeeeacddd470) to Async(default) with arguments: #<GlobalID:0x00007fca5a9801f8 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/4>>
+  [1m[36mActiveStorage::Blob Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470] Performing ActiveStorage::PurgeJob (Job ID: 99de9cef-1b79-4c9b-afad-aeeeacddd470) from Async(default) with arguments: #<GlobalID:0x00007fca58a19670 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/4>>
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470]   [1m[36mActiveStorage::Attachment Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 4], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470]   [1m[36mActiveStorage::Blob Destroy (1.0ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 4]]
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470]   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470]   [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 4], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470] [36m  S3 Storage (286.9ms) [0m[31mDeleted file from key: bLJ7VHw2tjeVVw6KowQjcHpx[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470] [36m  S3 Storage (69.2ms) [0m[31mDeleted files by key prefix: variants/bLJ7VHw2tjeVVw6KowQjcHpx/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [99de9cef-1b79-4c9b-afad-aeeeacddd470] Performed ActiveStorage::PurgeJob (Job ID: 99de9cef-1b79-4c9b-afad-aeeeacddd470) from Async(default) in 364.5ms
+Started GET "/" for ::1 at 2020-08-02 16:35:46 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:35:46 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (2.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (3.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (52.5ms)
+Completed 200 OK in 77ms (Views: 57.4ms | ActiveRecord: 14.5ms)
+
+
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Destroy (0.3ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 34], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Destroy (0.3ms)[0m  [1m[31mDELETE FROM "active_storage_attachments" WHERE "active_storage_attachments"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::PurgeJob (Job ID: f9839434-2b6f-4a63-8422-5890861f3f64) to Async(default) with arguments: #<GlobalID:0x00007fca5a652c88 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/5>>
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64] Performing ActiveStorage::PurgeJob (Job ID: f9839434-2b6f-4a63-8422-5890861f3f64) from Async(default) with arguments: #<GlobalID:0x00007fca5baf3c78 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/5>>
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64]   [1m[36mActiveStorage::Attachment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."blob_id" = $1 LIMIT $2[0m  [["blob_id", 5], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64]   [1m[36mActiveStorage::Blob Destroy (0.7ms)[0m  [1m[31mDELETE FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1[0m  [["id", 5]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64]   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64]   [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 5], ["record_type", "ActiveStorage::Blob"], ["name", "preview_image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64] [36m  S3 Storage (289.6ms) [0m[31mDeleted file from key: K9VVqsNxncp9ErrgA362fUik[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64] [36m  S3 Storage (69.7ms) [0m[31mDeleted files by key prefix: variants/K9VVqsNxncp9ErrgA362fUik/[0m
+[ActiveJob] [ActiveStorage::PurgeJob] [f9839434-2b6f-4a63-8422-5890861f3f64] Performed ActiveStorage::PurgeJob (Job ID: f9839434-2b6f-4a63-8422-5890861f3f64) from Async(default) in 366.03ms
+Started GET "/" for ::1 at 2020-08-02 16:36:06 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:36:06 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (2.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (37.3ms)
+Completed 200 OK in 50ms (Views: 38.6ms | ActiveRecord: 8.8ms)
+
+
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" ORDER BY "events"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mEvent Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."title" = $1 AND "events"."id" != $2 LIMIT $3[0m  [["title", "Badger Busters"], ["id", 35], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mEvent Update (0.5ms)[0m  [1m[33mUPDATE "events" SET "title" = $1, "updated_at" = $2 WHERE "events"."id" = $3[0m  [["title", "Badger Busters"], ["updated_at", "2020-08-02 20:36:38.291485"], ["id", 35]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/" for ::1 at 2020-08-02 16:36:45 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 40ms (Views: 36.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:36:45 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (43.0ms)
+Completed 200 OK in 58ms (Views: 49.1ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/" for ::1 at 2020-08-02 16:38:07 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:38:07 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (33.7ms)
+Completed 200 OK in 50ms (Views: 38.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/api/events/38" for ::1 at 2020-08-02 16:38:37 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:8
+  Rendering api/events/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  Rendered api/events/show.json.jbuilder (3.6ms)
+Completed 200 OK in 18ms (Views: 13.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/api/events/38" for ::1 at 2020-08-02 16:38:40 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:8
+  Rendering api/events/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  Rendered api/events/show.json.jbuilder (6.7ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:38:43 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (24.1ms)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/api/events/38" for ::1 at 2020-08-02 16:38:48 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mEvent Load (3.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:8
+  Rendering api/events/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  Rendered api/events/show.json.jbuilder (4.6ms)
+Completed 200 OK in 22ms (Views: 15.6ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:38:50 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (22.2ms)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/api/events/38" for ::1 at 2020-08-02 16:38:53 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:8
+  Rendering api/events/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  Rendered api/events/show.json.jbuilder (6.0ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events/38" for ::1 at 2020-08-02 16:38:54 -0400
+Processing by Api::EventsController#show as JSON
+  Parameters: {"id"=>"38"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:8
+  Rendering api/events/show.json.jbuilder
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/show.json.jbuilder:3
+  Rendered api/events/show.json.jbuilder (4.2ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:38:57 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (20.9ms)
+Completed 200 OK in 37ms (Views: 31.5ms | ActiveRecord: 3.1ms)
+
+
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-08-02 16:52:19 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.4ms)
+  Rendered static_pages/root.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 366ms (Views: 363.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/api/events" for ::1 at 2020-08-02 16:52:19 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (1.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (3.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (46.0ms)
+Completed 200 OK in 61ms (Views: 44.1ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--350fab11bbb48cd848fa8785ea91c7e2bc286951/badger.jpg" for ::1 at 2020-08-02 16:52:19 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--350fab11bbb48cd848fa8785ea91c7e2bc286951", "filename"=>"badger"}
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--10c5254c52dfd82721b269d5e05a90cb650ba0a4/bbq.jpg" for ::1 at 2020-08-02 16:52:19 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f3cb6677f246fb4624c262775682008a1f4dcbfe/disco.jpg" for ::1 at 2020-08-02 16:52:19 -0400
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b249cfe8b0cb2aab685789519b40e348dbbfb95/dan-guitar.jpg" for ::1 at 2020-08-02 16:52:19 -0400
+  [1m[36mActiveStorage::Blob Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (3.1ms) [0m[34mGenerated URL for file at key: ZGmxFC78eBuvHy9is5geeg4R (https://boredom-breakers-dev.s3.amazonaws.com/ZGmxFC78eBuvHy9is5geeg4R?response-content-disposition=inline%3B%20filename%3D%22badger.jpg%22%3B%20filename%2A%3DUTF-8%27%27badger.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2db057962ed820a11462fc81a075d5ba73d02e7c76e39977c1c71c7f2d9f6065)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/ZGmxFC78eBuvHy9is5geeg4R?response-content-disposition=inline%3B%20filename%3D%22badger.jpg%22%3B%20filename%2A%3DUTF-8%27%27badger.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=2db057962ed820a11462fc81a075d5ba73d02e7c76e39977c1c71c7f2d9f6065
+Completed 302 Found in 21ms (ActiveRecord: 8.4ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--10c5254c52dfd82721b269d5e05a90cb650ba0a4", "filename"=>"bbq"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3b249cfe8b0cb2aab685789519b40e348dbbfb95", "filename"=>"dan-guitar"}
+  [1m[36mActiveStorage::Blob Load (2.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.0ms) [0m[34mGenerated URL for file at key: BgLeuCFwWyStnLmReG1m9SMX (https://boredom-breakers-dev.s3.amazonaws.com/BgLeuCFwWyStnLmReG1m9SMX?response-content-disposition=inline%3B%20filename%3D%22bbq.jpg%22%3B%20filename%2A%3DUTF-8%27%27bbq.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=11010e5e69938c79d9670f50a3ebbbfe457ecc88ca517192fe47a1c4f2a0e7a1)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/BgLeuCFwWyStnLmReG1m9SMX?response-content-disposition=inline%3B%20filename%3D%22bbq.jpg%22%3B%20filename%2A%3DUTF-8%27%27bbq.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=11010e5e69938c79d9670f50a3ebbbfe457ecc88ca517192fe47a1c4f2a0e7a1
+  [1m[36mActiveStorage::Blob Load (4.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18d22edcc89bfb5b8639fb9b8466b7141ddd6b33/lebron.jpg" for ::1 at 2020-08-02 16:52:19 -0400
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.0ms) [0m[34mGenerated URL for file at key: JZeVPnrRgiKWmqKpA5sfjfPo (https://boredom-breakers-dev.s3.amazonaws.com/JZeVPnrRgiKWmqKpA5sfjfPo?response-content-disposition=inline%3B%20filename%3D%22dan-guitar.jpg%22%3B%20filename%2A%3DUTF-8%27%27dan-guitar.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=493ce20fabd0153765c30fc45dd9c7f2aeeb57ce99e6b890021580cdc9fd5352)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/JZeVPnrRgiKWmqKpA5sfjfPo?response-content-disposition=inline%3B%20filename%3D%22dan-guitar.jpg%22%3B%20filename%2A%3DUTF-8%27%27dan-guitar.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=493ce20fabd0153765c30fc45dd9c7f2aeeb57ce99e6b890021580cdc9fd5352
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Completed 302 Found in 8ms (ActiveRecord: 2.5ms)
+
+
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f3cb6677f246fb4624c262775682008a1f4dcbfe", "filename"=>"disco"}
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--18d22edcc89bfb5b8639fb9b8466b7141ddd6b33", "filename"=>"lebron"}
+  [1m[36mActiveStorage::Blob Load (2.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.8ms) [0m[34mGenerated URL for file at key: j6uRG6cZ8EaUdXUvJs2BqtaD (https://boredom-breakers-dev.s3.amazonaws.com/j6uRG6cZ8EaUdXUvJs2BqtaD?response-content-disposition=inline%3B%20filename%3D%22disco.jpg%22%3B%20filename%2A%3DUTF-8%27%27disco.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3b8ef28ac47786f529df9ec1dbdda478587b706a99e865f6710a50ff81f7123e)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/j6uRG6cZ8EaUdXUvJs2BqtaD?response-content-disposition=inline%3B%20filename%3D%22disco.jpg%22%3B%20filename%2A%3DUTF-8%27%27disco.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=3b8ef28ac47786f529df9ec1dbdda478587b706a99e865f6710a50ff81f7123e
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.7ms) [0m[34mGenerated URL for file at key: yeoHz7guYFyJDwsYVSr45WE9 (https://boredom-breakers-dev.s3.amazonaws.com/yeoHz7guYFyJDwsYVSr45WE9?response-content-disposition=inline%3B%20filename%3D%22lebron.jpg%22%3B%20filename%2A%3DUTF-8%27%27lebron.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7331181e4bfe2a3211ab6dbdb5855cba1d729ffe7792e8ba83cb479bb84deec0)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/yeoHz7guYFyJDwsYVSr45WE9?response-content-disposition=inline%3B%20filename%3D%22lebron.jpg%22%3B%20filename%2A%3DUTF-8%27%27lebron.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205219Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=7331181e4bfe2a3211ab6dbdb5855cba1d729ffe7792e8ba83cb479bb84deec0
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff32e1177323b6a86608b21d1fa52604486ff59b/aschel.jpg" for ::1 at 2020-08-02 16:52:20 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBEZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff32e1177323b6a86608b21d1fa52604486ff59b", "filename"=>"aschel"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (1.4ms) [0m[34mGenerated URL for file at key: HvSksGEx6bKJiorReK7zmtD4 (https://boredom-breakers-dev.s3.amazonaws.com/HvSksGEx6bKJiorReK7zmtD4?response-content-disposition=inline%3B%20filename%3D%22aschel.jpg%22%3B%20filename%2A%3DUTF-8%27%27aschel.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205220Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=943cab2a95b9edf9368c22af3fdafac5134a5eb0b5fdfd51e3bd9ea78df0b410)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/HvSksGEx6bKJiorReK7zmtD4?response-content-disposition=inline%3B%20filename%3D%22aschel.jpg%22%3B%20filename%2A%3DUTF-8%27%27aschel.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205220Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=943cab2a95b9edf9368c22af3fdafac5134a5eb0b5fdfd51e3bd9ea78df0b410
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-08-02 16:52:30 -0400
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "VR43lRrhLwGyES36TaEx7g"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:6
+  Rendered api/users/_user.json.jbuilder (0.5ms)
+  Rendered static_pages/root.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/api/events" for ::1 at 2020-08-02 16:53:45 -0400
+Processing by Api::EventsController#create as JSON
+  Parameters: {"event"=>{"host_id"=>"41", "title"=>"DeadMouse", "description"=>"Electronic music till your ears bleed", "price"=>"55", "location"=>"Amsterdam", "category"=>"Music", "max_attendees"=>"500", "event_start"=>"2021-03-03", "event_end"=>"2021-03-03", "event_start_time"=>"23:00", "event_end_time"=>"03:00", "photo"=>#<ActionDispatch::Http::UploadedFile:0x00007fb3f7846d88 @tempfile=#<Tempfile:/var/folders/_z/my9ncnh914n212mcwh75mzbw0000gn/T/RackMultipart20200802-5553-1sua3ly.jpg>, @original_filename="concert.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[photo]\"; filename=\"concert.jpg\"\r\nContent-Type: image/jpeg\r\n">}}
+[36m  S3 Storage (1295.0ms) [0m[32mUploaded file to key: VD6Cy7fAbdZYsMZ4B2N9osKa (checksum: Z6dLh6ROXUxT/Mq7ogQHvw==)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "VD6Cy7fAbdZYsMZ4B2N9osKa"], ["filename", "concert.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 58807], ["checksum", "Z6dLh6ROXUxT/Mq7ogQHvw=="], ["created_at", "2020-08-02 20:53:46.910130"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "events" WHERE "events"."title" = $1 LIMIT $2[0m  [["title", "DeadMouse"], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Create (1.1ms)[0m  [1m[32mINSERT INTO "events" ("host_id", "title", "description", "price", "location", "category", "max_attendees", "created_at", "updated_at", "event_start", "event_end", "event_start_time", "event_end_time") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING "id"[0m  [["host_id", 41], ["title", "DeadMouse"], ["description", "Electronic music till your ears bleed"], ["price", 55], ["location", "Amsterdam"], ["category", "Music"], ["max_attendees", 500], ["created_at", "2020-08-02 20:53:46.919548"], ["updated_at", "2020-08-02 20:53:46.919548"], ["event_start", "2021-03-03"], ["event_end", "2021-03-03"], ["event_start_time", "23:00"], ["event_end_time", "03:00"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mActiveStorage::Attachment Create (3.5ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photo"], ["record_type", "Event"], ["record_id", 42], ["blob_id", 12], ["created_at", "2020-08-02 20:53:46.923992"]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[36mEvent Update (0.7ms)[0m  [1m[33mUPDATE "events" SET "updated_at" = $1 WHERE "events"."id" = $2[0m  [["updated_at", "2020-08-02 20:53:46.930015"], ["id", 42]]
+  ↳ app/controllers/api/events_controller.rb:22
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/events_controller.rb:22
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: afb03ddb-3704-44be-a0df-449705c11a56) to Async(default) with arguments: #<GlobalID:0x00007fb4087292f0 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/12>>
+  Rendering api/events/show.json.jbuilder
+  Rendered api/events/show.json.jbuilder (1.1ms)
+Completed 200 OK in 1333ms (Views: 11.1ms | ActiveRecord: 9.5ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.8ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56] Performing ActiveStorage::AnalyzeJob (Job ID: afb03ddb-3704-44be-a0df-449705c11a56) from Async(default) with arguments: #<GlobalID:0x00007fb4086e3138 @uri=#<URI::GID gid://boredom-breakers/ActiveStorage::Blob/12>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56] [36m  S3 Storage (237.9ms) [0m[34mDownloaded file from key: VD6Cy7fAbdZYsMZ4B2N9osKa[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 12]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56]   ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [afb03ddb-3704-44be-a0df-449705c11a56] Performed ActiveStorage::AnalyzeJob (Job ID: afb03ddb-3704-44be-a0df-449705c11a56) from Async(default) in 256.42ms
+Started GET "/api/events" for ::1 at 2020-08-02 16:54:47 -0400
+Processing by Api::EventsController#index as JSON
+  Rendering api/events/index.json.jbuilder
+  [1m[36mEvent Load (1.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/api/events/index.json.jbuilder:7
+  [1m[36mActiveStorage::Attachment Load (1.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 36], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 37], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 38], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 40], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 41], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 35], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 42], ["record_type", "Event"], ["name", "photo"], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/api/events/index.json.jbuilder:9
+  Rendered api/events/index.json.jbuilder (43.8ms)
+Completed 200 OK in 63ms (Views: 47.6ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5aa7b96414e3ca231695db1493fb668c96d0dd50/concert.jpg" for ::1 at 2020-08-02 16:54:47 -0400
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBFUT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5aa7b96414e3ca231695db1493fb668c96d0dd50", "filename"=>"concert"}
+  [1m[36mActiveStorage::Blob Load (7.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ /Users/pure/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+[36m  S3 Storage (2.2ms) [0m[34mGenerated URL for file at key: VD6Cy7fAbdZYsMZ4B2N9osKa (https://boredom-breakers-dev.s3.amazonaws.com/VD6Cy7fAbdZYsMZ4B2N9osKa?response-content-disposition=inline%3B%20filename%3D%22concert.jpg%22%3B%20filename%2A%3DUTF-8%27%27concert.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205447Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f63bd022a7f5198cd6610140a57663910a963711cff21947b6a3ced1768cb459)[0m
+Redirected to https://boredom-breakers-dev.s3.amazonaws.com/VD6Cy7fAbdZYsMZ4B2N9osKa?response-content-disposition=inline%3B%20filename%3D%22concert.jpg%22%3B%20filename%2A%3DUTF-8%27%27concert.jpg&response-content-type=image%2Fjpeg&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAZNGDGLH6H7LBRCVN%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T205447Z&X-Amz-Expires=300&X-Amz-SignedHeaders=host&X-Amz-Signature=f63bd022a7f5198cd6610140a57663910a963711cff21947b6a3ced1768cb459
+Completed 302 Found in 12ms (ActiveRecord: 7.0ms)
+
+
