@@ -23,6 +23,8 @@ class User < ApplicationRecord
     foreign_key: :host_id,
     class_name: :Event
 
+    has_many :registrations
+
     def password=(password)
         @password = password
         self.password_digest = BCrypt::Password.create(password)

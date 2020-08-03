@@ -19,9 +19,14 @@ class Event < ApplicationRecord
     validates :host_id, :description, :price, :location, :category, :event_start, :event_end, :event_start_time, :event_end_time, :max_attendees, presence: true
 
     belongs_to :host,
-    foreign_key: :host_id,
-    class_name: :User
+        foreign_key: :host_id,
+        class_name: :User
 
+
+    has_many :registrations,
+        foreign_key: :event_id,
+        class_name: :Registration
+    
     has_one_attached :photo
 
 end
