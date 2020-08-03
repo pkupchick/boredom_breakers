@@ -12,15 +12,16 @@ class EventShow extends React.Component {
     this.props.fetchEvent(this.props.match.params.eventId);
   }
 
-  componentDidUpdate() {}
-
   eventDisplay() {
     return (
       <div>
         {this.props.events.title}
+        <br/>
         <NavLink to={`/events/${this.props.events.id}/edit`}>
           <img src={this.props.events.photoUrl} alt="" />
         </NavLink>
+        <br/>
+        <button className="register-button">Tickets</button>
       </div>
     );
   }

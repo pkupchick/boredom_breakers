@@ -3,5 +3,21 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .register-button {
-    background-color: blue;
+    border-radius: 5px;
+    transform: translateZ(0);
+    background-color: #0D8547;
+    border-style: none;
+    width: 322px;
+    height: 47px;
+    opacity: 1;
+    color: whitesmoke;
+    letter-spacing: .2px;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+    margin-bottom: 10px;
 }
+
+.register-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
