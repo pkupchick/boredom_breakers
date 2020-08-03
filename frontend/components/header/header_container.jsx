@@ -64,20 +64,27 @@ class Header extends React.Component {
         );
         if (!currentUser.name) {
             headerComponent = (
-                <div className="header-container" onClick={this.handleDropDown} >
-                    <div className="logo-right">
-                        <Link to="/"><img src="http://yogapattern.com/e-brite.png" /></Link>
-                    </div>
-                    <div>
-                      <form className="search-header">
-                        <input type="text" className="search-bar" placeholder="Search Events" />
-                      </form>
-                    </div>
-                    <div className="signin-header">
-                      <Link className="no-style" to="/signup">Sign in</Link>
-                    </div>
+              <div className="header-container" onClick={this.handleDropDown}>
+                <div className="logo-right">
+                  <Link to="/">
+                    <img src="http://yogapattern.com/e-brite.png" />
+                  </Link>
                 </div>
-            )
+                <div className="searchContainer">
+                  <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                  <input
+                    type="text"
+                    className="search-box"
+                    placeholder="Search Events"
+                  />
+                </div>
+                <div className="signin-header">
+                  <Link className="no-style" to="/signup">
+                    Sign in
+                  </Link>
+                </div>
+              </div>
+            );
         } else {
             headerComponent = (
               <div className="header-container" onClick={this.handleDropDown}>
