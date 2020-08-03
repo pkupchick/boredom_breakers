@@ -28,9 +28,10 @@ export const fetchEvents = () => (dispatch) =>
 );
 
 export const fetchEvent = id => (dispatch) => (
-    APIEventUtil.fetchEvent(id).then(event => (
+    APIEventUtil.fetchEvent(id).then(event => {
         dispatch(receiveEvent(event))
-    ))
+        return event;
+    })
 );
 
 export const createEvent = event => dispatch => (
