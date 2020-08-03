@@ -57,8 +57,8 @@ class EventEditForm extends React.Component {
         formData.append('event[event_start_time]', this.state.event_start_time);
         formData.append('event[event_end_time]', this.state.event_end_time);
         // formData.append('event[photo]', this.state.photoFile);
-        this.props.updateEvent(formData);
-        this.props.history.push("/")
+        this.props.updateEvent(formData).then(() => {this.props.history.push("/")});
+        // this.props.history.push("/")
     }
 
     handleFile(e) {
