@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logout } from '../../actions/session_actions'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Header extends React.Component {
     constructor(props) {
@@ -85,7 +87,8 @@ class Header extends React.Component {
                   </Link>
                 <div>
                 <div className="searchContainer">
-                    <input type="text" className="searchBox" placeholder="Search Events" />
+                    <FontAwesomeIcon icon={faSearch} className="search-icon" />
+                    <input type="text" className="search-box" placeholder="Search Events" />
                 </div>
                 </div>
                 </div>
