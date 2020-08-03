@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -57,8 +57,7 @@ class Header extends React.Component {
               onClick={this.handleDropDown}
             >
               <a onClick={this.props.logout}>Log Out</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <NavLink to="/events/new">Create Event</NavLink>
             </div>
           </>
         );
@@ -67,7 +66,7 @@ class Header extends React.Component {
               <div className="header-container" onClick={this.handleDropDown}>
                 <div className="logo-right">
                   <Link to="/">
-                    <img src="http://yogapattern.com/e-brite.png" />
+                    <img src="http://yogapattern.com/bb-joined.png" />
                   </Link>
                 </div>
                 <div className="searchContainer">
@@ -90,7 +89,7 @@ class Header extends React.Component {
               <div className="header-container" onClick={this.handleDropDown}>
                 <div className="logo-right">
                   <Link to="/">
-                    <img src="http://yogapattern.com/e-brite.png" />
+                    <img src="http://yogapattern.com/bb-joined.png" />
                   </Link>
                 <div>
                 <div className="searchContainer">
