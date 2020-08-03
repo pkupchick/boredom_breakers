@@ -27,7 +27,7 @@ class EventEditForm extends React.Component {
       componentDidMount() {
         this.props.fetchEvent(this.props.match.params.eventId)
           .then(event => {
-            const eventObj = Object.assign({}, event, { photoFile: event.photo });
+            const eventObj = Object.assign({}, event);
             this.setState(eventObj);
           });
       }
@@ -56,9 +56,10 @@ class EventEditForm extends React.Component {
         formData.append('event[event_end]', this.state.event_end);
         formData.append('event[event_start_time]', this.state.event_start_time);
         formData.append('event[event_end_time]', this.state.event_end_time);
-        // formData.append('event[photo]', this.state.photoFile);
+        if (this.state.photoFile) {
+          formData.append('event[photo]', this.state.photoFile);
+        }
         this.props.updateEvent(formData).then(() => {this.props.history.push("/")});
-        // this.props.history.push("/")
     }
 
     handleFile(e) {
