@@ -24,9 +24,9 @@ class EventEditForm extends React.Component {
         this.handleFile = this.handleFile.bind(this);
     }
 
-    componentDidMount() {
-        this.props.fetchEvent(this.props.match.params.eventId);
-    }
+    // componentDidMount() {
+    //     this.props.fetchEvent(this.props.match.params.eventId);
+    // }
 
     componentDidUpdate() {
     }
