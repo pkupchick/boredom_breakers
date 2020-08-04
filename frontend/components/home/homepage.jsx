@@ -35,8 +35,14 @@ class HomePage extends React.Component {
 
     render() {
         return (
-            <div className="events-container">
-                {this.events()}
+            <div>
+                <div>
+                    <img src="https://boredom-breakers-seed.s3.amazonaws.com/background-image.png" 
+                    className="home-page-map"/>
+                </div>
+                <div className="events-container">
+                    {this.events()}
+                </div>
             </div>
         )
     }

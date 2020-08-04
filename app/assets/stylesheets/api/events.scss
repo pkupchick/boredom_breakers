@@ -2,6 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+    padding: 10px;
+}
+
+.events-container img {
+    width: 280px;
+    height: 140px;
+}
+
+.home-page-map {
+    width: 100%;
+    padding: 40px;
+}
+
 .event-show {
     display: flex;
 }
@@ -44,5 +61,14 @@
 .register-button:hover {
     opacity: 0.6;
     cursor: pointer;
+}
+
+.individual-event {
+    align-items: center;
+    padding: 10px;
+}
+
+.event-form {
+    margin: auto;
 }
 
