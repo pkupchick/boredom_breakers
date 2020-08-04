@@ -13,24 +13,6 @@ class HomePage extends React.Component {
     this.props.fetchEvents();
   }
 
-  toStandardTime(militaryTime) {
-    // 12:00
-    militaryTime = militaryTime.split(":");
-    if (militaryTime[0].charAt(0) == 1 && militaryTime[0].charAt(1) > 2) {
-      return (
-        militaryTime[0] -
-        12 +
-        ":" +
-        militaryTime[1] +
-        ":" +
-        militaryTime[2] +
-        " P.M."
-      );
-    } else {
-      return militaryTime.join(":") + " A.M.";
-    }
-  }
-
   toSTime(time) {
     const timeArray = time.split(":");
     const hour = timeArray[0];
@@ -51,36 +33,38 @@ class HomePage extends React.Component {
     const events = this.props.events;
     let eventsArray = Object.values(events);
     eventsArray = eventsArray.map((event, idx) => {
-    const date = new Date(event.event_start);
-    let time = event.event_start_time;
-      if (!time) { 
-        time = "default:default"
-      }
-      return (
-        <div className="individual-event">
-          <Link to={`events/${event.id}/`}>
-            <div
-              className="image-wrap"
-              style={{ backgroundImage: `url(${event.photoUrl})` }}
-            ></div>
-          </Link>
-          <div className="bottom-card">
-            <p className="event-date-time">
-              {date.toDateString()} - {this.toSTime(time)}
-            </p>
+    // const date = new Date(event.event_start);
+    // let eventTime = event.event_start_time;
+      // if (!eventTime) { 
+      //   eventTime = "default:default"
+      // }
+        return (
+          <div className="individual-event">
             <Link to={`events/${event.id}/`}>
-              <h3 key={idx} className="event-description">
-                {event.title}
-              </h3>
+              <div
+                className="image-wrap"
+                style={{ backgroundImage: `url(${event.photoUrl})` }}
+              ></div>
             </Link>
+            <div className="bottom-card">
+              <p className="event-date-time">
+                {event.event_start} - {event.event_start_time}
+              </p>
+              <Link to={`events/${event.id}/`}>
+                <h3 key={idx} className="event-description">
+                  {event.title}
+                </h3>
+              </Link>
+            </div>
           </div>
-        </div>
-      );
-    });
+        );
+      }
+    );
     return eventsArray;
   }
 
   render() {
+
     return (
       <div>
         <div>
@@ -129,6 +113,7 @@ class HomePage extends React.Component {
   }
 }
 
+
   const msp = (state) => {
       return {
           errors: state.errors.session,
@@ -144,6 +129,6 @@ class HomePage extends React.Component {
           fetchEvent: (id) => dispatch(fetchEvent(id)),
           fetchUser: (id) => dispatch(fetchUser(id))
       }
-}
+  }
 
 export default connect(msp, mdp)(HomePage);

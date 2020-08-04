@@ -40,7 +40,6 @@ class Header extends React.Component {
         let headerComponent = null;
 
         let dropDown = (
-          // <div className="dropdown">
           <>
             <a className="dropbtn" value="drop-down-now">
               <img

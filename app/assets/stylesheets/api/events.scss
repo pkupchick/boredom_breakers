@@ -32,7 +32,7 @@
 
 .image-wrap {
     width: 100%;
-    height: 140px;
+    height: 170px;
     background-size: cover;
     background-position: center;
 }
@@ -73,6 +73,10 @@
 
 .online-events {
     opacity: .4;
+    &:hover {
+        color: blue;
+        opacity: .8;
+    }
 }
 
 .nav-item-1 {
@@ -145,8 +149,13 @@
     cursor: pointer;
 }
 
-
 .event-form {
-    margin: auto;
+    width: 500px;
+}
+
+.event-form-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
 }
 

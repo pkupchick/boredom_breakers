@@ -10,9 +10,10 @@ class FormItem extends React.Component {
 
     render() {
         let props = this.props;
-        debugger;
         return (
-            <EventEditForm props={props} />
+            <div>
+                <EventEditForm props={props} />
+            </div>
         )
     }
 }
