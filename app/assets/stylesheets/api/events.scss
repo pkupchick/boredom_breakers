@@ -24,6 +24,12 @@
     background-color: white;
 }
 
+.event-description {
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: .2;
+}
+
 .image-wrap {
     width: 100%;
     height: 140px;
@@ -33,7 +39,7 @@
 
 .individual-event {
     align-items: center;
-    margin: 10px;
+    margin: 15px;
     flex-grow: 1;
     box-shadow: 20px 20px 30px 30px rgba(0, 0, 0, .03);
     transition: 0.4s;
