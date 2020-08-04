@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 
 class HomePage extends React.Component {
     constructor(props) {
@@ -35,16 +35,45 @@ class HomePage extends React.Component {
 
     render() {
         return (
+          <div>
             <div>
-                <div>
-                    <img src="https://boredom-breakers-seed.s3.amazonaws.com/background-image.png" 
-                    className="home-page-map"/>
-                </div>
-                <div className="events-container">
-                    {this.events()}
-                </div>
+              <img
+                src="https://boredom-breakers-seed.s3.amazonaws.com/background-image.png"
+                className="home-page-map"
+              />
             </div>
-        )
+            <div className="category-nav">
+              <div className="nav-item-1">
+                <NavLink to="/">All</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">For you</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">Today</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">This Weekend</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">Free</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">All</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">Music</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">Food Drink</NavLink>
+              </div>
+              <div className="nav-item-1">
+                <NavLink to="/">Charity Causes</NavLink>
+              </div>
+            </div>
+            <div className="events-container">{this.events()}</div>
+          </div>
+        );
     }
 }
 
