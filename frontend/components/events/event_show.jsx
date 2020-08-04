@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
 import { NavLink } from 'react-router-dom';
+import Modal from 'react-modal';
 
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      modalStatus: false
+    }
+
   }
 
   componentDidMount() {
@@ -15,20 +21,33 @@ class EventShow extends React.Component {
   eventDisplay() {
     return (
       <div>
-        {this.props.events.title}
+        <div className="event-show-banner">
+          {this.props.events.title}
+          <br/>
+          <NavLink to={`/events/${this.props.events.id}/edit`}>
+            <img src={this.props.events.photoUrl} alt="" />
+          </NavLink>
+        </div>
         <br/>
-        <NavLink to={`/events/${this.props.events.id}/edit`}>
-          <img src={this.props.events.photoUrl} alt="" />
-        </NavLink>
-        <br/>
-        <button className="register-button">Tickets</button>
+        <div className="under-header-container">
+          <button onClick={() => setModalIsOpen(true)} className="register-button">Tickets</button>
+        </div>
       </div>
     );
   }
 
+  toggleModal() {
+    debugger;
+    if (this.state.modalStatus) {
+      this.setState({modalStatus: false})
+    } else {
+      this.setState({modalStatus: true})
+    }
+  }
+
   render() {
     return (
-      <div className="event-show">
+      <div>
         {this.eventDisplay()}
       </div>
     )

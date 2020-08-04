@@ -2,6 +2,31 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.event-show {
+    display: flex;
+}
+
+.event-show-banner {
+    height: 165;
+    width: 100%;
+}
+
+.event-show-banner-left {
+    width: 50%;
+}
+
+.under-header-container {
+    display: flex;
+    height: 65px;
+    border-bottom: solid 1px gainsboro;
+}
+
+.home-page-banner {
+    background-image: url("http://yogapattern.com/background-image.png");
+    height: 300px;
+    width: 1000px;
+}
+
 .register-button {
     border-radius: 5px;
     transform: translateZ(0);
