@@ -23,7 +23,6 @@ export const createEvent = eventForm => (
 )
 
 export const updateEvent = (event) => {
-    // debugger;
     return $.ajax({
         method: "PATCH",
         url: `/api/events/${event.get("event[id]")}`,

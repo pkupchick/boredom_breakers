@@ -70,10 +70,10 @@ class HomePage extends React.Component {
                 <NavLink to="/">Music</NavLink>
               </div>
               <div className="nav-item-1">
-                <NavLink to="/">Food Drink</NavLink>
+                <NavLink to="/">Food &amp; Drink</NavLink>
               </div>
               <div className="nav-item-1">
-                <NavLink to="/">Charity Causes</NavLink>
+                <NavLink to="/">Charity &amp; Causes</NavLink>
               </div>
             </div>
             <div className="events-container">{this.events()}</div>

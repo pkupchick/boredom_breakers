@@ -13,6 +13,7 @@
   flex: 1 1 300px;
   border-radius: 5px;
   overflow: hidden;
+  margin-left: 20px;
 }
 
 .search-box {
@@ -255,15 +256,14 @@ input {
     // float: left;
     justify-content: center;
     align-items: center;
-    // width: 110px;
-    // height: auto;
-    // padding-top: 10px;
 }
+
 .logo-right img {
 //     display: flex;
 //     float: left;
     width: 110px;
     height: auto;
+    margin-left: 20px;
 //     padding-top: 10px;
 }
 
