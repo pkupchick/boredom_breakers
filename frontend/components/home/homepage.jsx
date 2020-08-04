@@ -42,6 +42,11 @@ class HomePage extends React.Component {
                 className="home-page-map"
               />
             </div>
+            <div className="popular-in">
+              <h1>
+                Popular in <span className="online-events">Online Events</span>
+              </h1>
+            </div>
             <div className="category-nav">
               <div className="nav-item-1">
                 <NavLink to="/">All</NavLink>
