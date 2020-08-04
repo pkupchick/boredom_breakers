@@ -19,15 +19,17 @@ class HomePage extends React.Component {
         eventsArray = eventsArray.map((event, idx) => {
             return (
               <div className="individual-event">
+                <Link to={`events/${event.id}/`}>
+                  <div className="image-wrap" style={{backgroundImage: `url(${event.photoUrl})`}}>
+                    {/* <img src={event.photoUrl} alt="" /> */}
+                  </div>
+                </Link>
                 <h3 className="event-date-time">
                   {event.event_start} - {event.event_start_time}
                 </h3>
                 <h3 key={idx} className="event-description">
                   {event.title}
                 </h3>
-                <Link to={`events/${event.id}/`}>
-                  <img src={event.photoUrl} alt="" />
-                </Link>
               </div>
             );
         })

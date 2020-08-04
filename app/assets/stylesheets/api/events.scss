@@ -11,6 +11,13 @@
     padding: 20px;
 }
 
+.image-wrap {
+    width: 280px;
+    height: 140px;
+    background-size: cover;
+    background-position: center;
+}
+
 .individual-event {
     align-items: center;
     padding: 10px;
@@ -18,8 +25,7 @@
 }
 
 .events-container img {
-    width: 280px;
-    height: 140px;
+    width: 100%;
 }
 
 .category-nav {
