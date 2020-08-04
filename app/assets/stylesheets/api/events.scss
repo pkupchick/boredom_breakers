@@ -7,8 +7,22 @@
     flex-wrap: wrap;
     justify-content: center;
     float: left;
-    margin: 15px;
-    padding: 20px;
+    padding: 25px;
+    background-color: rgba(0, 0, 0, .03);
+}
+
+.event-date-time {
+    color: #C14B24;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.bottom-card {
+    height: 125px;
+    width: 280px;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    background-color: white;
 }
 
 .image-wrap {
@@ -20,8 +34,13 @@
 
 .individual-event {
     align-items: center;
-    padding: 10px;
+    margin: 10px;
     flex-grow: 1;
+}
+
+.individual-event a {
+    text-decoration: none;
+    color: black;
 }
 
 .events-container img {
