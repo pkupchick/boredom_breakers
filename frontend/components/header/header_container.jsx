@@ -42,10 +42,7 @@ class Header extends React.Component {
         let dropDown = (
           // <div className="dropdown">
           <>
-            <a
-              className="dropbtn"
-              value="drop-down-now"
-            >
+            <a className="dropbtn" value="drop-down-now">
               <img
                 src="http://yogapattern.com/lil-guy.png"
                 className="pos-ab"
@@ -58,6 +55,7 @@ class Header extends React.Component {
             >
               <a onClick={this.props.logout}>Log Out</a>
               <NavLink to="/events/new">Create Event</NavLink>
+              <NavLink to={`/users/${this.props.currentUser.id}`}>Tickets</NavLink>
             </div>
           </>
         );

@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
+import { fetchUser } from '../../actions/user_actions';
 import {Link, NavLink} from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -86,14 +87,16 @@ const msp = (state) => {
     return {
         errors: state.errors.session,
         currentUser: state.session.currentUser,
-        events: state.events
+        events: state.events,
+        user: state.user
     }
 }
 
 const mdp = (dispatch) => {
     return {
         fetchEvents: () => dispatch(fetchEvents()),
-        fetchEvent: (id) => dispatch(fetchEvent(id))
+        fetchEvent: (id) => dispatch(fetchEvent(id)),
+        fetchUser: (id) => dispatch(fetchUser(id))
     }
 }
 
