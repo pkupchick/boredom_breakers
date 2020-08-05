@@ -22,15 +22,17 @@ class EventShow extends React.Component {
   eventDisplay() {
     const currentEvent = this.props.entities.events[this.props.match.params.eventId];
     return currentEvent ?  (
-      <div>
+      <div className="event-show-container">
         <div className="event-show-banner">
-          {currentEvent.title}
-          <br/>
-          <NavLink to={`/events/${currentEvent.id}/edit`}>
-            <img src={currentEvent.photoUrl} alt="" />
-          </NavLink>
+          <div className="show-container-top">
+            <NavLink to={`/events/${currentEvent.id}/edit`}>
+              <img src={currentEvent.photoUrl} className="event-show-image" />
+            </NavLink>
+            <div className="event-show-card-right">
+              <p>{currentEvent.title}</p>
+            </div>
+          </div>
         </div>
-        <br/>
         <div className="under-header-container">
           <button className="register-button">Tickets</button>
         </div>

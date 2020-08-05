@@ -115,7 +115,10 @@ class EventForm extends React.Component {
                 <div className="event-form">
                     <form onSubmit={this.handleSubmit}>
                         <h1>Basic Info</h1>
-
+                        <p className="create-event-p">
+                            Name your event and tell event-goers why they should come. 
+                            Add details that highlight what makes it unique.
+                        </p>
                         <input
                         type="text"
                         className={eventTitle}
@@ -214,7 +217,7 @@ class EventForm extends React.Component {
                         <br />
                         <input
                         type="time"
-                        className={eventStartDate}
+                        className={eventStartTime}
                         value={event_start_time}
                         onChange={this.handleInput("event_start_time")}
                         />
