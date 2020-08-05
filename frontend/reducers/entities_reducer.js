@@ -1,13 +1,19 @@
 import { combineReducers } from 'redux';
 
-// export default combineReducers({
-//     events: eventsReducer
-// });
-const entitiesReducer = (state = {}, action) => {
-    switch (action.type) {
-        default: 
-            return state;
-    }
-}
+import events from './events_reducer';
+import users from './users_reducer';
 
-export default entitiesReducer;
+export default combineReducers({
+    events,
+    users
+});
+
+
+// const entitiesReducer = (state = {}, action) => {
+//     switch (action.type) {
+//         default: 
+//             return state;
+//     }
+// }
+
+// export default entitiesReducer;

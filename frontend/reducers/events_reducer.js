@@ -10,11 +10,11 @@ const eventsReducer = (state = {}, action) => {
         case RECEIVE_EVENTS:
             let eventsArray = Object.values(action.events);
             eventsArray.forEach(event => {
-                nextState[event.event_start] = event;
+                nextState[event.id] = event;
             });
             return nextState;
         case RECEIVE_EVENT:
-            const newEvent = action.event
+            const newEvent = { [action.event.id]: action.event };
             return Object.assign({}, state, newEvent);
         default:
             return state;

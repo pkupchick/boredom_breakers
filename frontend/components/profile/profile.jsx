@@ -29,7 +29,7 @@ class Profile extends React.Component {
         return(
             <div className="profile-container">
                 <div>
-                    {this.props.user.name}
+                    {this.props.currentUser.name}
                 </div>
             </div>
         )
@@ -40,7 +40,7 @@ const msp = (state) => {
     return {
         errors: state.errors.session,
         currentUser: state.session.currentUser,
-        user: state.user
+        user: state.entities.users
     }
 }
 

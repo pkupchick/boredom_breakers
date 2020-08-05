@@ -14,6 +14,7 @@
     color: #C14B24;
     font-size: 14px;
     padding-bottom: 5px;
+    font-weight: 500;
 }
 
 .bottom-card {
@@ -46,6 +47,7 @@
     &:hover {
         box-shadow: 20px 20px 30px 30px rgba(0, 0, 0, .09);
     }
+    max-width: 375px;;
 }
 
 .individual-event a {

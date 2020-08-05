@@ -7,11 +7,20 @@ import {Link, NavLink} from 'react-router-dom';
 class HomePage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      refresh: false,
+    };
   }
 
   componentDidMount() {
     this.props.fetchEvents();
   }
+
+  // componentDidUpdate(prevProps, prevState) {
+  //   if (prevProps.story !== this.props.story) {
+  //     this.setState(this.props.story);
+  //   }
+  // }
 
   toSTime(time) {
     const timeArray = time.split(":");
@@ -20,51 +29,55 @@ class HomePage extends React.Component {
     let standardHour = null;
     let meridian = null;
     if (parseInt(hour) > 12) {
-       standardHour = parseInt(hour) - 12;
-       meridian = "PM";
+      standardHour = parseInt(hour) - 12;
+      meridian = "PM";
     } else {
-       standardHour = parseInt(hour);
-       meridian = "AM"
+      standardHour = parseInt(hour);
+      meridian = "AM";
     }
-    return `${standardHour}:${min} ${meridian} EDT`
+    return `${standardHour}:${min} ${meridian} EDT`;
   }
 
   events() {
-    const events = this.props.events;
-    let eventsArray = Object.values(events);
-    eventsArray = eventsArray.map((event, idx) => {
-    // const date = new Date(event.event_start);
-    // let eventTime = event.event_start_time;
-      // if (!eventTime) { 
-      //   eventTime = "default:default"
-      // }
-        return (
-          <div className="individual-event">
-            <Link to={`events/${event.id}/`}>
-              <div
-                className="image-wrap"
-                style={{ backgroundImage: `url(${event.photoUrl})` }}
-              ></div>
-            </Link>
-            <div className="bottom-card">
-              <p className="event-date-time">
-                {event.event_start} - {event.event_start_time}
-              </p>
-              <Link to={`events/${event.id}/`}>
-                <h3 key={idx} className="event-description">
-                  {event.title}
-                </h3>
-              </Link>
-            </div>
-          </div>
-        );
+    const events = this.props.entities.events || [];
+    let eventsArray = Object.values(events) || [];
+    eventsArray.sort((e1, e2) => {
+      if (e1.event_start > e2.event_start) {
+        return 1;
+      } else if (e2.event_start > e1.event_start) {
+        return -1;
+      } else {
+        return 0;
       }
-    );
+    });
+    eventsArray = eventsArray.map((event, idx) => {
+      const eventDate = new Date(event.event_start) || new Date('August 19, 1975 23:15:30');
+      let eventTime = event.event_start_time || "11:11";
+      return (
+        <div key={event.id} className="individual-event">
+          <Link to={`events/${event.id}/`}>
+            <div
+              className="image-wrap"
+              style={{ backgroundImage: `url(${event.photoUrl})` }}
+            ></div>
+          </Link>
+          <div className="bottom-card">
+            <p className="event-date-time">
+              {eventDate.toDateString()} {this.toSTime(eventTime)}
+            </p>
+            <Link to={`events/${event.id}/`}>
+              <h3 className="event-description">
+                {event.title}
+              </h3>
+            </Link>
+          </div>
+        </div>
+      );
+    });
     return eventsArray;
   }
 
   render() {
-
     return (
       <div>
         <div>
@@ -118,8 +131,7 @@ class HomePage extends React.Component {
       return {
           errors: state.errors.session,
           currentUser: state.session.currentUser,
-          events: state.events,
-          user: state.user
+          entities: state.entities
       }
   }
 
