@@ -96,16 +96,22 @@ class EventForm extends React.Component {
         event_start_time,
         event_end_time,
         } = this.state;
-        const eventTitle = null;
-        const eventDescription = null;
-        const eventPrice = null;
-        const eventLocation = null;
-        const eventCategory = null;
-        const maxAttEvent = null;
-        const eventStartDate = null;
-        const eventEndDate = null;
-        const eventStartTime = null;
-        const eventEndTime = null;
+        let eventTitle = null;
+        let eventDescription = null;
+        let eventPrice = null;
+        let eventLocation = null;
+        let eventCategory = null;
+        let maxAttEvent = null;
+        let eventStartDate = null;
+        let eventEndDate = null;
+        let eventStartTime = null;
+        let eventEndTime = null;
+
+        eventTitle = "event-title-input";
+        eventDescription = "event-title-input";
+        eventCategory = "event-category-input";
+        eventPrice = "event-price-input";
+        eventLocation = "event-location-input";
 
         if (!this.props.currentUser) {
         return <p>Hey</p>;
@@ -116,7 +122,8 @@ class EventForm extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                         <h1>Basic Info</h1>
                         <p className="create-event-p">
-                            Name your event and tell event-goers why they should come. 
+                            Name your event and tell event-goers why they should come.
+                            <br/> 
                             Add details that highlight what makes it unique.
                         </p>
                         <input
@@ -146,8 +153,6 @@ class EventForm extends React.Component {
                         onChange={this.handleInput("price")}
                         placeholder="Price per ticket/registration"
                         />
-                        <br />
-                        <br />
                         <input
                         type="text"
                         className={eventLocation}
@@ -156,6 +161,8 @@ class EventForm extends React.Component {
                         placeholder="Event Location"
                         autoComplete="on"
                         />
+                        <br />
+                        <br />
                         <br />
                         <br />
                         <select

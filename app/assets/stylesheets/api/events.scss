@@ -7,7 +7,6 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 25px;
-    max-width: 1280px;
 }
 
 .event-date-time {
@@ -43,8 +42,6 @@
 .event-show-container {
     display: flex;
     flex-direction: column;
-    margin-left: 100px;
-    margin-right: 100px;
     margin-top: 25px;
 }
 
@@ -56,28 +53,60 @@
 // #717B32  #5D422D
 
 .event-show-card-right {
+    box-sizing: border-box;
     padding: 10px;
+    background-color: #EAEAE9;
+    border-top-right-radius: 5px;
+    height: 370px;
+    width: 40%;
 }
 
 .event-show-image {
-    width: 700px;
-    height: 350px;
+    width: 610px;
+    height: 370px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .under-header-container {
     height: 65px;
+    padding-right: 20px;
     border-bottom: solid 1px gainsboro;
+    background-color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .event-show-banner {
     height: 400px;
-    width: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 40px;
 }
 
 .event-show-banner-left {
     width: 50%;
 }
 
+.event-show-background {
+    height: 510px;
+    background-image: url("http://yogapattern.com/show-gradient.png");
+}
+
+.event-show-content-section {
+    background-color: #F8F7FA;
+    position: relative;
+}
+
+.inner-content {
+    margin-left: 100px;
+    margin-right: 100px;
+    position: absolute;
+    background-color: white;
+    top: -34px;
+    width: 1040px;
+}
 
 
 // End Event Show Page CSS
@@ -168,7 +197,6 @@
     color: whitesmoke;
     letter-spacing: .2px;
     transition: all .4s cubic-bezier(.4,0,.3,1);
-    margin-bottom: 10px;
 }
 
 .register-button:hover {
@@ -177,8 +205,30 @@
 }
 
 .event-form {
-    width: 500px;
     margin: auto;
+}
+
+.event-title-input {
+    width: 610px;
+    opacity: .6;
+}
+
+.event-category-input {
+    height: 45px;
+    opacity: .6;
+    padding: 5px;
+    opacity: .6;
+}
+
+.event-price-input {
+    width: 195px;
+    margin-right: 20px;
+    opacity: .6;
+}
+
+.event-location-input {
+    width: 395px;
+    opacity: .6;
 }
 
 .event-form-container {

@@ -3,17 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 * {
-    box-sizing: border-box;
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
 .searchContainer {
-  display: inline-flex;
-  flex: 1 1 300px;
-  border-radius: 5px;
-  overflow: hidden;
-  margin-left: 20px;
+    display: inline-flex;
+    flex: 1 1 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 20px;
 }
 
 .search-box {
