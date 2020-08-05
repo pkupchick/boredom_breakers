@@ -13,19 +13,21 @@ class EventShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvent(this.props.match.params.eventId)
-      .then((event) => {
-        this.setState(event)
+      .then(event => {
+        const eventObj = Object.assign({}, event);
+        this.setState(eventObj);
       })
   }
 
   eventDisplay() {
-    return (
+    const currentEvent = this.props.entities.events[this.props.match.params.eventId];
+    return currentEvent ?  (
       <div>
         <div className="event-show-banner">
-          {this.props.entities.events.title}
+          {currentEvent.title}
           <br/>
-          <NavLink to={`/events/${this.props.entities.events.id}/edit`}>
-            <img src={this.props.entities.events.photoUrl} alt="" />
+          <NavLink to={`/events/${currentEvent.id}/edit`}>
+            <img src={currentEvent.photoUrl} alt="" />
           </NavLink>
         </div>
         <br/>
@@ -33,16 +35,7 @@ class EventShow extends React.Component {
           <button className="register-button">Tickets</button>
         </div>
       </div>
-    );
-  }
-
-  toggleModal() {
-    debugger;
-    if (this.state.modalStatus) {
-      this.setState({modalStatus: false})
-    } else {
-      this.setState({modalStatus: true})
-    }
+    ) : null;
   }
 
   render() {
