@@ -112,6 +112,11 @@ class EventForm extends React.Component {
         eventCategory = "event-category-input";
         eventPrice = "event-price-input";
         eventLocation = "event-location-input";
+        maxAttEvent = "max-attend-input";
+        eventStartDate = "event-start-date";
+        eventStartTime = "event-start-time";
+        eventEndDate = "event-end-date";
+        eventEndTime = "event-end-time";
 
         if (!this.props.currentUser) {
         return <p>Hey</p>;
@@ -163,8 +168,12 @@ class EventForm extends React.Component {
                         />
                         <br />
                         <br />
-                        <br />
-                        <br />
+                        <h1>Category and Max Attendees</h1>
+                        <p className="create-event-p">
+                            What category does your event fall under?
+                            <br />
+                            Please select one from the drop down list below.
+                        </p>
                         <select
                         className={eventCategory}
                         value={category}
@@ -195,8 +204,6 @@ class EventForm extends React.Component {
                         <option value="Travel & Outdoor">Travel & Outdoor</option>
                         <option value="Other">Other</option>
                         </select>
-                        <br />
-                        <br />
                         <input
                         type="number"
                         className={maxAttEvent}
@@ -212,6 +219,12 @@ class EventForm extends React.Component {
                         value={event_start}
                         onChange={this.handleInput("event_start")}
                         />
+                        <input
+                            type="time"
+                            className={eventStartTime}
+                            value={event_start_time}
+                            onChange={this.handleInput("event_start_time")}
+                        />
                         <br />
                         <br />
                         <input
@@ -220,16 +233,6 @@ class EventForm extends React.Component {
                         value={event_end}
                         onChange={this.handleInput("event_end")}
                         />
-                        <br />
-                        <br />
-                        <input
-                        type="time"
-                        className={eventStartTime}
-                        value={event_start_time}
-                        onChange={this.handleInput("event_start_time")}
-                        />
-                        <br />
-                        <br />
                         <input
                         type="time"
                         className={eventEndTime}

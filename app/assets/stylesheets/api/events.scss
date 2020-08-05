@@ -62,10 +62,9 @@
 }
 
 .event-show-image {
-    width: 610px;
+    width: 60%;
     height: 370px;
     border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
 }
 
 .under-header-container {
@@ -176,7 +175,7 @@
 }
 
 .home-page-map {
-    width: 100%;
+    width: 94%;
     padding: 40px;
 }
 
@@ -214,7 +213,9 @@
 }
 
 .event-category-input {
-    height: 45px;
+    height: 35px;
+    width: 300px;
+    margin-right: 20px;
     opacity: .6;
     padding: 5px;
     opacity: .6;
@@ -228,6 +229,11 @@
 
 .event-location-input {
     width: 395px;
+    opacity: .6;
+}
+
+.max-attend-input {
+    width: 200px;
     opacity: .6;
 }
 
