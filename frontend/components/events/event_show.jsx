@@ -74,15 +74,12 @@ class EventShow extends React.Component {
 }
 
 const msp = ({ entities, errors, session }, ownProps) => {
-  const purchased = entities.users[session.currentUser.id].purchased_event_ids.includes(
-    parseInt(ownProps.match.params.eventId)
-  );
+
   return {
     errors: errors.session,
     currentUser: session.currentUser,
     entities: entities,
     tickets: entities.tickets,
-    purchased,
   };
 };
 
