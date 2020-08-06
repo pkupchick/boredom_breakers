@@ -25,3 +25,14 @@ export const verify = (email) => {
     data: { user: { email: email } },
   });
 };
+
+
+// To be used for ticket feature
+
+export const tickets = (user) => {
+  return $.ajax({
+    method: "GET",
+    url: "api/user_tickets",
+    data: { user }
+  });
+};
