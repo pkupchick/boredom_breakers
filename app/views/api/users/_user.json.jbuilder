@@ -4,7 +4,6 @@ json.user do
 end
 
 json.events do
-  # debugger
   user.all_events.each do |event|
     json.set! event.id do 
       json.extract! event, :id, :host_id, :title, :event_start, :event_start_time
