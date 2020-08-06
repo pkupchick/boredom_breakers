@@ -44,7 +44,8 @@ class EventShow extends React.Component {
             </div>
           </div>
           <div className="inner-content">
-              <p>
+            <h3>Description</h3>
+              <p className="event-description-body">
                 {currentEvent.description}
                 <br/>
                 <br/>
