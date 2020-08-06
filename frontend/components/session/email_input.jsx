@@ -52,7 +52,7 @@ class EmailInput extends React.Component {
       <>
         <div className="form-container">
           <div className="login-signup">
-            <img src="http://yogapattern.com/b-icon.png" className="logo-small" />
+            <img src="https://boredom-breakers-seed.s3.amazonaws.com/b-icon.png" className="logo-small" />
             <p className="login-signup-greeting">Sign up or log in</p>
           </div>
           <div className="email-verify">

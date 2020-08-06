@@ -63,7 +63,7 @@ class Header extends React.Component {
               <div className="header-container" onClick={this.handleDropDown}>
                 <div className="logo-right">
                   <Link to="/">
-                    <img src="http://yogapattern.com/bb-joined.png" />
+                    <img src="https://boredom-breakers-seed.s3.amazonaws.com/bb-joined.png" />
                   </Link>
                 </div>
                 <div className="searchContainer">
@@ -86,7 +86,7 @@ class Header extends React.Component {
               <div className="header-container" onClick={this.handleDropDown}>
                 <div className="logo-right">
                   <Link to="/">
-                    <img src="http://yogapattern.com/bb-joined.png" />
+                    <img src="https://boredom-breakers-seed.s3.amazonaws.com/bb-joined.png" />
                   </Link>
                 <div>
                 <div className="searchContainer">
