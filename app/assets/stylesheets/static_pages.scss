@@ -53,6 +53,7 @@
 
 .main-container {
     width: auto;
+    height:100vh;
 }
 
 .header-container {
@@ -294,10 +295,15 @@ input {
 // Begin footer CSS
 
 .footer-container {
-    height: 80px;
+    height: 60px;
     background-color: #1B0D39;
     display: flex;
     align-items: center;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    margin-top: 50px;
 }
 
 .footer-content li {
