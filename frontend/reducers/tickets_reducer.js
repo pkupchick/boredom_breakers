@@ -1,4 +1,4 @@
-import { RECEIVE_ALL_TICKETS } from '../actions/registration_actions';
+import { RECEIVE_ALL_TICKETS, RECEIVE_TICKET } from '../actions/registration_actions';
 
 const ticketsReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -10,6 +10,9 @@ const ticketsReducer = (state = {}, action) => {
                 nextState[ticket.id] = ticket;
             });
             return nextState;
+        case RECEIVE_TICKET:
+            const newTicket = { [action.ticket.id]: action.ticket };
+            return Object.assign({}, state, newTicket);
         default:
             return state;
     }

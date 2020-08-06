@@ -1,6 +1,12 @@
 import * as APITicketUtil from '../util/registration_api_util';
 
 export const RECEIVE_ALL_TICKETS = "RECEIVE_ALL_TICKETS";
+export const RECEIVE_TICKET = "RECEIVE_TICKET";
+
+export const receiveTicket = ticket => ({
+    type: RECEIVE_TICKET,
+    ticket
+});
 
 export const receiveAllTickets = () => {
     return {
@@ -14,9 +20,8 @@ export const fetchTickets = user => (dispatch) => {
         .then(user => dispatch(fetchTickets(user))
     )
 };
-
 export const createTicket = ticket => dispatch => (
-    APITicketUtil.createTicket(ticket)
-        .then(ticket => (dispatch(receiveAllTickets(ticket.user_id)))
-    )
+    APITicketUtil.createTicket(ticket).then(ticket => (
+        dispatch(receiveTicket(ticket))
+    ))
 );

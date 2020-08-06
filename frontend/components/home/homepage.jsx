@@ -2,6 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
 import { fetchUser } from '../../actions/user_actions';
+import { fetchTickets } from '../../actions/registration_actions';
 import {Link, NavLink} from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -14,13 +15,10 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvents();
+    if (this.props.currentUser) {
+      this.props.fetchTickets(this.props.currentUser);
+    }
   }
-
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevProps.story !== this.props.story) {
-  //     this.setState(this.props.story);
-  //   }
-  // }
 
   toSTime(time) {
     const timeArray = time.split(":");
@@ -139,7 +137,8 @@ class HomePage extends React.Component {
       return {
           fetchEvents: () => dispatch(fetchEvents()),
           fetchEvent: (id) => dispatch(fetchEvent(id)),
-          fetchUser: (id) => dispatch(fetchUser(id))
+          fetchUser: (id) => dispatch(fetchUser(id)),
+          fetchTickets: user => dispatch(fetchTickets(user))
       }
   }
 
