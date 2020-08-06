@@ -24,9 +24,18 @@ class Api::RegistrationsController < ApplicationController
         end
     end
 
+    def show
+      @ticket = Registration.find(params[:id])
+    end
+
     def create
-        @ticket = Registration.create!(ticket_params)
-        render :show
+      # debugger
+        @ticket = Registration.new(ticket_params)
+        if @ticket.save!
+          render :show
+        else
+          render @ticket.errors.full_messages, status: 401
+        end
     end
 
     private

@@ -13,7 +13,7 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchTickets(this.props.currentUser);
+    // this.props.fetchTickets(this.props.currentUser);
     this.props.fetchEvent(this.props.match.params.eventId)
       .then(event => {
         const eventObj = Object.assign({}, event);
@@ -23,12 +23,19 @@ class EventShow extends React.Component {
 
   handleTicket(e) {
     e.preventDefault();
-    const ticketData = new FormData();
-    ticketData.append("registration[user_id]", this.props.currentUser.id);
-    ticketData.append("registration[event_id]", this.props.match.params.eventId);
+    // const ticketData = new FormData();
+    // ticketData.append("registration[user_id]", this.props.currentUser.id);
+    // ticketData.append("registration[event_id]", this.props.match.params.eventId);
+    const ticketData = {
+      registration: {
+        user_id: this.props.currentUser.id,
+        event_id: this.props.match.params.eventId,
+      }
+    };
+    // debugger;
     this.props.createTicket(ticketData);
-    const tickets = this.props.fetchTickets(this.props.currentUser);
-    this.setState(tickets);
+    // const tickets = this.props.fetchTickets(this.props.currentUser);
+    // this.setState(tickets);
   }
 
   eventDisplay() {
@@ -51,7 +58,10 @@ class EventShow extends React.Component {
                 </div>
               </div>
               <div className="under-header-container">
-                <button onClick={this.handleTicket} className="register-button">Tickets</button>
+                <button 
+                  onClick={this.handleTicket} className="register-button"
+                  disabled={this.props.purchased}
+              >{this.props.purchased ? "Already purchased" : "Tickets"}</button>
               </div>
             </div>
           </div>
@@ -77,16 +87,18 @@ class EventShow extends React.Component {
   }
 }
 
-const msp = (state, ownProps) => {
-    const purchase = ownProps.match.params.eventId
-    return {
-        errors: state.errors.session,
-        currentUser: state.session.currentUser,
-        entities: state.entities,
-        tickets: state.tickets,
-        purchased
-    }
-}
+const msp = ({ entities, errors, session }, ownProps) => {
+  const purchased = entities.users[session.currentUser.id].purchased_event_ids.includes(
+    parseInt(ownProps.match.params.eventId)
+  );
+  return {
+    errors: errors.session,
+    currentUser: session.currentUser,
+    entities: entities,
+    tickets: entities.tickets,
+    purchased,
+  };
+};
 
 const mdp = (dispatch) => {
     return {

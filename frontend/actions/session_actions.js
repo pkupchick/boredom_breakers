@@ -8,7 +8,8 @@ export const VERIFY_EMAIL = "VERIFY_EMAIL";
 export const receiveCurrentUser = (payload) => ({
   type: RECEIVE_CURRENT_USER,
   currentUser: payload.user,
-  events: payload.events
+  events: payload.events,
+  tickets: payload.tickets
 });
 
 export const logoutCurrentUser = () => ({
