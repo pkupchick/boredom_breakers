@@ -9,9 +9,9 @@ export const receiveAllTickets = () => {
     }
 };
 
-export const fetchTicket = user => (dispatch) => {
+export const fetchTickets = user => (dispatch) => {
     return APITicketUtil.fetchTickets(user)
-        .then(user => dispatch(receiveTicket(user))
+        .then(user => dispatch(fetchTickets(user))
     )
 };
 

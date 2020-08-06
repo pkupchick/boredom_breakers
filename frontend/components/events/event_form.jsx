@@ -34,7 +34,7 @@ class EventForm extends React.Component {
     handleSubmit(e) {
         e.preventDefault();
         const formData = new FormData();
-        formData.append("event[host_id", this.state.host_id),
+        formData.append("event[host_id]", this.state.host_id);
         formData.append("event[title]", this.state.title);
         formData.append("event[description]", this.state.description);
         formData.append("event[price]", this.state.price);

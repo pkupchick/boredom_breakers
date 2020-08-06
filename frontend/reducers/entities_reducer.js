@@ -2,8 +2,10 @@ import { combineReducers } from 'redux';
 
 import events from './events_reducer';
 import users from './users_reducer';
+import tickets from './tickets_reducer';
 
 export default combineReducers({
+    tickets,
     events,
     users
 });

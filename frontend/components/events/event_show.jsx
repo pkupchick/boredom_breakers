@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
-import { createTicket } from '../../actions/registration_actions';
+import { createTicket, fetchTickets } from '../../actions/registration_actions';
 import { NavLink } from 'react-router-dom';
 
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {}
-
+    this.state = this.props.fetchTickets(this.props.currentUser);
+    this.handleTicket = this.handleTicket.bind(this);
   }
 
   componentDidMount() {
@@ -20,8 +20,14 @@ class EventShow extends React.Component {
       })
   }
 
-  handleTicket() {
-
+  handleTicket(e) {
+    e.preventDefault();
+    const ticketData = new FormData();
+    ticketData.append("registration[user_id]", this.props.currentUser.id);
+    ticketData.append("registration[event_id]", this.props.match.params.eventId);
+    this.props.createTicket(ticketData);
+    const tickets = this.props.fetchTickets(this.props.currentUser);
+    this.setState(tickets);
   }
 
   eventDisplay() {
@@ -44,7 +50,7 @@ class EventShow extends React.Component {
                 </div>
               </div>
               <div className="under-header-container">
-                <button className="register-button">Tickets</button>
+                <button onClick={this.handleTicket} className="register-button">Tickets</button>
               </div>
             </div>
           </div>
@@ -83,7 +89,8 @@ const mdp = (dispatch) => {
     return {
         fetchEvents: () => dispatch(fetchEvents()),
         fetchEvent: (id) => dispatch(fetchEvent(id)),
-        createTicket: ticket => dispatch(createTicket(ticket))
+        createTicket: ticket => dispatch(createTicket(ticket)),
+        fetchTickets: (user) => dispatch(fetchTickets(user))
     }
 }
 
