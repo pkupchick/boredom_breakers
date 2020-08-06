@@ -2,6 +2,7 @@ import {
     RECEIVE_EVENTS,
     RECEIVE_EVENT,
 } from '../actions/event_actions';
+import { RECEIVE_CURRENT_USER } from "../actions/session_actions";
 
 const eventsReducer = (state = {}, action) => {
     Object.freeze(state)
@@ -16,6 +17,8 @@ const eventsReducer = (state = {}, action) => {
         case RECEIVE_EVENT:
             const newEvent = { [action.event.id]: action.event };
             return Object.assign({}, state, newEvent);
+        case RECEIVE_CURRENT_USER:
+            return Object.assign({}, state, action.events);
         default:
             return state;
     }

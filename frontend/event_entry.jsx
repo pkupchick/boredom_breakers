@@ -4,6 +4,7 @@ import configureStore from "./store/store";
 import Root from "./components/root";
 import { login, logout, signup, verify } from './actions/session_actions';
 import { fetchEvents, fetchEvent } from './actions/event_actions';
+import { createTicket, fetchTickets } from './actions/registration_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store;
@@ -12,10 +13,14 @@ document.addEventListener("DOMContentLoaded", () => {
       session: { currentUser: window.currentUser },
       entities: {
         users: { [window.currentUser.id]: window.currentUser },
+        events: window.events,
+        tickets: window.tickets
       }
     };
     store = configureStore(preloadedState);
     delete window.currentUser;
+    delete window.events;
+    delete window.tickets;
   } else {
     store = configureStore();
   }
@@ -37,6 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.$ = $;
     window.fetchEvents = fetchEvents;
     window.fetchEvent = fetchEvent;
+    window.createTicket = createTicket;
     //   TESTING END
 
   const root = document.getElementById("root");

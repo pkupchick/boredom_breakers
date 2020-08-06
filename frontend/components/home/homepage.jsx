@@ -16,12 +16,6 @@ class HomePage extends React.Component {
     this.props.fetchEvents();
   }
 
-  // componentDidUpdate(prevProps, prevState) {
-  //   if (prevProps.story !== this.props.story) {
-  //     this.setState(this.props.story);
-  //   }
-  // }
-
   toSTime(time) {
     const timeArray = time.split(":");
     const hour = timeArray[0];
@@ -139,7 +133,7 @@ class HomePage extends React.Component {
       return {
           fetchEvents: () => dispatch(fetchEvents()),
           fetchEvent: (id) => dispatch(fetchEvent(id)),
-          fetchUser: (id) => dispatch(fetchUser(id))
+          fetchUser: (id) => dispatch(fetchUser(id)),
       }
   }
 

@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
-import { createTicket } from '../../actions/registration_actions';
+import { createTicket, fetchTickets } from '../../actions/registration_actions';
 import { NavLink } from 'react-router-dom';
 
 class EventShow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {}
-
+    this.state = {};
+    this.handleTicket = this.handleTicket.bind(this);
   }
 
   componentDidMount() {
@@ -20,8 +20,8 @@ class EventShow extends React.Component {
       })
   }
 
-  handleTicket() {
-
+  handleTicket(e) {
+    e.preventDefault();
   }
 
   eventDisplay() {
@@ -44,7 +44,10 @@ class EventShow extends React.Component {
                 </div>
               </div>
               <div className="under-header-container">
-                <button className="register-button">Tickets</button>
+                <button 
+                  onClick={this.handleTicket} className="register-button"
+                  disabled={this.props.purchased}
+              >{this.props.purchased ? "Already purchased" : "Tickets"}</button>
               </div>
             </div>
           </div>
@@ -70,20 +73,22 @@ class EventShow extends React.Component {
   }
 }
 
-const msp = (state) => {
-    return {
-        errors: state.errors.session,
-        currentUser: state.session.currentUser,
-        entities: state.entities,
-        tickets: state.tickets
-    }
-}
+const msp = ({ entities, errors, session }, ownProps) => {
+
+  return {
+    errors: errors.session,
+    currentUser: session.currentUser,
+    entities: entities,
+    tickets: entities.tickets,
+  };
+};
 
 const mdp = (dispatch) => {
     return {
         fetchEvents: () => dispatch(fetchEvents()),
         fetchEvent: (id) => dispatch(fetchEvent(id)),
-        createTicket: ticket => dispatch(createTicket(ticket))
+        createTicket: ticket => dispatch(createTicket(ticket)),
+        fetchTickets: (user) => dispatch(fetchTickets(user))
     }
 }
 
