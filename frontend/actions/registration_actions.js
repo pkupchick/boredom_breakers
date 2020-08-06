@@ -17,6 +17,6 @@ export const fetchTickets = user => (dispatch) => {
 
 export const createTicket = ticket => dispatch => (
     APITicketUtil.createTicket(ticket)
-        .then(ticket => (dispatch(receiveAllTickets()))
+        .then(ticket => (dispatch(receiveAllTickets(ticket.user_id)))
     )
 );

@@ -8,11 +8,12 @@ class EventShow extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = this.props.fetchTickets(this.props.currentUser);
+    this.state = {};
     this.handleTicket = this.handleTicket.bind(this);
   }
 
   componentDidMount() {
+    this.props.fetchTickets(this.props.currentUser);
     this.props.fetchEvent(this.props.match.params.eventId)
       .then(event => {
         const eventObj = Object.assign({}, event);
