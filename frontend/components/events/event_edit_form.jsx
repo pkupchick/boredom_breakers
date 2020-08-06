@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { fetchEvent, updateEvent } from '../../actions/event_actions';
+import { fetchEvent, updateEvent, deleteEvent } from '../../actions/event_actions';
 import DropZone from 'react-dropzone';
 
 class EventEditForm extends React.Component {
@@ -22,8 +22,8 @@ class EventEditForm extends React.Component {
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleFile = this.handleFile.bind(this);
     this.onDrop = this.onDrop.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
 
       componentDidMount() {
@@ -62,6 +62,12 @@ class EventEditForm extends React.Component {
           formData.append('event[photo]', this.state.photoFile);
         }
         this.props.updateEvent(formData).then(() => {this.props.history.push("/")});
+    }
+
+    handleDelete(e) {
+      e.preventDefault;
+      this.props.deleteEvent(this.props.match.params.eventId);
+      this.props.history.push("/");
     }
 
     handleFile(e) {
@@ -266,7 +272,10 @@ class EventEditForm extends React.Component {
               <button className="create-event-button" onClick={this.handleSubmit}>
                 Save &amp; Continue
               </button>
+              <br/>
+              <br/>
             </form>
+              <button onClick={this.handleDelete} className="create-event-button">Delete Event</button>
           </div>
         </div>
       );
@@ -285,7 +294,8 @@ const msp = (state) => {
 const mdp = (dispatch) => {
     return {
         updateEvent: event => dispatch(updateEvent(event)),
-        fetchEvent: id => dispatch(fetchEvent(id))
+        fetchEvent: id => dispatch(fetchEvent(id)),
+        deleteEvent: id => dispatch(deleteEvent(id))
     }
 };
 

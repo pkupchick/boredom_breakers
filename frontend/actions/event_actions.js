@@ -15,10 +15,10 @@ export const receiveEvent = event => ({
 });
 
 const receiveErrors = (errors) => {
-  return {
-    type: RECEIVE_EVENT_ERRORS,
-    errors: errors,
-  };
+    return {
+        type: RECEIVE_EVENT_ERRORS,
+        errors: errors,
+    };
 };
 
 export const fetchEvents = () => (dispatch) =>
@@ -48,6 +48,6 @@ export const updateEvent = event => dispatch => (
 
 export const deleteEvent = (id) => dispatch => {
     return APIEventUtil.deleteEvent(id)
-        .then(id => dispatch(removeEvent(id)),
-        err => dispatch(receiveErrors(err.responseJSON)))
+        .then(id => dispatch(deleteEvent(id)),
+    )
 }
