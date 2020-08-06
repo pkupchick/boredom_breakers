@@ -266,27 +266,55 @@ input {
 //     padding-top: 10px;
 }
 
- .errors-list {
-   list-style: none;
-   font-size: 12px;
-   color: #c42421;
-   margin: 0px;
-   padding: 0px;
-   padding-top: 5px;
-   text-align: left;
- }
+.errors-list {
+    list-style: none;
+    font-size: 12px;
+    color: #c42421;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 5px;
+    text-align: left;
+}
 
- .input-error {
-     border: 1px solid #B62D35
- }
+.input-error {
+    border: 1px solid #B62D35
+}
 
- .log-in-instead {
+.log-in-instead {
     color: #3B68DF;
     font-weight: 300;
     font-size: 12px;
     letter-spacing: .2;
- }
+}
 
- .log-in-instead:hover {
-     cursor: pointer;
- }
+.log-in-instead:hover {
+    cursor: pointer;
+}
+
+// Begin footer CSS
+
+.footer-container {
+    height: 80px;
+    background-color: #1B0D39;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content li {
+    color: white;
+    padding: 20px;
+    display: inline;
+}
+
+.unstyled-link {
+    text-decoration: none;
+    color: white;
+    &:hover {
+        color: #4060E7;
+        text-decoration: underline;
+    }
+}
+
+.footer-links {
+    list-style: none;
+}

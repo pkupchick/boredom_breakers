@@ -1,5 +1,6 @@
 import React from "react";
 import Header from './header/header_container';
+import Footer from './footer/footer';
 import SessionContainer from './session/session_container';
 import HomePage from './home/homepage';
 import EventForm from './events/event_form';
@@ -24,6 +25,9 @@ const App = () => (
       <Route exact path="/events/:eventId" component={EventShow} />
       <ProtectedRoute path="/users/:userId" component={Profile} />
     </Switch>
+    <footer>
+      <Footer />
+    </footer>
   </div>
 );
 
