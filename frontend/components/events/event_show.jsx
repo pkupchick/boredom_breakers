@@ -34,7 +34,8 @@ class EventShow extends React.Component {
                 <img src={currentEvent.photoUrl} className="event-show-image" />
                 <div className="event-show-card-right">
                   <p>{eventDate}</p>
-                  <p>{currentEvent.title}</p>
+                  <br/>
+                  <h3>{currentEvent.title}</h3>
                 </div>
               </div>
               <div className="under-header-container">
