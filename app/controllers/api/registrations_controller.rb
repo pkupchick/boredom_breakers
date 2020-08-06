@@ -13,4 +13,15 @@ class Api::RegistrationsController < ApplicationController
             render json: @user.errors.full_messages, status: 401
         end
     end
+
+    def create
+        @ticket = Registration.create!(ticket_params)
+        render :show
+    end
+
+    private
+    
+    def ticket_params
+        params.require(:registration).permit(:user_id, :event_id)
+    end
 end

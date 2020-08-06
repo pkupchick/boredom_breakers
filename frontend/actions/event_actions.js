@@ -50,4 +50,4 @@ export const deleteEvent = (id) => dispatch => {
     return APIEventUtil.deleteEvent(id)
         .then(id => dispatch(deleteEvent(id)),
     )
-}
+};

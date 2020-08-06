@@ -7,3 +7,11 @@ export const fetchTickets = (user) => {
         data: { user }
     });
 };
+
+export const createTicket = ticketForm => {
+    return $.ajax({
+        method: "POST",
+        url: "/api/registrations",
+        data: ticketForm
+    })
+}

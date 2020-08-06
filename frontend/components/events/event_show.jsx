@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { fetchEvents, fetchEvent } from '../../actions/event_actions';
+import { createTicket } from '../../actions/registration_actions';
 import { NavLink } from 'react-router-dom';
 
 class EventShow extends React.Component {
@@ -17,6 +18,10 @@ class EventShow extends React.Component {
         const eventObj = Object.assign({}, event);
         this.setState(eventObj);
       })
+  }
+
+  handleTicket() {
+
   }
 
   eventDisplay() {
@@ -69,14 +74,16 @@ const msp = (state) => {
     return {
         errors: state.errors.session,
         currentUser: state.session.currentUser,
-        entities: state.entities
+        entities: state.entities,
+        tickets: state.tickets
     }
 }
 
 const mdp = (dispatch) => {
     return {
         fetchEvents: () => dispatch(fetchEvents()),
-        fetchEvent: (id) => dispatch(fetchEvent(id))
+        fetchEvent: (id) => dispatch(fetchEvent(id)),
+        createTicket: ticket => dispatch(createTicket(ticket))
     }
 }
 
