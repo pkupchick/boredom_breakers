@@ -13,7 +13,6 @@ class EventShow extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchTickets(this.props.currentUser);
     this.props.fetchEvent(this.props.match.params.eventId)
       .then(event => {
         const eventObj = Object.assign({}, event);
@@ -23,12 +22,6 @@ class EventShow extends React.Component {
 
   handleTicket(e) {
     e.preventDefault();
-    const ticketData = new FormData();
-    ticketData.append("registration[user_id]", this.props.currentUser.id);
-    ticketData.append("registration[event_id]", this.props.match.params.eventId);
-    this.props.createTicket(ticketData);
-    const tickets = this.props.fetchTickets(this.props.currentUser);
-    this.setState(tickets);
   }
 
   eventDisplay() {

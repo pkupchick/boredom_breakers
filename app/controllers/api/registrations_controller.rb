@@ -10,7 +10,7 @@ class Api::RegistrationsController < ApplicationController
             end
             render :json => { tickets: events }
         else
-            render json: @user.errors.full_messages, status: 401
+            render json: ["No tickets"]
         end
     end
 

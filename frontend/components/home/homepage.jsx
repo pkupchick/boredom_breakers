@@ -15,9 +15,6 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     this.props.fetchEvents();
-    if (this.props.currentUser) {
-      this.props.fetchTickets(this.props.currentUser);
-    }
   }
 
   toSTime(time) {
@@ -138,7 +135,6 @@ class HomePage extends React.Component {
           fetchEvents: () => dispatch(fetchEvents()),
           fetchEvent: (id) => dispatch(fetchEvent(id)),
           fetchUser: (id) => dispatch(fetchUser(id)),
-          fetchTickets: user => dispatch(fetchTickets(user))
       }
   }
 

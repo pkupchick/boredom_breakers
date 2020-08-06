@@ -1,7 +1,5 @@
-// To be used for ticket feature
 
 export const fetchTickets = (user) => {
-    debugger;
     return $.ajax({
         method: "GET",
         url: "api/user_tickets",
