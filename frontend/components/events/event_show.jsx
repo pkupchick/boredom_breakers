@@ -44,7 +44,10 @@ class EventShow extends React.Component {
                 </div>
               </div>
               <div className="under-header-container">
-                <button onClick={this.handleTicket} className="register-button">Tickets</button>
+                <button 
+                  onClick={this.handleTicket} className="register-button"
+                  disabled={this.props.purchased}
+              >{this.props.purchased ? "Already purchased" : "Tickets"}</button>
               </div>
             </div>
           </div>
@@ -70,14 +73,18 @@ class EventShow extends React.Component {
   }
 }
 
-const msp = (state) => {
-    return {
-        errors: state.errors.session,
-        currentUser: state.session.currentUser,
-        entities: state.entities,
-        tickets: state.tickets
-    }
-}
+const msp = ({ entities, errors, session }, ownProps) => {
+  const purchased = entities.users[session.currentUser.id].purchased_event_ids.includes(
+    parseInt(ownProps.match.params.eventId)
+  );
+  return {
+    errors: errors.session,
+    currentUser: session.currentUser,
+    entities: entities,
+    tickets: entities.tickets,
+    purchased,
+  };
+};
 
 const mdp = (dispatch) => {
     return {

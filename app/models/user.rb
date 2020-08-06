@@ -54,4 +54,9 @@ class User < ApplicationRecord
         self.save!
         self.session_token
     end
+
+    def all_events
+        # hosted events + events that you purchased.
+        self.events + self.registrations.map {|ticket| ticket.event }
+    end
 end
