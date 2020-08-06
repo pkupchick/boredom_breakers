@@ -10,11 +10,3 @@ export const validateEmail = (email) => {
     }
     return true;
 };
-
-export const showDropDown = () => {
-    $('.dropdown-content').removeClass('hidden')
-}
-
-export const hideDropDown = () => {
-    $('.dropdown-content').addClass('hidden')
-}

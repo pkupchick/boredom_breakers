@@ -24,15 +24,6 @@ class Api::UsersController < ApplicationController
     @user = selected_user
   end
 
-  def tickets
-    @user = User.find_by(id: params[:user][:id])
-    if @user
-      render :json => { tickets: @user.registrations}
-    else
-      render json: @user.errors.full_messages, status: 401
-    end
-  end
-
   def verify
     @user = User.find_by(email: params[:user][:email])
     if @user
