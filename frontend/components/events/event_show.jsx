@@ -77,12 +77,14 @@ class EventShow extends React.Component {
   }
 }
 
-const msp = (state) => {
+const msp = (state, ownProps) => {
+    const purchase = ownProps.match.params.eventId
     return {
         errors: state.errors.session,
         currentUser: state.session.currentUser,
         entities: state.entities,
-        tickets: state.tickets
+        tickets: state.tickets,
+        purchased
     }
 }
 

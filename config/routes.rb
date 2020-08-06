@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :users
     resources :registrations
     resources :events
-    match 'user_tickets', to: 'registrations#tickets', via: [:get]
+    # match 'user_tickets', to: 'registrations#tickets', via: [:get]
     match 'verify_user', to: 'users#verify', via: [:get]
     resource :session, only: [:create, :destroy]
   end
