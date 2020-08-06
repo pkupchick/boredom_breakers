@@ -244,7 +244,7 @@ class EventForm extends React.Component {
                         {this.dropZone()}
                         <br/>
                         <br/>
-                        <button className="login-button" onClick={this.handleSubmit}>
+                        <button className="create-event-button" onClick={this.handleSubmit}>
                         Save &amp; Continue
                         </button>
                     </form>

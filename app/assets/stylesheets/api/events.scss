@@ -75,6 +75,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    box-shadow: 0px 0px 5px 1px rgba(5, 5, 5, 0.1)
 }
 
 .event-show-banner {
@@ -89,22 +90,21 @@
 }
 
 .event-show-background {
-    height: 510px;
     background-image: url("http://yogapattern.com/show-gradient.png");
 }
 
 .event-show-content-section {
     background-color: #F8F7FA;
-    position: relative;
 }
 
 .inner-content {
+    box-sizing: border-box;
+    padding: 10px;
     margin-left: 100px;
     margin-right: 100px;
-    position: absolute;
+    margin-top:30px;
     background-color: white;
-    top: -34px;
-    width: 1040px;
+    box-shadow: 0px 0px 5px 1px rgba(5, 5, 5, 0.1)
 }
 
 
@@ -161,6 +161,9 @@
 
 .nav-item-1:hover {
     border-bottom: 2px solid black;
+    // outline: 2px solid black;
+    // outline-offset: -10px;
+    // box-sizing: border-box;
 }
 
 .category-nav-list {
@@ -213,8 +216,8 @@
 }
 
 .event-category-input {
-    height: 35px;
-    width: 300px;
+    height: 32px;
+    width: 283px;
     margin-right: 20px;
     opacity: .6;
     padding: 5px;
@@ -237,6 +240,28 @@
     opacity: .6;
 }
 
+.event-start-date {
+    width: 295px;
+    opacity: .6;
+    margin-right: 20px;
+}
+
+.event-start-time {
+    width: 295px;
+    opacity: .6;
+}
+
+.event-end-date {
+    width: 295px;
+    opacity: .6;
+    margin-right: 20px;
+}
+
+.event-end-time {
+    width: 295px;
+    opacity: .6;
+}
+
 .event-form-container {
     display: flex;
     align-items: center;
@@ -244,4 +269,28 @@
 
 .create-event-p {
     padding-bottom: 10px;
+}
+
+.create-button-container {
+    justify-content: flex-end;
+}
+
+.create-event-button {
+    border-radius: 5px;
+    transform: translateZ(0);
+    background-color: var(--eds-primary-brand,#d1410c);
+    border-style: none;
+    width: 322px;
+    height: 47px;
+    opacity: 1;
+    color: whitesmoke;
+    letter-spacing: .2px;
+    transition: all .4s cubic-bezier(.4,0,.3,1);
+    margin-bottom: 20px;
+    margin-left:190px;
+
+    &:hover {
+        opacity: 0.6;
+        cursor: pointer;
+    }
 }
