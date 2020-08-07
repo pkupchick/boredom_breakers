@@ -90,22 +90,22 @@ e4 = Event.create!({
 
   e4.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/not-a-dog.png"), filename: "not-a-dog.png")
 
-# e5 = Event.create!({
-#     host_id: jim.id,
-#     title: "Bills Badger Busters: Learn how to swang and bang",
-#     description: "Come bust up badgers with billy.  He's a badger busting fool and after a few short hours of smashing baders we're sure
-#     you'll fallin love with Americas favorite pastime.",
-#     event_start: "2020-11-11",
-#     event_end: "2020-11-12",
-#     event_start_time: "06:00",
-#     event_end_time: "08:00",
-#     price: 55,
-#     location: "Macon, GA",
-#     category: "Hobbies",
-#     max_attendees: 55,
-#   })
+e5 = Event.create!({
+    host_id: jim.id,
+    title: "Bills Badger Busters: Learn how to swang and bang",
+    description: "Come bust up badgers with billy.  He's a badger busting fool and after a few short hours of smashing baders we're sure
+    you'll fallin love with Americas favorite pastime.",
+    event_start: "2020-11-11",
+    event_end: "2020-11-12",
+    event_start_time: "06:00",
+    event_end_time: "08:00",
+    price: 55,
+    location: "Macon, GA",
+    category: "Hobbies",
+    max_attendees: 55,
+  })
 
-# e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.jpg"), filename: "badger.jpg")
+e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.jpg"), filename: "badger.jpg")
 
  e6 = Event.create!({
     host_id: peter.id,
@@ -123,21 +123,21 @@ e4 = Event.create!({
 
   e6.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/concert.jpg"), filename: "concert.jpg")
 
-e7 =  Event.create!({
-    host_id: aschel.id,
-    title: "Salsa Dancing",
-    description: "Come learn to salsa dance with world class Latinos",
-    event_start: "2020-05-10",
-    event_end: "2020-05-10",
-    event_start_time: "20:00",
-    event_end_time: "22:00",
-    price: 87,
-    location: "Harlem, NY",
-    category: "Performing & Visual Arts",
-    max_attendees: 30,
-  })
+# e7 =  Event.create!({
+#     host_id: aschel.id,
+#     title: "Salsa Dancing",
+#     description: "Come learn to salsa dance with world class Latinos",
+#     event_start: "2020-05-10",
+#     event_end: "2020-05-10",
+#     event_start_time: "20:00",
+#     event_end_time: "22:00",
+#     price: 87,
+#     location: "Harlem, NY",
+#     category: "Performing & Visual Arts",
+#     max_attendees: 30,
+#   })
 
-  e7.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/salsa.jpg"), filename: "salsa.jpg")
+#   e7.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/salsa.jpg"), filename: "salsa.jpg")
 
 e8 =  Event.create!({
     host_id: peter.id,
