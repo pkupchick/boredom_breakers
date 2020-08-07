@@ -1,25 +1,4 @@
-# README
+# Boredom Breakers
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Boredom Breakers is an EventBrite clone that allows users to create events of all sizes and types.  Users can browse events and register for the ones that interest them.  The site was built with Ruby on Rails backend, PostgreSQL Database, and React/Redux front end.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# boredom_breakers
