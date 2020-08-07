@@ -90,22 +90,22 @@ e4 = Event.create!({
 
   e4.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/not-a-dog.png"), filename: "not-a-dog.png")
 
-e5 = Event.create!({
-    host_id: jim.id,
-    title: "Bills Badger Busters: Learn how to swang and bang",
-    description: "Come bust up badgers with billy.  He's a badger busting fool and after a few short hours of smashing baders we're sure
-    you'll fallin love with Americas favorite pastime.",
-    event_start: "2020-11-11",
-    event_end: "2020-11-12",
-    event_start_time: "06:00",
-    event_end_time: "08:00",
-    price: 55,
-    location: "Macon, GA",
-    category: "Hobbies",
-    max_attendees: 55,
-  })
+# e5 = Event.create!({
+#     host_id: jim.id,
+#     title: "Bills Badger Busters: Learn how to swang and bang",
+#     description: "Come bust up badgers with billy.  He's a badger busting fool and after a few short hours of smashing baders we're sure
+#     you'll fallin love with Americas favorite pastime.",
+#     event_start: "2020-11-11",
+#     event_end: "2020-11-12",
+#     event_start_time: "06:00",
+#     event_end_time: "08:00",
+#     price: 55,
+#     location: "Macon, GA",
+#     category: "Hobbies",
+#     max_attendees: 55,
+#   })
 
-e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.jpg"), filename: "badger.jpg")
+# e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.jpg"), filename: "badger.jpg")
 
  e6 = Event.create!({
     host_id: peter.id,
