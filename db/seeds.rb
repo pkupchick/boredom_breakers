@@ -22,18 +22,20 @@ jim = User.create!(email: "jim@gmail.com", name: "Jim Gagger", password: "hunter
 
 e1 =    Event.create!({
     host_id: peter.id,
-    title: "Brisket Lessons from a BBQ God",
-    description: "Learn how to cook Brisket like pit masters from all over the USA",
+    title: "Advanced Photoshop Techniques: with Mufasa",
+    description: "Long before he was the King of the Jungle Mufasa was an avid wildlife photographer.  
+    Since the faking of his death he's head ample time to pick up a camera and capture some of the 
+    Serengeti's most most breath taking creatures.",
     event_start: "2020-10-10",
     event_end: "2020-10-10",
     event_start_time: "11:00",
     event_end_time: "13:00",
     price: 150,
-    location: "Dallas, TX",
-    category: "Food & Drink",
-    max_attendees: 44,
+    location: "Musoma, Africa",
+    category: "Performing & Visual Arts",
+    max_attendees: 55,
   })
-  e1.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/bbq.jpg"), filename: "bbq.jpg")
+  e1.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/photo-editing-seminar.png"), filename: "photo-editing-seminar.jpg")
 
  e2 =  Event.create!({
     host_id: dan.id,
