@@ -57,24 +57,27 @@ e1 =    Event.create!({
 
 e3 = Event.create!({
     host_id: dan.id,
-    title: "Dans Disco",
-    description: "Dan disco",
+    title: "Free Fish Feast",
+    description: "This guys giving out free fish and nobody is sure why.  Either way register to come get some of this delicious mackeral
+    or maybe its tuna.  Bottom line is nobody is sure what kinda fish it is but its free and he looks intent on giving it away.",
     event_start: "2020-02-02",
     event_end: "2020-02-02",
-    event_start_time: "13:09",
+    event_start_time: "13:00",
     event_end_time: "14:00",
-    price: 100,
-    location: "LI NY",
-    category: "Auto, Boat & Air",
+    price: 0,
+    location: "Harlem, NY",
+    category: "Other",
     max_attendees: 20,
   })
 
-  e3.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/disco.jpg"), filename: "disco.jpg")
+  e3.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/free-fish.png"), filename: "free-fish.png")
 
 e4 = Event.create!({
     host_id: jim.id,
-    title: "Lebrons Basketball Camp",
-    description: "Come get dunked on six hours a day by Lebron James",
+    title: "Dog Training with Jim Lapel",
+    description: "Sign up for the premier dog training course offered this side of the hill.  Jim Lapel taught the dog in this photo
+    how to sit, come, and clearly how to lay down and we'll be dollars to doughnuts he can teach your dog too.  Heck Jim will even work
+    with cats if you'd like.  Bring your dogs or cats and Jim will set em straight.",
     event_start: "2021-03-20",
     event_end: "2021-03-22",
     event_start_time: "16:00",
@@ -82,21 +85,22 @@ e4 = Event.create!({
     price: 1200,
     location: "Los Angeles, CA",
     category: "Sports & Fitness",
-    max_attendees: 999,
+    max_attendees: 100,
   })
 
-  e4.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/lebron.jpg"), filename: "lebron.jpg")
+  e4.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/not-a-dog.png"), filename: "not-a-dog.png")
 
 e5 = Event.create!({
     host_id: jim.id,
-    title: "Badger Busters",
-    description: "Come bust up badgers with billy.  He's a badger busting fool.",
+    title: "Bills Badger Busters: Learn how to swang and bang",
+    description: "Come bust up badgers with billy.  He's a badger busting fool and after a few short hours of smashing baders we're sure
+    you'll fallin love with Americas favorite pastime.",
     event_start: "2020-11-11",
     event_end: "2020-11-12",
     event_start_time: "06:00",
     event_end_time: "08:00",
     price: 55,
-    location: "Los Angeles, CA",
+    location: "Macon, GA",
     category: "Hobbies",
     max_attendees: 55,
   })
@@ -166,19 +170,3 @@ e9 = Event.create!({
   })
 
   e9.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/beef-pho.jpg"), filename: "beef-pho.jpg")
-
-e10 = Event.create!({
-    host_id: aschel.id,
-    title: "Aschs Sas Class",
-    description: "Come get classy with..Sass taught by...Asch",
-    event_start: "2020-10-10",
-    event_end: "2020-10-10",
-    event_start_time: "21:00",
-    event_end_time: "22:00",
-    price: 100,
-    location: "New Orleans, LA",
-    category: "Home & Lifestyle",
-    max_attendees: 4,
-  })
-
-  e10.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/aschel.jpg"), filename: "aschel.jpg")
