@@ -39,19 +39,21 @@ e1 =    Event.create!({
 
  e2 =  Event.create!({
     host_id: dan.id,
-    title: "Dans Jams",
-    description: "Come Jam with Dan.  He's a Jammin Man",
+    title: "Intergalactic Space Picnic with Rick and Morty",
+    description: "Register to attend a picnic for the ages with Rick and Morty, portal guns included!
+    This Friday, well not this worlds' Friday but that worlds Friday come join us for a swell time, you can rest assured
+    Ricks bringing the pickles.  All you need to bring are some of those sweet wafers.",
     event_start: "2021-06-06",
     event_end: "2021-06-06",
     event_start_time: "18:00",
     event_end_time: "20:00",
-    price: 78,
-    location: "Portland, ME",
-    category: "Music",
-    max_attendees: 60,
+    price: 17,
+    location: "Planet Squanch",
+    category: "Travel & Outdoor",
+    max_attendees: 400,
   })
 
-  e2.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/dan-guitar.jpg"), filename: "dan-guitar.jpg")
+  e2.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/rick-morty.png"), filename: "rick-morty.jpg")
 
 e3 = Event.create!({
     host_id: dan.id,
