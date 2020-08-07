@@ -245,7 +245,7 @@ class EventForm extends React.Component {
                         <br/>
                         <br/>
                         <button className="create-event-button" onClick={this.handleSubmit}>
-                        Save &amp; Continue
+                        Create Event
                         </button>
                     </form>
                 </div>

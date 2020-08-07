@@ -270,7 +270,7 @@ class EventEditForm extends React.Component {
               <br />
               <br />
               <button className="create-event-button" onClick={this.handleSubmit}>
-                Create Event
+                Update Event
               </button>
               <br/>
               <br/>
