@@ -105,46 +105,46 @@ e5 = Event.create!({
     max_attendees: 55,
   })
 
-e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.jpg"), filename: "badger.jpg")
+e5.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/badger.png"), filename: "badger.png")
 
  e6 = Event.create!({
     host_id: peter.id,
-    title: "DeadMouse",
-    description: "Electronic music till your ears bleed",
+    title: "Virtual EDM: Hosted on Zoom",
+    description: "Electronic music till your ears bleed shiny disco balls.  Who says we can't get deeb grooves going during Covid?",
     event_start: "2021-03-03",
     event_end: "2021-03-03",
     event_start_time: "23:00",
     event_end_time: "03:00",
     price: 55,
-    location: "Amsterdam",
+    location: "Online",
     category: "Music",
     max_attendees: 500,
   })
 
-  e6.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/concert.jpg"), filename: "concert.jpg")
+  e6.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/edm.png"), filename: "edm.png")
 
-# e7 =  Event.create!({
-#     host_id: aschel.id,
-#     title: "Salsa Dancing",
-#     description: "Come learn to salsa dance with world class Latinos",
-#     event_start: "2020-05-10",
-#     event_end: "2020-05-10",
-#     event_start_time: "20:00",
-#     event_end_time: "22:00",
-#     price: 87,
-#     location: "Harlem, NY",
-#     category: "Performing & Visual Arts",
-#     max_attendees: 30,
-#   })
+e7 =  Event.create!({
+    host_id: aschel.id,
+    title: "Salsa Dancing",
+    description: "Come learn to salsa dance with world class instructors",
+    event_start: "2020-05-10",
+    event_end: "2020-05-10",
+    event_start_time: "20:00",
+    event_end_time: "22:00",
+    price: 87,
+    location: "Bronx, NY",
+    category: "Performing & Visual Arts",
+    max_attendees: 30,
+  })
 
-#   e7.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/salsa.jpg"), filename: "salsa.jpg")
+  e7.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/salsa-dancing.png"), filename: "salsa-dancing.png")
 
 e8 =  Event.create!({
     host_id: peter.id,
     title: "Pete's Pastries",
     description: "Come learn to make pastries with Pete, he knows how to roll that dough!",
-    event_start: "2021-05-10",
-    event_end: "2021-05-10",
+    event_start: "2021-12-10",
+    event_end: "2021-12-10",
     event_start_time: "10:00",
     event_end_time: "13:00",
     price: 25,
@@ -153,20 +153,20 @@ e8 =  Event.create!({
     max_attendees: 35,
   })
 
-e8.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/pastries.jpg"), filename: "pastries.jpg")
+e8.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/petes-pastries.png"), filename: "pastries.png")
 
-e9 = Event.create!({
-    host_id: peter.id,
-    title: "Peter Kims Recovery",
-    description: "He needs soup to feel better!!",
-    event_start: "2020-08-03",
-    event_end: "2020-08-03",
-    event_start_time: "11:00",
-    event_end_time: "12:00",
-    price: 15,
-    location: "NY, NY",
-    category: "Food & Drink",
-    max_attendees: 2,
-  })
+# e9 = Event.create!({
+#     host_id: peter.id,
+#     title: "Peter Kims Recovery",
+#     description: "He needs soup to feel better!!",
+#     event_start: "2020-08-03",
+#     event_end: "2020-08-03",
+#     event_start_time: "11:00",
+#     event_end_time: "12:00",
+#     price: 15,
+#     location: "NY, NY",
+#     category: "Food & Drink",
+#     max_attendees: 2,
+#   })
 
-  e9.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/beef-pho.jpg"), filename: "beef-pho.jpg")
+#   e9.photo.attach(io: open("https://boredom-breakers-seed.s3.amazonaws.com/beef-pho.jpg"), filename: "beef-pho.jpg")
