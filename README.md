@@ -66,3 +66,13 @@ export const validateEmail = (email) => {
   }
 ```
 
+## Simple Event Creation / AWS Image Upload
+
+<img src="https://boredom-breakers-seed.s3.amazonaws.com/form-gif.gif">
+
+## Future Features
+
+- Google Maps API 
+- Event Ticket Barcode Generation
+- Manage Events Hosted in Profile
+- Manage Tickets Purchased in Profile
