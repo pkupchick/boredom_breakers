@@ -270,7 +270,7 @@ class EventEditForm extends React.Component {
               <br />
               <br />
               <button className="create-event-button" onClick={this.handleSubmit}>
-                Save &amp; Continue
+                Create Event
               </button>
               <br/>
               <br/>

@@ -31,6 +31,7 @@ class EventShow extends React.Component {
       let dateObj = new Date(currentEvent.event_start);
       eventDate = dateObj.toDateString();
     }
+
     return currentEvent ?  (
       <div className="event-show-container">
         <div className="event-show-background">
@@ -38,9 +39,16 @@ class EventShow extends React.Component {
             <div className="show-container-top">
                 <img src={currentEvent.photoUrl} className="event-show-image" />
                 <div className="event-show-card-right">
-                  <p>{eventDate}</p>
-                  <br/>
-                  <h3>{currentEvent.title}</h3>
+                  <div className="event-show-card-right-top">
+                    <p>{eventDate}</p>
+                    <br/>
+                    <h3>{currentEvent.title}</h3>
+                  </div>
+                  <div className="event-show-card-right-bottom">
+                    <div className="price-box">
+                      <p>${currentEvent.price}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="under-header-container">
