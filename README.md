@@ -25,8 +25,7 @@ Boredom Breakers is an EventBrite clone that allows users to create events of al
 
 ## Brief site walkthrough
 
-<img src="https://boredom-breakers-seed.s3.amazonaws.com/gifffff.gif">
-
+<img src="https://boredom-breakers-seed.s3.amazonaws.com/home-page-animated.gif">
 
 ## Custom Simple Scripts
 
