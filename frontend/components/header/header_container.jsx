@@ -4,6 +4,8 @@ import { Link, NavLink } from 'react-router-dom';
 import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Component } from 'react';
+import Select from 'react-select';
 
 class Header extends React.Component {
     constructor(props) {
@@ -12,6 +14,7 @@ class Header extends React.Component {
         this.showDropDown = this.showDropDown.bind(this);
         this.hideDropDown = this.hideDropDown.bind(this);
         this.handleDropDown = this.handleDropDown.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
 
     showDropDown() {
@@ -35,9 +38,44 @@ class Header extends React.Component {
         )
     }
 
+  handleChange(selectedOption) {
+    if (selectedOption.value === "home") {
+      this.props.history.push("/");
+    } else if (selectedOption.value === "profile") {
+      this.props.history.push(`/users/${this.props.currentUser.id}`);
+    } else if (selectedOption.value === "logout") {
+      this.props.logout().then(() => {
+        this.props.history.push('/login');
+      });
+    } else {
+      this.props.history.push(`/${selectedOption.value}`);
+    }
+  };
+
     render() {
         const { currentUser } = this.props;
         let headerComponent = null;
+
+      let options = null;
+      if (this.props.loggedIn) {
+        options = [
+          { value: "home", label: "home" },
+          { value: "events", label: "event" },
+          { value: "leaderboard", label: "leaderboard" },
+          { value: "profile", label: "profile" },
+          { value: "events/new", label: "create event" },
+          { value: "logout", label: "logout" },
+        ];
+      } else {
+        options = [
+          { value: "home", label: "home" },
+          { value: "events", label: "events" },
+          { value: "leaderboard", label: "leaderboard" },
+          { value: "signup", label: "signup" },
+          { value: "login", label: "login" },
+        ];
+      }
+      const selectedOption = null;
 
         let dropDown = (
           <>
@@ -95,9 +133,16 @@ class Header extends React.Component {
                 </div>
                 </div>
                 </div>
-                <div className="dropdown" >
-                  {dropDown}
-                </div>
+                  {/* {dropDown} */}
+                  <div className="select-container">
+                    <Select
+                      style='drop-down-select'
+                      value={selectedOption}
+                      onChange={this.handleChange}
+                      options={options}
+                      placeholder='Nav Menu'
+                    />
+                  </div>
               </div>
             );
         }
