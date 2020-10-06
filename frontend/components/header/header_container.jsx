@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import 
 import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -69,10 +70,11 @@ class Header extends React.Component {
       } else {
         options = [
           { value: "home", label: "home" },
-          { value: "events", label: "events" },
+          { value: "events", label: "event" },
           { value: "leaderboard", label: "leaderboard" },
-          { value: "signup", label: "signup" },
-          { value: "login", label: "login" },
+          { value: "profile", label: "profile" },
+          { value: "events/new", label: "create event" },
+          { value: "logout", label: "logout" },
         ];
       }
       const selectedOption = null;
