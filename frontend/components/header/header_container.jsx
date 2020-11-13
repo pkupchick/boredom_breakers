@@ -1,12 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
-import 
 import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Component } from 'react';
 import Select from 'react-select';
+
 
 class Header extends React.Component {
     constructor(props) {
@@ -62,7 +61,6 @@ class Header extends React.Component {
         options = [
           { value: "home", label: "home" },
           { value: "events", label: "event" },
-          { value: "leaderboard", label: "leaderboard" },
           { value: "profile", label: "profile" },
           { value: "events/new", label: "create event" },
           { value: "logout", label: "logout" },
@@ -71,7 +69,6 @@ class Header extends React.Component {
         options = [
           { value: "home", label: "home" },
           { value: "events", label: "event" },
-          { value: "leaderboard", label: "leaderboard" },
           { value: "profile", label: "profile" },
           { value: "events/new", label: "create event" },
           { value: "logout", label: "logout" },
@@ -159,14 +156,14 @@ class Header extends React.Component {
 
 const msp = (state) => {
     return {
-        errors: state.errors.session,
-        currentUser: state.session.currentUser
+      errors: state.errors.session,
+      currentUser: state.session.currentUser
     }
 }
 
 const mdp = (dispatch) => {
     return {
-        logout: () => dispatch(logout())
+      logout: () => dispatch(logout())
     };
 };
 
