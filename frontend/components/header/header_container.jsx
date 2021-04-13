@@ -5,6 +5,7 @@ import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Select from 'react-select';
+import { useHistory } from 'react-router-dom';
 
 
 class Header extends React.Component {
