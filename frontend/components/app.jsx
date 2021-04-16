@@ -10,12 +10,13 @@ import FormItem from './events/test_container';
 import Profile from './profile/profile';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Switch, Route } from 'react-router-dom';
+import { withRouter } from 'react-router';
 
 const App = () => (
   <div className="main-container">
-    <header>
-      <Header/>
-    </header>
+      <header>
+        <Header/>
+      </header>
     <Switch>
       <Route exact path="/test" component={FormItem} />
       <AuthRoute path="/signup" component={SessionContainer} />

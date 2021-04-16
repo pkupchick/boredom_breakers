@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 import { logout } from '../../actions/session_actions'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Select from 'react-select';
-import { useHistory } from 'react-router-dom';
 
 
 class Header extends React.Component {
@@ -168,4 +167,4 @@ const mdp = (dispatch) => {
     };
 };
 
-export default connect(msp, mdp)(Header);
+export default connect(msp, mdp)(withRouter(Header));
