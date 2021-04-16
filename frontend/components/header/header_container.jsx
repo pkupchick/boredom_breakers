@@ -60,7 +60,6 @@ class Header extends React.Component {
       if (this.props.loggedIn) {
         options = [
           { value: "home", label: "home" },
-          { value: "events", label: "event" },
           { value: "profile", label: "profile" },
           { value: "events/new", label: "create event" },
           { value: "logout", label: "logout" },
@@ -68,7 +67,6 @@ class Header extends React.Component {
       } else {
         options = [
           { value: "home", label: "home" },
-          { value: "events", label: "event" },
           { value: "profile", label: "profile" },
           { value: "events/new", label: "create event" },
           { value: "logout", label: "logout" },
