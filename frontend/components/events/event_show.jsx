@@ -26,12 +26,19 @@ class EventShow extends React.Component {
 
   eventDisplay() {
     const currentEvent = this.props.entities.events[this.props.match.params.eventId];
+    const currentUserId = this.props.currentUser.id;
     let eventDate = null;
     if (currentEvent) {
       let dateObj = new Date(currentEvent.event_start);
       eventDate = dateObj.toDateString();
     }
-
+    let eventOwner = null;
+    if (currentEvent.host_id === currentUserId) {
+      debugger;
+      eventOwner = (<NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink>)
+    } else {
+      eventOwner = null;
+    }
     return currentEvent ?  (
       <div className="event-show-container">
         <div className="event-show-background">
@@ -65,7 +72,8 @@ class EventShow extends React.Component {
                 {currentEvent.description}
                 <br/>
                 <br/>
-                <NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink>
+                {eventOwner}
+                {/* <NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink> */}
               </p>
           </div>
       </div>
