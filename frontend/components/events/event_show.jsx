@@ -34,7 +34,6 @@ class EventShow extends React.Component {
     }
     let eventOwner = null;
     if (currentEvent.host_id === currentUserId) {
-      debugger;
       eventOwner = (<NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink>)
     } else {
       eventOwner = null;

@@ -2,12 +2,13 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { fetchEvent, updateEvent, deleteEvent } from '../../actions/event_actions';
 import DropZone from 'react-dropzone';
+import { withRouter } from 'react-router';
 
 class EventEditForm extends React.Component {
   constructor(props) {
     super(props)
     this.state =  {
-      host_id: this.props.currentUser.id,
+      host_id: "",
       title: "",
       description: "",
       price: "",
@@ -35,6 +36,10 @@ class EventEditForm extends React.Component {
       }
 
       componentDidUpdate() {
+        //if currentUser is not owner of the event redirect to home page
+        if (this.props.currentUser.id !== this.state.host_id) {
+          this.props.history.push(`/`)
+        } 
       }
 
     handleInput(type) {
@@ -142,7 +147,6 @@ class EventEditForm extends React.Component {
     eventStartTime = "event-start-time";
     eventEndDate = "event-end-date";
     eventEndTime = "event-end-time";
-
     if (!this.props.currentUser) {
       return <p>Hey</p>;
     } else {
@@ -299,4 +303,4 @@ const mdp = (dispatch) => {
     }
 };
 
-export default connect(msp, mdp)(EventEditForm);
+export default connect(msp, mdp)(withRouter(EventEditForm));
