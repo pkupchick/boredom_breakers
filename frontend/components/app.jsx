@@ -14,9 +14,9 @@ import { withRouter } from 'react-router';
 
 const App = () => (
   <div className="main-container">
-      <header>
-        <Header/>
-      </header>
+    <header>
+      <Header/>
+    </header>
     <Switch>
       <Route exact path="/test" component={FormItem} />
       <AuthRoute path="/signup" component={SessionContainer} />
