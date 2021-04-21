@@ -39,6 +39,18 @@ class EventShow extends React.Component {
   eventDisplay() {
     const currentEvent = this.props.entities.events[this.props.match.params.eventId];
     const currentUserId = this.props.currentUser.id;
+    let purchased = null
+    const tickets = Object.values(this.props.entities.tickets);
+    const ticketIds = [];
+    tickets.forEach(ticket =>{
+      ticketIds.push(ticket.event_id)
+    });
+
+    if (ticketIds.includes(parseInt(this.props.match.params.eventId))) {
+      purchased = true
+    } else {
+      purchased = false
+    }
     let eventDate = null;
     if (currentEvent) {
       let dateObj = new Date(currentEvent.event_start);
@@ -72,8 +84,8 @@ class EventShow extends React.Component {
               <div className="under-header-container">
                 <button 
                   onClick={this.handleTicket} className="register-button"
-                  disabled={this.props.purchased}
-              >{this.props.purchased ? "Already purchased" : "Tickets"}</button>
+                  disabled={purchased}
+              >{purchased ? "Already purchased" : "Tickets"}</button>
               </div>
             </div>
           </div>
