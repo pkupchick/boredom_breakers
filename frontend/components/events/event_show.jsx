@@ -9,6 +9,7 @@ class EventShow extends React.Component {
     super(props);
 
     this.state = {};
+    this.tickets = {};
     this.handleTicket = this.handleTicket.bind(this);
   }
 
@@ -22,11 +23,34 @@ class EventShow extends React.Component {
 
   handleTicket(e) {
     e.preventDefault();
+    // const formData = new FormData();
+    // formData.append("user_id", this.props.currentUser.id);
+    // formData.append("event_id", this.props.match.params.eventId);
+    const data = {
+      user_id: this.props.currentUser.id,
+      event_id: this.props.match.params.eventId
+    }
+    this.props.createTicket(data)
+      .then(ticket => {
+        this.setState({[this.tickets]: ticket })
+      })
   }
 
   eventDisplay() {
     const currentEvent = this.props.entities.events[this.props.match.params.eventId];
     const currentUserId = this.props.currentUser.id;
+    let purchased = null
+    const tickets = Object.values(this.props.entities.tickets);
+    const ticketIds = [];
+    tickets.forEach(ticket =>{
+      ticketIds.push(ticket.event_id)
+    });
+
+    if (ticketIds.includes(parseInt(this.props.match.params.eventId))) {
+      purchased = true
+    } else {
+      purchased = false
+    }
     let eventDate = null;
     if (currentEvent) {
       let dateObj = new Date(currentEvent.event_start);
@@ -60,8 +84,8 @@ class EventShow extends React.Component {
               <div className="under-header-container">
                 <button 
                   onClick={this.handleTicket} className="register-button"
-                  disabled={this.props.purchased}
-              >{this.props.purchased ? "Already purchased" : "Tickets"}</button>
+                  disabled={purchased}
+              >{purchased ? "Already purchased" : "Tickets"}</button>
               </div>
             </div>
           </div>
@@ -72,7 +96,6 @@ class EventShow extends React.Component {
                 <br/>
                 <br/>
                 {eventOwner}
-                {/* <NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink> */}
               </p>
           </div>
       </div>
