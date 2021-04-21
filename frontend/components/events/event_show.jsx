@@ -9,6 +9,7 @@ class EventShow extends React.Component {
     super(props);
 
     this.state = {};
+    this.tickets = {};
     this.handleTicket = this.handleTicket.bind(this);
   }
 
@@ -22,6 +23,10 @@ class EventShow extends React.Component {
 
   handleTicket(e) {
     e.preventDefault();
+    this.props.createTicket(this.props.match.params.eventId)
+      .then(ticket => {
+        this.setState({[tickets]: ticket })
+      })
   }
 
   eventDisplay() {
@@ -72,7 +77,6 @@ class EventShow extends React.Component {
                 <br/>
                 <br/>
                 {eventOwner}
-                {/* <NavLink to={`/events/${currentEvent.id}/edit`}>Edit this event</NavLink> */}
               </p>
           </div>
       </div>

@@ -15,7 +15,7 @@ class Api::RegistrationsController < ApplicationController
     # end
 
     def index
-        @tickets = User.find_by(id: params[:userId]).registrations
+        @tickets = User.find_by_id(params[:user_id]).registrations
         if @tickets.length > 0
             events = @tickets.map { |ticket| ticket.event }
             render json: { tickets: events }
@@ -29,7 +29,8 @@ class Api::RegistrationsController < ApplicationController
     end
 
     def create
-        @ticket = Registration.new(ticket_params)
+      debugger
+        @ticket = Registration.new(params)
         if @ticket.save!
           render :show
         else
