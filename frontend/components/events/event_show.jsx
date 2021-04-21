@@ -23,9 +23,16 @@ class EventShow extends React.Component {
 
   handleTicket(e) {
     e.preventDefault();
-    this.props.createTicket(this.props.match.params.eventId)
+    // const formData = new FormData();
+    // formData.append("user_id", this.props.currentUser.id);
+    // formData.append("event_id", this.props.match.params.eventId);
+    const data = {
+      user_id: this.props.currentUser.id,
+      event_id: this.props.match.params.eventId
+    }
+    this.props.createTicket(data)
       .then(ticket => {
-        this.setState({[tickets]: ticket })
+        this.setState({[this.tickets]: ticket })
       })
   }
 

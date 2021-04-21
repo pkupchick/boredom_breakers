@@ -29,8 +29,11 @@ class Api::RegistrationsController < ApplicationController
     end
 
     def create
-      debugger
-        @ticket = Registration.new(params)
+        ticket = {
+          user_id: params[:user_id],
+          event_id: params[:event_id]
+        }
+        @ticket = Registration.new(ticket)
         if @ticket.save!
           render :show
         else
