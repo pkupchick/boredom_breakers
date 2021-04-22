@@ -31,7 +31,8 @@ class Api::RegistrationsController < ApplicationController
     def create
         ticket = {
           user_id: params[:user_id],
-          event_id: params[:event_id]
+          event_id: params[:event_id],
+          event_title: params[:event_title]
         }
         @ticket = Registration.new(ticket)
         if @ticket.save!

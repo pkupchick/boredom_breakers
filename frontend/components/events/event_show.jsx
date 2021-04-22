@@ -28,7 +28,8 @@ class EventShow extends React.Component {
     // formData.append("event_id", this.props.match.params.eventId);
     const data = {
       user_id: this.props.currentUser.id,
-      event_id: this.props.match.params.eventId
+      event_id: this.props.match.params.eventId,
+      event_title: this.state.title
     }
     this.props.createTicket(data)
       .then(ticket => {
