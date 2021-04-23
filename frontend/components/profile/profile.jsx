@@ -28,10 +28,6 @@ class Profile extends React.Component {
         //     debugger;
         // console.log(ticketsArray)
         // console.log(this.props.currentUser.purchased_event_ids)
-        // const purchasedArray = this.props.currentUser.purchased_event_ids.map(event =>{
-        //     return this.props.fetchEvent(event)
-        // })
-        // console.log(purchasedArray);
     }
 
     render() {
