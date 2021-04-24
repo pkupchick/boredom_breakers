@@ -1,7 +1,15 @@
 class Api::EventsController < ApplicationController
 
     def index
-        @events = Event.all
+        if params[:filter]
+            filter = params[:filter]
+            if filter[:searchParams]
+                search_params = "%#{filter[:searchParams]}%"
+                @events = Event.select("*").where("UPPER(title) LIKE UPPER(?) OR UPPER(description) LIKE UPPER(?)", search_params, search_params)
+            end
+        else
+            @events = Event.all
+        end
     end
 
     def show

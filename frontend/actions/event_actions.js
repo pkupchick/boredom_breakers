@@ -21,8 +21,8 @@ const receiveErrors = (errors) => {
     };
 };
 
-export const fetchEvents = () => (dispatch) =>
-    APIEventUtil.fetchEvents().then((events) => {
+export const fetchEvents = (filter = {}) => (dispatch) =>
+    APIEventUtil.fetchEvents(filter).then((events) => {
         return dispatch(receiveEvents(events))
     }
 );

@@ -15,6 +15,11 @@ class Header extends React.Component {
         this.hideDropDown = this.hideDropDown.bind(this);
         this.handleDropDown = this.handleDropDown.bind(this);
         this.handleChange = this.handleChange.bind(this);
+        this.handleKeyInput = this.handleKeyInput.bind(this);
+        this.timer = null;
+        this.state = {
+          searchParam: ""
+        }
     }
 
     showDropDown() {
@@ -37,20 +42,30 @@ class Header extends React.Component {
             </div>
         )
     }
-
-  handleChange(selectedOption) {
-    if (selectedOption.value === "home") {
-      this.props.history.push("/");
-    } else if (selectedOption.value === "profile") {
-      this.props.history.push(`/users/${this.props.currentUser.id}`);
-    } else if (selectedOption.value === "logout") {
-      this.props.logout().then(() => {
-        this.props.history.push('/login');
-      });
-    } else {
-      this.props.history.push(`/${selectedOption.value}`);
+    handleKeyInput(e) {
+      e.preventDefault()
+      clearTimeout(this.timer);
+      let timeout = () => {
+        this.props.fetchEvents(this.state.searchParam);
+      };
+      this.timer = setTimeout(timeout, 1000);
+      this.setState({ searchParam: e.target.value })
     }
-  };
+
+
+    handleChange(selectedOption) {
+      if (selectedOption.value === "home") {
+        this.props.history.push("/");
+      } else if (selectedOption.value === "profile") {
+        this.props.history.push(`/users/${this.props.currentUser.id}`);
+      } else if (selectedOption.value === "logout") {
+        this.props.logout().then(() => {
+          this.props.history.push('/login');
+        });
+      } else {
+        this.props.history.push(`/${selectedOption.value}`);
+      }
+    };
 
     render() {
         const { currentUser } = this.props;
@@ -107,6 +122,7 @@ class Header extends React.Component {
                     type="text"
                     className="search-box"
                     placeholder="Search Events"
+                    onChange={this.handleKeyInput}
                   />
                 </div>
                 <div className="signin-header">
@@ -126,7 +142,11 @@ class Header extends React.Component {
                 <div>
                 <div className="searchContainer">
                     <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                    <input type="text" className="search-box" placeholder="Search Events" />
+                    <input type="text" 
+                    className="search-box" 
+                    placeholder="Search Events" 
+                    onChange={this.handleKeyInput}
+                    />
                 </div>
                 </div>
                 </div>
@@ -161,7 +181,8 @@ const msp = (state) => {
 
 const mdp = (dispatch) => {
     return {
-      logout: () => dispatch(logout())
+      logout: () => dispatch(logout()),
+      fetchEvents: (searchParams) => dispatch(fetchEvents({ searchParams }))
     };
 };
 

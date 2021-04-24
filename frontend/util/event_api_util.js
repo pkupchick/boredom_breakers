@@ -1,9 +1,11 @@
-export const fetchEvents = () => (
+export const fetchEvents = (filter = {}) => (
     $.ajax({
         method: "GET",
         url: "/api/events",
+        data: {filter}
     })
 );
+
 
 export const fetchEvent = id => (
     $.ajax({
