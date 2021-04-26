@@ -11,7 +11,7 @@ class Profile extends React.Component {
         this.state = {}
         this.displayTickets = this.displayTickets.bind(this);
     }
-
+    
     componentDidMount() {
         this.props.fetchUser(this.props.match.params.userId)
             .then(user => {
@@ -28,14 +28,17 @@ class Profile extends React.Component {
         //     debugger;
         // console.log(ticketsArray)
         // console.log(this.props.currentUser.purchased_event_ids)
+        console.log("hi")
     }
 
     render() {
         return(
             <div className="profile-container">
-                <div>
-                    {this.props.currentUser.name}
-                    {this.displayTickets()}
+                <div className="profile-main">
+                    <h1>
+                        Hi <span className="user-name">{this.props.currentUser.name}</span> you have # tickets
+                        {this.displayTickets()}
+                    </h1>
                 </div>
             </div>
         )

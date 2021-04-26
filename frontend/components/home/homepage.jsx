@@ -44,7 +44,7 @@ class HomePage extends React.Component {
         return 0;
       }
     });
-    eventsArray = eventsArray.map((event, idx) => {
+    eventsArray = eventsArray.map((event) => {
       const eventDate = new Date(event.event_start) || new Date('August 19, 1975 23:15:30');
       let eventTime = event.event_start_time || "11:11";
       return (
