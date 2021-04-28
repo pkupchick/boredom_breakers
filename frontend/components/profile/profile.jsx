@@ -8,7 +8,8 @@ class Profile extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {}
+        this.state = {};
+        this.tickets = null;
         this.displayTickets = this.displayTickets.bind(this);
     }
     
@@ -19,16 +20,12 @@ class Profile extends React.Component {
             });
     }
 
-    displayTickets() {
-        // const ticketsArray = [];
-        // this.props.fetchTickets(this.props.match.params.userId)
-        //     .then(tickets => {
-        //         ticketsArray = tickets
-        //     });
-        //     debugger;
-        // console.log(ticketsArray)
-        // console.log(this.props.currentUser.purchased_event_ids)
-        console.log("hi")
+    displayTickets(e) {
+        e.preventDefault();
+        this.props.fetchTickets(this.props.match.params.userId)
+            .then(tickets =>{
+                this.setState({[this.tickets]: tickets })
+            })
     }
 
     render() {
@@ -36,8 +33,7 @@ class Profile extends React.Component {
             <div className="profile-container">
                 <div className="profile-main">
                     <h1>
-                        Hi <span className="user-name">{this.props.currentUser.name}</span> you have # tickets
-                        {this.displayTickets()}
+                        Hi <span className="user-name">{this.props.currentUser.name}</span> Manage your tickets here.
                     </h1>
                 </div>
             </div>

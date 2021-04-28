@@ -25,7 +25,14 @@ class Api::RegistrationsController < ApplicationController
     end
 
     def show
-      @ticket = Registration.find(params[:id])
+      # @ticket = Registration.find(params[:id])
+      @tickets = User.find_by_id(params[:id]).registrations
+        if @tickets.length > 0
+            events = @tickets.map { |ticket| ticket.event }
+            render json: { tickets: events }
+        else
+            render json: ["No tickets"]
+        end
     end
 
     def create

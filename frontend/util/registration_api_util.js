@@ -1,9 +1,10 @@
 
 export const fetchTickets = (user) => {
+    debugger;
     return $.ajax({
         method: "GET",
-        url: "api/registrations",
-        data: data
+        url: `api/registrations/${user}`,
+        data: {userId: user.id }
     });
 };
 
