@@ -1,6 +1,5 @@
 
 export const fetchTickets = (user) => {
-    debugger;
     return $.ajax({
         method: "GET",
         url: `api/registrations/${user}`,
